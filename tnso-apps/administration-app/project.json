@@ -53,8 +53,7 @@
       "defaultConfiguration": "development",
       "options": {
         "buildTarget": "tnso-apps/administration-app:build",
-        "hmr": true,
-        "port": 8083
+        "hmr": true
       },
       "configurations": {
         "development": {
