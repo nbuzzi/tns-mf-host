@@ -7,7 +7,6 @@ tmp
 
 # dependencies
 node_modules
-module-federation.base.config.ts
 
 # IDEs and editors
 /.idea
