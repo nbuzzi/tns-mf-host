@@ -3,7 +3,7 @@
 
 export const environment = {
   // VITE_API_URL_BASE: "http://172.17.8.144:8080/v1/portalapi",
-  VITE_API_URL_BASE: 'http://localhost:5000/v1/portalapi',
+  VITE_API_URL_BASE: 'https://tns-backend.vercel.app/v1/portalapi',
   VITE_DEVICES_ENABLED: true,
   VITE_CONTACTS_ENABLED: true,
 };

@@ -7,7 +7,7 @@ export const environment = {
   VITE_API_SOCKET_URL: 'ws://localhost:5000',
   VITE_JWT_SECRET: 'tns-dashboard',
   // VITE_API_URL_BASE: 'http://172.17.8.145/v1/portalapi',
-  VITE_API_URL_BASE: 'http://localhost:5000/v1/portalapi',
+  VITE_API_URL_BASE: 'https://tns-backend.vercel.app/v1/portalapi',
 
   // URL API BACKEND
   //VITE_API_URL_BASE= 'http://172.21.240.38:8080/v1/portalapi',
