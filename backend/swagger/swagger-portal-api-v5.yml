@@ -1,0 +1,1079 @@
+openapi: 3.0.2
+info:
+  title: Portal API Endpoints
+  version: v1.0.0
+
+components:
+  securitySchemes:
+    BearerToken:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT
+
+  schemas:
+    Authenticate:
+      type: object
+      properties:
+        username:
+          type: string
+        password:
+          type: string
+      example:
+        username: admin
+        password: '@dminPWD_2023!'
+
+    AuthenticateResponseOk:
+      type: object
+      properties:
+        accessToken:
+          type: string
+        refreshToken:
+          type: string
+      example:
+        accessToken: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJ0b3B0YWwuY29tIiwiZXhwIjoxNDI2NDIwODAwLCJodHRwOi8vdG9wdGFsLmNvbS9qd3RfY2xhaW1zL2lzX2FkbWluIjp0cnVlLCJjb21wYW55IjoiVG9wdGFsIiwiYXdlc29tZSI6dHJ1ZX0.yRQYnWzskCZUxPwaQupWkiUzKELZ49eM7oWxAQK_ZXw
+        refreshToken: e58ed763-928c-4155-bee9-fdbaaadc15f3
+
+    AuthenticateResponseForbidden:
+      type: object
+      properties:
+        error:
+          type: string
+          enum: [ACCOUNT_LOCKED, ACCOUNT_DISABLED, CREDENTIALS_EXPIRED]
+      example:
+        error: ACCOUNT_LOCKED
+
+    BadAccessTokenResponse:
+      type: object
+      properties:
+        error:
+          type: string
+          enum: [BAD_ACCESS_TOKEN]
+      example:
+        error: BAD_ACCESS_TOKEN
+
+    PaginationResponse:
+      type: object
+      properties:
+        totalRecords:
+          type: number
+          example: 10
+        returnedRecords:
+          type: number
+          example: 1
+
+    DeviceDataResponse:
+      type: object
+      properties:
+        acna:
+          type: string
+          example: aafu
+        companyName:
+          type: string
+          example: Alliance Bernstein
+        connectivityStatus:
+          type: string
+          enum: [fullService, onPrimary, onBackup, offline, inderterminate, unknown]
+          example: onBackup
+        customerDeviceName:
+          type: string
+          example: Device Center IT
+        country:
+          type: string
+          example: Italy
+        operationalStatus:
+          type: string
+          example: Installed
+        tnsDeviceName:
+          type: string
+          example: aafu1
+
+    connectivityStatus:
+      type: object
+      properties:
+        fullService:
+          type: number
+        onPrimary:
+          type: number
+        onBackup:
+          type: number
+        offline:
+          type: number
+        inderterminate:
+          type: number
+        unknown:
+          type: number
+      example:
+        fullService: 1900
+        onPrimary: 90
+        onBackup: 8
+        offline: 1
+        inderterminate: 0
+        unknown: 1
+
+    connectivityStatusEnum:
+      type: string
+      enum: [fullService, onPrimary, onBackup, offline, inderterminate, unknown]
+      example: onBackup
+
+    GroupsMembers:
+      type: object
+      properties:
+        acna:
+          type: string
+        companyName:
+          type: string
+        totalNumberOfDevices:
+          type: number
+        connectivityStatus:
+          $ref: '#/components/schemas/connectivityStatus'
+      example:
+        acna: apl
+        companyName: Apple
+        totalNumberOfDevices: 2000
+        connectivityStatus:
+          fullService: 1900
+          onPrimary: 90
+          onBackup: 8
+          offline: 1
+          inderterminate: 0
+          unknown: 1
+
+security:
+  - BearerToken: []
+
+paths:
+  /v1/portalapi/authenticate:
+    post:
+      summary: Authenticate
+      security: []
+      tags:
+        - Authentication
+      requestBody:
+        required: true
+        description: User and Password to login
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Authenticate'
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/AuthenticateResponseOk'
+        '400':
+          description: Bad Request
+        '403':
+          description: Forbidden
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/AuthenticateResponseForbidden'
+        '404':
+          description: Not Found
+        '500':
+          description: Internal Server Error
+
+  /v1/portalapi/authenticate/refreshToken:
+    post:
+      summary: Refresh Token
+      description: To request a new Access Token when expired
+      security: []
+      tags:
+        - Authentication
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                refreshToken:
+                  type: string
+              example:
+                refreshToken: e58ed763-928c-4155-bee9-fdbaaadc15f3
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/AuthenticateResponseOk'
+        '400':
+          description: Bad Request
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+                    enum: [BAD_REFRESH_TOKEN]
+                example:
+                  error: BAD_REFRESH_TOKEN
+        '404':
+          description: Not Found
+        '500':
+          description: Internal Server Error
+
+  /v1/portalapi/devices/{tnsDeviceName}/note:
+    get:
+      summary: Fetch Device Note
+      description: To fetch device's note
+      tags:
+        - Devices
+      parameters:
+        - in: path
+          required: true
+          name: tnsDeviceName
+          schema:
+            type: string
+            example: eftx03043v
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  note:
+                    type: string
+                example:
+                  note: here is my device's note
+        '400':
+          description: Bad Request
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BadAccessTokenResponse'
+        '403':
+          description: Forbidden
+        '404':
+          description: Not Found
+        '500':
+          description: Internal Server Error
+
+    patch:
+      summary: Update Device Note
+      description: To update device's note
+      tags:
+        - Devices
+      parameters:
+        - in: path
+          required: true
+          name: tnsDeviceName
+          schema:
+            type: string
+            example: eftx03043v
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                note:
+                  type: string
+              example:
+                note: here is my updated device's note
+      responses:
+        '204':
+          description: No Content
+        '400':
+          description: Bad Request
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BadAccessTokenResponse'
+        '403':
+          description: Forbidden
+        '404':
+          description: Not Found
+        '500':
+          description: Internal Server Error
+
+  /v1/portalapi/devices:
+    get:
+      summary: Fetch All Devices
+      description: To fetch and filter devices information associated to the user
+      tags:
+        - Devices
+      parameters:
+        - in: query
+          name: acnas
+          schema:
+            type: string
+            example: eftx,bml,aafu
+        - in: query
+          name: companyName
+          schema:
+            type: string
+            example: Alliance Bernstein
+        - in: query
+          name: connectivityStatus
+          schema:
+            $ref: '#/components/schemas/connectivityStatusEnum'
+        - in: query
+          name: customerDeviceName
+          schema:
+            type: string
+            example: Barclay
+        - in: query
+          name: country
+          schema:
+            type: string
+            example: Italy
+        - in: query
+          name: countries
+          schema:
+            type: string
+            example: USA,Italy
+        - in: query
+          name: operationalStatus
+          schema:
+            type: string
+            example: configured
+        - in: query
+          name: orderBy
+          schema:
+            type: string
+            default: ASC
+            example: DESC
+        - in: query
+          name: recordsPerPage
+          schema:
+            type: number
+            maximum: 200
+            default: 100
+            example: 30
+        - in: query
+          name: sortBy
+          schema:
+            type: string
+            default: tnsDeviceName
+            example: connectivityStatus
+        - in: query
+          name: startAtRecord
+          schema:
+            type: number
+            default: 0
+            minimum: 0
+            example: 100
+        - in: query
+          name: tnsDeviceName
+          schema:
+            type: string
+            example: eftx03043v,bml26153v
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                allOf:
+                  - $ref: '#/components/schemas/PaginationResponse'
+                  - properties:
+                      devices:
+                        type: array
+                        items:
+                          $ref: '#/components/schemas/DeviceDataResponse'
+        '400':
+          description: Bad Request
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BadAccessTokenResponse'
+        '403':
+          description: Forbidden
+        '404':
+          description: Not Found
+        '500':
+          description: Internal Server Error
+
+  /v1/portalapi/devices/{tnsDeviceName}:
+    get:
+      summary: Fetch Device's details
+      description: To fetch some device's information
+      tags:
+        - Devices
+      parameters:
+        - in: path
+          required: true
+          name: tnsDeviceName
+          schema:
+            type: string
+            example: eftx03043v
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  tnsDeviceName:
+                    type: string
+                  customerDeviceName:
+                    type: string
+                  acna:
+                    type: string
+                  companyName:
+                    type: string
+                  manufacturer:
+                    type: string
+                  model:
+                    type: string
+                  operationalStatus:
+                    type: string
+                  connectivityStatus:
+                    $ref: '#/components/schemas/connectivityStatusEnum'
+                  streetAddress:
+                    type: string
+                  latitude:
+                    type: string
+                  longitude:
+                    type: string
+                  city:
+                    type: string
+                  state:
+                    type: string
+                  zipCode:
+                    type: string
+                  country:
+                    type: string
+                  lanIpAddress:
+                    type: string
+                  lanSubnetMask:
+                    type: string
+                  statusLastChangedOn:
+                    type: string
+                example:
+                  tnsDeviceName: eftx03043v
+                  customerDeviceName: Router DC 3
+                  acna: eftx
+                  companyName: EFTX Corp.
+                  manufacturer: Cisco
+                  model: C1111-4PLTEEA
+                  operationalStatus: Deployed
+                  connectivityStatus: fullService
+                  latitude: '49.439999'
+                  longitude: '1.100000'
+                  streetAddress: 2107 Wilson Blvd. Suite 600
+                  city: Arlington
+                  state: VA
+                  zipCode: 22201-3061
+                  country: USA
+                  lanIpAddress: '10.232.128.140'
+                  lanSubnetMask: '255.255.255.0'
+                  statusLastChangedOn: '2021-04-30 10:23:57'
+        '400':
+          description: Bad Request
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BadAccessTokenResponse'
+        '403':
+          description: Forbidden
+        '404':
+          description: Not Found
+        '500':
+          description: Internal Server Error
+
+  /v1/portalapi/devices/count/connectivityStatus:
+    get:
+      summary: Count Number of Devices Grouped by Connectivity Status
+      description: To count the number of devices, grouped by connectivity status, associated to the user
+      tags:
+        - Devices
+      parameters:
+        - in: query
+          name: acnas
+          schema:
+            type: string
+            example: eftx,bml,aafu
+        - in: query
+          name: companyName
+          schema:
+            type: string
+            example: Alliance Bernstein
+        - in: query
+          name: customerDeviceName
+          schema:
+            type: string
+            example: Barclay
+        - in: query
+          name: country
+          schema:
+            type: string
+            example: Italy
+        - in: query
+          name: countries
+          schema:
+            type: string
+            example: USA,Italy
+        - in: query
+          name: operationalStatus
+          schema:
+            type: string
+            example: configured
+        - in: query
+          name: tnsDeviceName
+          schema:
+            type: string
+            example: eftx03043v,bml26153v
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/connectivityStatus'
+        '400':
+          description: Bad Request
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BadAccessTokenResponse'
+        '403':
+          description: Forbidden
+        '404':
+          description: Not Found
+        '500':
+          description: Internal Server Error
+
+  /v1/portalapi/devices/groups/members:
+    get:
+      summary: Fetch Groups Grouped by Members
+      description: To fetch information per member associated to the user
+      tags:
+        - Devices
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/GroupsMembers'
+        '400':
+          description: Bad Request
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BadAccessTokenResponse'
+        '403':
+          description: Forbidden
+        '404':
+          description: Not Found
+        '500':
+          description: Internal Server Error
+
+  /v1/portalapi/devices/geolocation:
+    get:
+      summary: Fetch All Devices Geolocation
+      description: To fetch information to display devices on Google Maps
+      tags:
+        - Devices
+      parameters:
+        - in: query
+          name: acnas
+          schema:
+            type: string
+            example: eftx,bml,aafu
+        - in: query
+          name: companyName
+          schema:
+            type: string
+            example: Alliance Bernstein
+        - in: query
+          name: connectivityStatus
+          schema:
+            $ref: '#/components/schemas/connectivityStatusEnum'
+        - in: query
+          name: customerDeviceName
+          schema:
+            type: string
+            example: Barclay
+        - in: query
+          name: country
+          schema:
+            type: string
+            example: Italy
+        - in: query
+          name: countries
+          schema:
+            type: string
+            example: USA,Italy
+        - in: query
+          name: operationalStatus
+          schema:
+            type: string
+            example: configured
+        - in: query
+          name: tnsDeviceName
+          schema:
+            type: string
+            example: eftx03043v,bml26153v
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    tnsDeviceName:
+                      type: string
+                    latitude:
+                      type: string
+                    longitude:
+                      type: string
+                    connectivityStatus:
+                      $ref: '#/components/schemas/connectivityStatusEnum'
+                  example:
+                    tnsDeviceName: eftx03043v
+                    latitude: '49.439999'
+                    longitude: '1.100000'
+                    connectivityStatus: fullService
+        '400':
+          description: Bad Request
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BadAccessTokenResponse'
+        '403':
+          description: Forbidden
+        '404':
+          description: Not Found
+        '500':
+          description: Internal Server Error
+
+  /v1/portalapi/devices/{tnsDeviceName}/uptime/monthly:
+    get:
+      summary: Fetch Device Uptime Monthly
+      description: To fetch last 6 months uptime details for a tnsDeviceName
+      tags:
+        - Devices
+      parameters:
+        - in: path
+          required: true
+          name: tnsDeviceName
+          schema:
+            type: string
+            example: eftx03043v
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    tnsDeviceName:
+                      type: string
+                    month:
+                      type: string
+                    year:
+                      type: string
+                    uptime:
+                      type: string
+                  example:
+                    tnsDeviceName: eftx03043v
+                    month: 'October'
+                    year: '2022'
+                    uptime: '11.100000'
+        '400':
+          description: Bad Request
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BadAccessTokenResponse'
+        '403':
+          description: Forbidden
+        '404':
+          description: Not Found
+        '500':
+          description: Internal Server Error
+
+  /v1/portalapi/devices/{tnsDeviceName}/uptime/daily/{month}:
+    get:
+      summary: Fetch Device Uptime Daily
+      description: To fetch uptime details for a tnsDeviceName in a given month
+      tags:
+        - Devices
+      parameters:
+        - in: path
+          required: true
+          name: tnsDeviceName
+          schema:
+            type: string
+            example: eftx03043v
+        - in: path
+          required: true
+          name: month
+          schema:
+            type: string
+            example: November
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    tnsDeviceName:
+                      type: string
+                    day:
+                      type: string
+                    month:
+                      type: string
+                    year:
+                      type: string
+                    uptime:
+                      type: string
+                  example:
+                    tnsDeviceName: eftx03043v
+                    day: '05'
+                    month: '11'
+                    year: '2022'
+                    uptime: '11.100000'
+        '400':
+          description: Bad Request
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BadAccessTokenResponse'
+        '403':
+          description: Forbidden
+        '404':
+          description: Not Found
+        '500':
+          description: Internal Server Error
+
+  /v1/portalapi/devices/count/nogeolocation:
+    get:
+      summary: Fetch device count with no gelocation details
+      description: Count of devices with no gelocation details
+      tags:
+        - Devices
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  count:
+                    type: integer
+                example:
+                  count: 20
+        '400':
+          description: Bad Request
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BadAccessTokenResponse'
+        '403':
+          description: Forbidden
+        '404':
+          description: Not Found
+        '500':
+          description: Internal Server Error
+
+  /v1/portalapi/acnas:
+    get:
+      summary: Fetch All ACNAs
+      description: To fetch the list of ACNAs linked to the user's company profiles
+      tags:
+        - ACNA
+      parameters:
+        - in: query
+          name: name
+          schema:
+            type: string
+            example: eftx
+        - in: query
+          name: recordsPerPage
+          schema:
+            type: number
+            maximum: 200
+            default: 100
+            example: 30
+        - in: query
+          name: startAtRecord
+          schema:
+            type: number
+            default: 0
+            minimum: 0
+            example: 100
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                allOf:
+                  - $ref: '#/components/schemas/PaginationResponse'
+                  - properties:
+                      acnas:
+                        type: array
+                        items:
+                          type: object
+                          properties:
+                            name:
+                              type: string
+                              example: aafu
+        '400':
+          description: Bad Request
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BadAccessTokenResponse'
+        '403':
+          description: Forbidden
+        '500':
+          description: Internal Server Error
+
+  /v1/portalapi/companyprofiles:
+    get:
+      summary: Fetch All Company Profiles
+      description: To fetch the list of company profiles visible by the user
+      tags:
+        - Company Profile
+      parameters:
+        - in: query
+          name: name
+          schema:
+            type: string
+            example: eftx
+        - in: query
+          name: recordsPerPage
+          schema:
+            type: number
+            maximum: 200
+            default: 100
+            example: 30
+        - in: query
+          name: startAtRecord
+          schema:
+            type: number
+            default: 0
+            minimum: 0
+            example: 100
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                allOf:
+                  - $ref: '#/components/schemas/PaginationResponse'
+                  - properties:
+                      companyProfiles:
+                        type: array
+                        items:
+                          type: object
+                          properties:
+                            name:
+                              type: string
+                              example: aafu
+                            acnas:
+                              type: array
+                              items:
+                                type: object
+                                properties:
+                                  name:
+                                    type: string
+                                    example: aafu
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BadAccessTokenResponse'
+        '403':
+          description: Forbidden
+        '500':
+          description: Internal Server Error
+
+    post:
+      summary: Create Company Profile
+      description: To create a new company profile
+      tags:
+        - Company Profile
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required:
+                - name
+                - acnas
+              properties:
+                name:
+                  type: string
+                acnas:
+                  type: string
+              example:
+                name: Chris Co
+                acnas: aafu,eftx
+      responses:
+        '204':
+          description: No Content
+        '400':
+          description: Bad Request
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+                    enum: [BAD_REFRESH_TOKEN]
+                example:
+                  error: BAD_REFRESH_TOKEN
+        '403':
+          description: Forbidden
+        '409':
+          description: Conflict
+        '500':
+          description: Internal Server Error
+
+  /v1/portalapi/companyprofiles/{companyProfileName}:
+    patch:
+      summary: Update Company Profile
+      description: To update the company profile's name and/or its linked ACNAs
+      tags:
+        - Company Profile
+      parameters:
+        - in: path
+          required: true
+          name: companyProfileName
+          schema:
+            type: string
+            example: Chris Co
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              anyOf:
+                - properties:
+                    name:
+                      type: string
+                      description: New company profile's name
+                      example: Chris Corp
+                  required: [name]
+                - properties:
+                    acnas:
+                      type: string
+                      description: Comma separated ACNAs
+                      example: aafu,eftx
+                  required: [acnas]
+            examples:
+              Company Name Only:
+                value:
+                  name: Chris Corp
+              ACNAs Only:
+                value:
+                 acnas: aafu,eftx,clmb
+              All Parameters:
+                value:
+                  name: Chris Corp
+                  acnas: aafu,eftx,clmb
+      responses:
+        '204':
+          description: No Content
+        '400':
+          description: Bad Request
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BadAccessTokenResponse'
+        '403':
+          description: Forbidden
+        '409':
+          description: Conflict
+        '500':
+          description: Internal Server Error
+
+  /v1/portalapi/companyprofiles/name/{companyProfileName}/available:
+    get:
+      summary: Check Company Profile Name Availability
+      description: Check if a company profile name is available before to create a new one
+      tags:
+        - Company Profile
+      parameters:
+        - in: path
+          name: companyProfileName
+          required: true
+          schema:
+            type: string
+            example: Chris Co
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  available:
+                    type: boolean
+                    example: true
+        '400':
+          description: Bad Request
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BadAccessTokenResponse'
+        '403':
+          description: Forbidden
+        '500':
+          description: Internal Server Error

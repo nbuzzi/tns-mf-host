@@ -1,0 +1,228 @@
+.fixedTopbar {
+  .topbar {
+    position: fixed;
+    width: 100%;
+    background-color: #111d3d;
+    color: white;
+    height: $topbarHeight;
+    top: 0;
+    left: 0;
+    border-bottom: 1px solid #1c2e61;
+    padding-right: 2%;
+    z-index: 2;
+
+    .bi::before {
+      color: white;
+    }
+    .logo-tns {
+      text-decoration: none;
+      color: $black;
+      font-weight: bold;
+      &hover {
+        text-decoration: none;
+      }
+      .label-logo {
+        color: white;
+        font-size: 0.9rem;
+      }
+    }
+    .image-tns {
+      height: 5vh;
+    }
+    i {
+      font-size: 1.3rem;
+    }
+    .icon-list-mobile {
+      display: none;
+    }
+    .icon-back-mobile {
+      display: none;
+    }
+    .icon-user-mobile {
+      display: none;
+    }
+    .language-mobile {
+      display: none;
+    }
+  }
+
+  .nav-dropdown .dropdown-toggle::after {
+    display: none;
+  }
+  .nav-dropdown {
+    height: 1rem;
+    margin-right: 0.5rem;
+  }
+  .item {
+    width: 1rem;
+  }
+  .item-text {
+    font-size: 0.9rem;
+  }
+  .HorizontalTopbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 2;
+  }
+  &.contentArea {
+    padding-top: $topbarHeight;
+  }
+}
+.ddWidth {
+  width: 300px;
+}
+
+.mega-dropdown {
+  position: static;
+  .dropdown-menu {
+    padding: 30px;
+    width: 96%;
+    margin: 0 2%;
+    transform: translate(0px, 62px) !important;
+    max-height: 480px;
+    overflow: auto;
+  }
+}
+
+@mixin styles-button() {
+  border-color: $btn-border-primary;
+  background-color: $footer-primary;
+  color: $black !important;
+  &:hover,
+  &.active,
+  &.disabled,
+  &:focus {
+    color: white !important;
+  }
+}
+
+@media (max-width: 1025px) {
+  .fixedTopbar {
+    .topbar {
+      padding-top: 0rem;
+      .logo-tns {
+        text-decoration: none;
+        color: $black;
+        font-weight: bold;
+        align-items: center;
+        &hover {
+          text-decoration: none;
+        }
+        .label-logo {
+          font-size: 0.9rem;
+        }
+      }
+      .image-tns {
+        height: 5vh;
+      }
+
+      i {
+        font-size: 1.2rem;
+      }
+    }
+  }
+}
+
+@media (max-width: 769px) {
+  .fixedTopbar {
+    .topbar {
+      padding-top: 0rem;
+      .logo-tns {
+        text-decoration: none;
+        color: $black;
+        font-weight: bold;
+        align-items: center;
+        &hover {
+          text-decoration: none;
+        }
+        .label-logo {
+          font-size: 0.9rem;
+        }
+      }
+      .image-tns {
+        height: 5vh;
+      }
+
+      i {
+        font-size: 1.2rem;
+      }
+    }
+  }
+}
+
+@media (max-width: 541px) {
+  .fixedTopbar {
+    .topbar {
+      padding-top: 0rem;
+      background-color: $body-bg;
+      .logo-tns {
+        text-decoration: none;
+        color: $black;
+        font-weight: bold;
+        align-items: center;
+        &hover {
+          text-decoration: none;
+        }
+        .label-logo {
+          display: none;
+        }
+      }
+      .image-tns {
+        display: none;
+      }
+      .icon-list-mobile {
+        display: block;
+        margin-left: 0.5rem;
+        @include styles-button();
+      }
+      .icon-back-mobile {
+        display: block;
+        margin-left: 0.2rem;
+        @include styles-button();
+      }
+      .icon-user-mobile {
+        display: block;
+        margin-left: 0.2rem;
+        @include styles-button();
+      }
+      .language-mobile {
+        display: block;
+        padding-right: 0.3rem;
+        @include styles-button();
+      }
+      .nav-link {
+        margin-right: 0%;
+      }
+      i {
+        font-size: 1.5rem;
+      }
+    }
+  }
+}
+
+@media (max-width: 280px) {
+  .fixedTopbar {
+    .topbar {
+      padding-top: 0rem;
+      .logo-tns {
+        text-decoration: none;
+        color: $black;
+        font-weight: bold;
+        align-items: center;
+        &hover {
+          text-decoration: none;
+        }
+        .label-logo {
+          display: none;
+        }
+      }
+      .image-tns {
+        display: none;
+      }
+      i {
+        font-size: 1.5rem;
+      }
+    }
+  }
+}

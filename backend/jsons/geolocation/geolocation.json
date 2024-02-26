@@ -1,0 +1,662 @@
+[
+  {
+    "connectivityStatus": "fullService",
+    "tnsDeviceName": "ascend",
+    "latitude": null,
+    "longitude": null
+  },
+  {
+    "connectivityStatus": "fullService",
+    "tnsDeviceName": "ascend-2",
+    "latitude": "3.712448581050022",
+    "longitude": "24.704854140772724"
+  },
+  {
+    "connectivityStatus": "unknown",
+    "tnsDeviceName": "ascend-3",
+    "latitude": null,
+    "longitude": null
+  },
+  {
+    "connectivityStatus": "onBackup",
+    "tnsDeviceName": "ascend-4",
+    "latitude": "47.229029282404746",
+    "longitude": "59.348953944026206"
+  },
+  {
+    "connectivityStatus": "offline",
+    "tnsDeviceName": "ascend-5",
+    "latitude": "24.149101086386985",
+    "longitude": "21.128847460407595"
+  },
+  {
+    "connectivityStatus": "fullService",
+    "tnsDeviceName": "ascend-6",
+    "latitude": null,
+    "longitude": null
+  },
+  {
+    "connectivityStatus": "fullService",
+    "tnsDeviceName": "ascend-7",
+    "latitude": "24.309330420117913",
+    "longitude": "18.120422124969252"
+  },
+  {
+    "connectivityStatus": "offline",
+    "tnsDeviceName": "ascend-8",
+    "latitude": "52.538703418826884",
+    "longitude": "69.72013247607747"
+  },
+  {
+    "connectivityStatus": "unknown",
+    "tnsDeviceName": "ascend-9",
+    "latitude": "56.45200999155505",
+    "longitude": "62.08552737141076"
+  },
+  {
+    "connectivityStatus": "fullService",
+    "tnsDeviceName": "ascend-10",
+    "latitude": "58.9143930515054",
+    "longitude": "54.97932717729091"
+  },
+  {
+    "connectivityStatus": "offline",
+    "tnsDeviceName": "ascend-11",
+    "latitude": "61.19091626921993",
+    "longitude": "19.68812034095992"
+  },
+  {
+    "connectivityStatus": "indeterminate",
+    "tnsDeviceName": "ascend-12",
+    "latitude": "55.621473527007566",
+    "longitude": "1.640029067072092"
+  },
+  {
+    "connectivityStatus": "onBackup",
+    "tnsDeviceName": "ascend-13",
+    "latitude": "19.15990588012449",
+    "longitude": "41.26037006555203"
+  },
+  {
+    "connectivityStatus": "fullService",
+    "tnsDeviceName": "ascend-14",
+    "latitude": "41.13393584755085",
+    "longitude": "42.98808311733893"
+  },
+  {
+    "connectivityStatus": "fullService",
+    "tnsDeviceName": "ascend-15",
+    "latitude": "35.46802401718356",
+    "longitude": "23.497589665067785"
+  },
+  {
+    "connectivityStatus": "fullService",
+    "tnsDeviceName": "ascend-16",
+    "latitude": "38.75794815932341",
+    "longitude": "51.032992051203124"
+  },
+  {
+    "connectivityStatus": "fullService",
+    "tnsDeviceName": "ascend-17",
+    "latitude": "28.050154659094662",
+    "longitude": "55.704956125678535"
+  },
+  {
+    "connectivityStatus": "fullService",
+    "tnsDeviceName": "ascend-18",
+    "latitude": "9.592981082159035",
+    "longitude": "22.643779672691288"
+  },
+  {
+    "connectivityStatus": "onBackup",
+    "tnsDeviceName": "ascend-19",
+    "latitude": "53.60804595566277",
+    "longitude": "12.249453416073436"
+  },
+  {
+    "connectivityStatus": "onBackup",
+    "tnsDeviceName": "ascend-20",
+    "latitude": "44.67264949399832",
+    "longitude": "15.98350779815846"
+  },
+  {
+    "connectivityStatus": "fullService",
+    "tnsDeviceName": "ascend-21",
+    "latitude": "5.299650563033688",
+    "longitude": "32.41046863466107"
+  },
+  {
+    "connectivityStatus": "fullService",
+    "tnsDeviceName": "ascend-22",
+    "latitude": "12.065383526652141",
+    "longitude": "11.479282710646043"
+  },
+  {
+    "connectivityStatus": "onBackup",
+    "tnsDeviceName": "ascend-23",
+    "latitude": "14.538851353534795",
+    "longitude": "61.43297601181399"
+  },
+  {
+    "connectivityStatus": "fullService",
+    "tnsDeviceName": "ascend-24",
+    "latitude": "1.989487779731563",
+    "longitude": "76.09734343427422"
+  },
+  {
+    "connectivityStatus": "fullService",
+    "tnsDeviceName": "ascend25",
+    "latitude": "57.83213843946106",
+    "longitude": "50.4713088554453"
+  },
+  {
+    "connectivityStatus": "fullService",
+    "tnsDeviceName": "ascend-26",
+    "latitude": "44.91733655855981",
+    "longitude": "78.14855012998433"
+  },
+  {
+    "connectivityStatus": "unknown",
+    "tnsDeviceName": "ascend-27",
+    "latitude": "39.86835548126956",
+    "longitude": "24.91032393563213"
+  },
+  {
+    "connectivityStatus": "offline",
+    "tnsDeviceName": "ascend-28",
+    "latitude": "66.55066800349508",
+    "longitude": "56.439272208969506"
+  },
+  {
+    "connectivityStatus": "offline",
+    "tnsDeviceName": "ascend-29",
+    "latitude": "42.188026919839",
+    "longitude": "6.674459866605712"
+  },
+  {
+    "connectivityStatus": "fullService",
+    "tnsDeviceName": "ascend-30",
+    "latitude": "38.36780050229639",
+    "longitude": "80.61177998191044"
+  },
+  {
+    "connectivityStatus": "fullService",
+    "tnsDeviceName": "ascend-31",
+    "latitude": "32.10307082950882",
+    "longitude": "72.62820268933308"
+  },
+  {
+    "connectivityStatus": "offline",
+    "tnsDeviceName": "ascend-32",
+    "latitude": "6.102696974441786",
+    "longitude": "53.22231214256587"
+  },
+  {
+    "connectivityStatus": "unknown",
+    "tnsDeviceName": "ascend-33",
+    "latitude": "31.36636964720353",
+    "longitude": "45.034312961567835"
+  },
+  {
+    "connectivityStatus": "fullService",
+    "tnsDeviceName": "ascend-34",
+    "latitude": "50.064520321929265",
+    "longitude": "14.452263944277476"
+  },
+  {
+    "connectivityStatus": "offline",
+    "tnsDeviceName": "ascend-35",
+    "latitude": "36.65632109116501",
+    "longitude": "78.02389081132713"
+  },
+  {
+    "connectivityStatus": "unknown",
+    "tnsDeviceName": "ascend-36",
+    "latitude": "24.394820481209404",
+    "longitude": "45.12255414459493"
+  },
+  {
+    "connectivityStatus": "onBackup",
+    "tnsDeviceName": "ascend-37",
+    "latitude": "37.9510993267359",
+    "longitude": "77.93019830442904"
+  },
+  {
+    "connectivityStatus": "unknown",
+    "tnsDeviceName": "ascend-38",
+    "latitude": "67.88585361207087",
+    "longitude": "38.351641589064556"
+  },
+  {
+    "connectivityStatus": "fullService",
+    "tnsDeviceName": "ascend-39",
+    "latitude": "63.654432067231745",
+    "longitude": "40.47814847213959"
+  },
+  {
+    "connectivityStatus": "fullService",
+    "tnsDeviceName": "ascend-40",
+    "latitude": "31.679454050101093",
+    "longitude": "55.00665908108685"
+  },
+  {
+    "connectivityStatus": "fullService",
+    "tnsDeviceName": "ascend-41",
+    "latitude": "38.58606751327908",
+    "longitude": "38.229951188837035"
+  },
+  {
+    "connectivityStatus": "fullService",
+    "tnsDeviceName": "ascend-42",
+    "latitude": "31.60124239032038",
+    "longitude": "76.7390398373864"
+  },
+  {
+    "connectivityStatus": "onBackup",
+    "tnsDeviceName": "ascend-43",
+    "latitude": "31.80809350075125",
+    "longitude": "57.1496467990284"
+  },
+  {
+    "connectivityStatus": "onBackup",
+    "tnsDeviceName": "ascend-44",
+    "latitude": "13.614183715051182",
+    "longitude": "78.39532903612067"
+  },
+  {
+    "connectivityStatus": "fullService",
+    "tnsDeviceName": "ascend-45",
+    "latitude": "65.1410948310247",
+    "longitude": "38.27615795817712"
+  },
+  {
+    "connectivityStatus": "fullService",
+    "tnsDeviceName": "ascend-46",
+    "latitude": "20.816016536617827",
+    "longitude": "69.50263505401065"
+  },
+  {
+    "connectivityStatus": "onBackup",
+    "tnsDeviceName": "ascend-47",
+    "latitude": "14.412204486559817",
+    "longitude": "31.973649438174995"
+  },
+  {
+    "connectivityStatus": "fullService",
+    "tnsDeviceName": "ascend-48",
+    "latitude": "54.37487146629131",
+    "longitude": "15.462609539420672"
+  },
+  {
+    "connectivityStatus": "fullService",
+    "tnsDeviceName": "ascend-49",
+    "latitude": "42.33952182231461",
+    "longitude": "74.74161095511494"
+  },
+  {
+    "connectivityStatus": "fullService",
+    "tnsDeviceName": "ascend-50",
+    "latitude": "7.391682015465213",
+    "longitude": "79.69273216526136"
+  },
+  {
+    "connectivityStatus": "fullService",
+    "tnsDeviceName": "ascend-51",
+    "latitude": "42.148528350774576",
+    "longitude": "19.46991888986679"
+  },
+  {
+    "connectivityStatus": "fullService",
+    "tnsDeviceName": "ascend-52",
+    "latitude": "48.55481184958634",
+    "longitude": "51.407640333950056"
+  },
+  {
+    "connectivityStatus": "onBackup",
+    "tnsDeviceName": "ascend-53",
+    "latitude": "40.62352638776371",
+    "longitude": "79.18789288806781"
+  },
+  {
+    "connectivityStatus": "onBackup",
+    "tnsDeviceName": "ascend-54",
+    "latitude": "4.251903229577084",
+    "longitude": "2.4833350060527906"
+  },
+  {
+    "connectivityStatus": "fullService",
+    "tnsDeviceName": "ascend-55",
+    "latitude": "47.093295737117394",
+    "longitude": "79.96787911931624"
+  },
+  {
+    "connectivityStatus": "fullService",
+    "tnsDeviceName": "ascend-56",
+    "latitude": "31.516377653038077",
+    "longitude": "4.959546256812629"
+  },
+  {
+    "connectivityStatus": "onBackup",
+    "tnsDeviceName": "ascend-57",
+    "latitude": "17.208665762423887",
+    "longitude": "55.47502728846192"
+  },
+  {
+    "connectivityStatus": "onBackup",
+    "tnsDeviceName": "ascend-58",
+    "latitude": "26.304611756138264",
+    "longitude": "67.1199389926773"
+  },
+  {
+    "connectivityStatus": "fullService",
+    "tnsDeviceName": "ascend-59",
+    "latitude": "30.68471728109901",
+    "longitude": "38.811735645873"
+  },
+  {
+    "connectivityStatus": "fullService",
+    "tnsDeviceName": "ascend-60",
+    "latitude": "12.450340149845772",
+    "longitude": "40.8428838048268"
+  },
+  {
+    "connectivityStatus": "fullService",
+    "tnsDeviceName": "ascend-61",
+    "latitude": "8.082286936823197",
+    "longitude": "62.65273313310293"
+  },
+  {
+    "connectivityStatus": "fullService",
+    "tnsDeviceName": "ascend-62",
+    "latitude": "43.65672932965132",
+    "longitude": "21.68964534889048"
+  },
+  {
+    "connectivityStatus": "onBackup",
+    "tnsDeviceName": "ascend-63",
+    "latitude": "67.41293878554798",
+    "longitude": "68.79617693388795"
+  },
+  {
+    "connectivityStatus": "onBackup",
+    "tnsDeviceName": "ascend-64",
+    "latitude": "15.806910127828026",
+    "longitude": "17.663750007791904"
+  },
+  {
+    "connectivityStatus": "fullService",
+    "tnsDeviceName": "ascend-65",
+    "latitude": "50.57295360974564",
+    "longitude": "41.621233350812474"
+  },
+  {
+    "connectivityStatus": "fullService",
+    "tnsDeviceName": "ascend-66",
+    "latitude": "28.950899076371037",
+    "longitude": "4.178404610811736"
+  },
+  {
+    "connectivityStatus": "onBackup",
+    "tnsDeviceName": "ascend-67",
+    "latitude": "21.37209210727248",
+    "longitude": "18.336048503183612"
+  },
+  {
+    "connectivityStatus": "onBackup",
+    "tnsDeviceName": "ascend-68",
+    "latitude": "21.409671363976063",
+    "longitude": "73.28872887103812"
+  },
+  {
+    "connectivityStatus": "fullService",
+    "tnsDeviceName": "ascend-69",
+    "latitude": "58.19884077898926",
+    "longitude": "79.69664929977746"
+  },
+  {
+    "connectivityStatus": "fullService",
+    "tnsDeviceName": "ascend-70",
+    "latitude": "37.95151723900278",
+    "longitude": "41.67559200529581"
+  },
+  {
+    "connectivityStatus": "fullService",
+    "tnsDeviceName": "ascend-71",
+    "latitude": "23.229339846238453",
+    "longitude": "74.44309083216234"
+  },
+  {
+    "connectivityStatus": "fullService",
+    "tnsDeviceName": "ascend-72",
+    "latitude": "60.99048015839758",
+    "longitude": "50.37267854070272"
+  },
+  {
+    "connectivityStatus": "onBackup",
+    "tnsDeviceName": "ascend-73",
+    "latitude": "38.16551585056968",
+    "longitude": "49.21300065951391"
+  },
+  {
+    "connectivityStatus": "onBackup",
+    "tnsDeviceName": "ascend-74",
+    "latitude": "42.204909076064595",
+    "longitude": "60.80217666909583"
+  },
+  {
+    "connectivityStatus": "fullService",
+    "tnsDeviceName": "ascend-75",
+    "latitude": "30.805357806059774",
+    "longitude": "73.63391639370914"
+  },
+  {
+    "connectivityStatus": "fullService",
+    "tnsDeviceName": "ascend-76",
+    "latitude": "50.96228472171705",
+    "longitude": "55.94696592439175"
+  },
+  {
+    "connectivityStatus": "onBackup",
+    "tnsDeviceName": "ascend-77",
+    "latitude": "66.49790401686506",
+    "longitude": "59.09793399643981"
+  },
+  {
+    "connectivityStatus": "onBackup",
+    "tnsDeviceName": "ascend-78",
+    "latitude": "56.56123885499691",
+    "longitude": "8.020582997579865"
+  },
+  {
+    "connectivityStatus": "fullService",
+    "tnsDeviceName": "ascend-79",
+    "latitude": "63.2264137937041",
+    "longitude": "69.24462062977149"
+  },
+  {
+    "connectivityStatus": "fullService",
+    "tnsDeviceName": "ascend-80",
+    "latitude": "36.96492885724733",
+    "longitude": "75.43416346718656"
+  },
+  {
+    "connectivityStatus": "fullService",
+    "tnsDeviceName": "ascend-81",
+    "latitude": "22.652891290271825",
+    "longitude": "14.467584534563688"
+  },
+  {
+    "connectivityStatus": "fullService",
+    "tnsDeviceName": "ascend-82",
+    "latitude": "59.61727375251249",
+    "longitude": "14.581608518527215"
+  },
+  {
+    "connectivityStatus": "onBackup",
+    "tnsDeviceName": "ascend-83",
+    "latitude": "8.574132543591647",
+    "longitude": "77.0864903400546"
+  },
+  {
+    "connectivityStatus": "onBackup",
+    "tnsDeviceName": "ascend-84",
+    "latitude": "23.99131265166911",
+    "longitude": "64.14520294577754"
+  },
+  {
+    "connectivityStatus": "fullService",
+    "tnsDeviceName": "ascend-85",
+    "latitude": "59.53188137825116",
+    "longitude": "52.274907053454974"
+  },
+  {
+    "connectivityStatus": "fullService",
+    "tnsDeviceName": "ascend-86",
+    "latitude": "53.90343814793718",
+    "longitude": "66.74439750386449"
+  },
+  {
+    "connectivityStatus": "onBackup",
+    "tnsDeviceName": "ascend-87",
+    "latitude": "48.06044386670162",
+    "longitude": "65.69673807591647"
+  },
+  {
+    "connectivityStatus": "onBackup",
+    "tnsDeviceName": "ascend-88",
+    "latitude": "27.728994614804968",
+    "longitude": "69.02140655171854"
+  },
+  {
+    "connectivityStatus": "fullService",
+    "tnsDeviceName": "ascend-89",
+    "latitude": "27.728994614804968",
+    "longitude": "69.02140655171854"
+  },
+  {
+    "connectivityStatus": "fullService",
+    "tnsDeviceName": "ascend-90",
+    "latitude": "62.54758866702779",
+    "longitude": "28.226191790070953"
+  },
+  {
+    "connectivityStatus": "fullService",
+    "tnsDeviceName": "ascend-91",
+    "latitude": "49.67817813360209",
+    "longitude": "34.736901472442526"
+  },
+  {
+    "connectivityStatus": "fullService",
+    "tnsDeviceName": "ascend-92",
+    "latitude": "25.67524715779549",
+    "longitude": "48.17532766215959"
+  },
+  {
+    "connectivityStatus": "onBackup",
+    "tnsDeviceName": "ascend-93",
+    "latitude": "30.735027248142657",
+    "longitude": "30.447028387839342"
+  },
+  {
+    "connectivityStatus": "onBackup",
+    "tnsDeviceName": "ascend-94",
+    "latitude": "21.129278972811697",
+    "longitude": "27.14369711401398"
+  },
+  {
+    "connectivityStatus": "fullService",
+    "tnsDeviceName": "ascend-95",
+    "latitude": "23.396747300944906",
+    "longitude": "52.484571806447796"
+  },
+  {
+    "connectivityStatus": "fullService",
+    "tnsDeviceName": "ascend-96",
+    "latitude": "7.978780002444051",
+    "longitude": "60.863004755166926"
+  },
+  {
+    "connectivityStatus": "onBackup",
+    "tnsDeviceName": "ascend-97",
+    "latitude": "52.740836653710694",
+    "longitude": "5.7270818470616405"
+  },
+  {
+    "connectivityStatus": "fullService",
+    "tnsDeviceName": "ascend-98",
+    "latitude": "58.66050385916685",
+    "longitude": "4.753489235284029"
+  },
+  {
+    "connectivityStatus": "onBackup",
+    "tnsDeviceName": "ascend-99",
+    "latitude": "18.911405535848683",
+    "longitude": "45.41374564270813"
+  },
+  {
+    "connectivityStatus": "fullService",
+    "tnsDeviceName": "ascend-100",
+    "latitude": "2.4564559980608784",
+    "longitude": "24.624589446423165"
+  },
+  {
+    "connectivityStatus": "fullService",
+    "tnsDeviceName": "ascend-101",
+    "latitude": "65.1944923426159",
+    "longitude": "30.98819236301891"
+  },
+  {
+    "connectivityStatus": "onBackup",
+    "tnsDeviceName": "ascend-102",
+    "latitude": "8.713496577772046",
+    "longitude": "21.11855136364824"
+  },
+  {
+    "connectivityStatus": "fullService",
+    "tnsDeviceName": "ascend-103",
+    "latitude": "13.205691372047122",
+    "longitude": "2.6482965470080124"
+  },
+  {
+    "connectivityStatus": "onBackup",
+    "tnsDeviceName": "ascend-104",
+    "latitude": "5.119747223016394",
+    "longitude": "1.316763370143427"
+  },
+  {
+    "connectivityStatus": "fullService",
+    "tnsDeviceName": "ascend-105",
+    "latitude": "25.461496702119128",
+    "longitude": "35.176189346551936"
+  },
+  {
+    "connectivityStatus": "fullService",
+    "tnsDeviceName": "ascend-111",
+    "latitude": "47.350172616661276",
+    "longitude": "4.967836535064624"
+  },
+  {
+    "connectivityStatus": "fullService",
+    "tnsDeviceName": "ascend-112",
+    "latitude": "42.403343476951285",
+    "longitude": "74.45838999630385"
+  },
+  {
+    "connectivityStatus": "fullService",
+    "tnsDeviceName": "ascend-113",
+    "latitude": "32.16016990771716",
+    "longitude": "55.06037512706263"
+  },
+  {
+    "connectivityStatus": "fullService",
+    "tnsDeviceName": "ascend-114",
+    "latitude": "45.90760402894185",
+    "longitude": "77.20416599127847"
+  },
+  {
+    "connectivityStatus": "fullService",
+    "tnsDeviceName": "ascend-115",
+    "latitude": "23.064445274237777",
+    "longitude": "53.03466419461515"
+  }
+]

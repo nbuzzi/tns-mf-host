@@ -1,0 +1,86 @@
+{
+  "name": "tnso-apps/user-guide",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "tnso-apps/user-guide/src",
+  "projectType": "application",
+  "targets": {
+    "build": {
+      "executor": "@nx/webpack:webpack",
+      "outputs": ["{options.outputPath}"],
+      "defaultConfiguration": "production",
+      "options": {
+        "compiler": "babel",
+        "outputPath": "dist/tnso-apps/user-guide",
+        "index": "tnso-apps/user-guide/src/index.html",
+        "baseHref": "/",
+        "main": "tnso-apps/user-guide/src/main.tsx",
+        "tsConfig": "tnso-apps/user-guide/tsconfig.app.json",
+        "assets": [
+          "tnso-apps/user-guide/src/favicon.ico",
+          "tnso-apps/user-guide/src/assets"
+        ],
+        "styles": ["tnso-apps/user-guide/src/styles.scss"],
+        "scripts": [],
+        "webpackConfig": "tnso-apps/user-guide/webpack.config.ts",
+        "isolatedConfig": true
+      },
+      "configurations": {
+        "development": {
+          "extractLicenses": false,
+          "optimization": false,
+          "sourceMap": true,
+          "vendorChunk": true
+        },
+        "production": {
+          "fileReplacements": [
+            {
+              "replace": "env.ts",
+              "with": "env.ts.sample"
+            }
+          ],
+          "optimization": true,
+          "outputHashing": "all",
+          "sourceMap": false,
+          "namedChunks": false,
+          "extractLicenses": true,
+          "vendorChunk": false
+        }
+      }
+    },
+    "serve": {
+      "executor": "@nx/webpack:dev-server",
+      "defaultConfiguration": "development",
+      "options": {
+        "buildTarget": "user-guide:build",
+        "hmr": true
+      },
+      "configurations": {
+        "development": {
+          "buildTarget": "user-guide:build:development"
+        },
+        "production": {
+          "buildTarget": "user-guide:build:production",
+          "hmr": false
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nx/eslint:lint",
+      "outputs": ["{options.outputFile}"]
+    },
+    "serve-static": {
+      "executor": "@nx/web:file-server",
+      "options": {
+        "buildTarget": "user-guide:build"
+      }
+    },
+    "test": {
+      "executor": "@nx/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
+      "options": {
+        "jestConfig": "tnso-apps/user-guide/jest.config.ts"
+      }
+    }
+  },
+  "tags": []
+}

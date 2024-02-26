@@ -1,0 +1,18 @@
+.sidebarArea {
+  position: fixed;
+  flex-shrink: 0;
+  height: 100%;
+  z-index: 5;
+
+  .expandible-icon {
+    position: absolute;
+    border-radius: 0.5rem;
+    padding: 0.2rem 0.65rem;
+    top: 1rem;
+    right: -1rem;
+    cursor: pointer;
+  }
+  .divider-sidebar {
+    background-color: #1c2e61;
+  }
+}

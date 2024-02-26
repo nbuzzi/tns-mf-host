@@ -1,0 +1,122 @@
+{
+    "data": [
+        {
+            "id": 1,
+            "attributes": {
+                "userGuide": "TNSOnline provides customers a web portal interface to monitor in real-time the status of TNSLink and TNSConnect services\n\n![Login view](/uploads/initial_Page_a11bf4fffb.png)\n",
+                "createdAt": "2023-08-24T19:53:30.665Z",
+                "updatedAt": "2023-08-29T16:45:39.371Z",
+                "publishedAt": "2023-08-24T19:53:40.112Z",
+                "locale": "en",
+                "Title": " Introduction"
+            }
+        },
+        {
+            "id": 2,
+            "attributes": {
+                "userGuide": "### Accessing TNSOnline\n\nThe URL to access TNSOnline is: https://ap-online.tnsi.com\nEnter the User Name and Password via the Sign In page and select the Sign In button.\n\n![Login view](/uploads/initial_Page_a11bf4fffb.png)\n\nIf the password has been forgotten, the user may refresh it via the<u> _Forgot Password?</u>_ Link.\n\n![resetPasswordPage.png](/uploads/reset_Password_Page_5e1709bdfa.png)\n\nEnter the email address of the user and select the Send button.  An email is sent to the user’s email address with a link allowing the user to set a new password.  \n\n_Note – This feature will also unlock the User’s account in the even_\n",
+                "createdAt": "2023-08-24T20:04:33.220Z",
+                "updatedAt": "2023-08-25T15:39:04.223Z",
+                "publishedAt": "2023-08-24T20:04:36.323Z",
+                "locale": "en",
+                "Title": "Accessing TNSOnline"
+            }
+        },
+        {
+            "id": 3,
+            "attributes": {
+                "userGuide": "### Portal Navegation\n\nThe Portal pages are framed with the Portal’s Menu of features along the left side of the portal pages and User Profile features positioned in the upper right-hand corner.\n\n#### Feature Menu\n\n![portalNavigation.png](/uploads/portal_Navigation_4825991565.png)\n\nSelect the ![menu.png](/uploads/menu_dee2fc5323.png) icon to toggle the Menu display between Minimized and Expanded. \n![mainMenuDisplayToggle-Ecpanded.png](/uploads/main_Menu_Display_Toggle_Ecpanded_9126021023.png)\n![mainMenuDisplayToggle-Minimized.png](/uploads/main_Menu_Display_Toggle_Minimized_1376a10512.png)\n\nSelect the  icon ![Open Menu](/uploads/icon_Open_Menu_de85a6ed4e.png) next to a Menu category to reveal the available features\n\n![menuCategoryAvailableFeatures](/uploads/menu_Category_Available_Features_4a38c63be7.png)\n\nSelect the ![iconCloseMenu](/uploads/icon_Close_Menu_d5f04a13fc.png) icon to close the Menu Category\n\n\n",
+                "createdAt": "2023-08-24T20:39:29.386Z",
+                "updatedAt": "2023-08-25T20:29:08.075Z",
+                "publishedAt": "2023-08-24T20:39:30.527Z",
+                "locale": "en",
+                "Title": "Portal Navegation"
+            }
+        },
+        {
+            "id": 4,
+            "attributes": {
+                "userGuide": "### Records List Grid View\n\nTNSOnline offers a variety of views listing records in a grid view.  Figure 6 provides and example Records List Grid View.\n\n![exampleRecordsListGridView.png](/uploads/example_Records_List_Grid_View_8db239ba29.png)\n\nThe Records List Grid View consists of the following key elements:\nColumn Title bar with labels indicating the type of data provided within each column.\nFilter menu bar listed under the Column Title bar.  The different type of field filter types include:\n\n ![filterByDate.png](/uploads/filter_By_Date_bf1bd524cf.png) – Filter by Date / Time\n\n![filterByStringValue.png](/uploads/filter_By_String_Value_732b9e6837.png) – Filter by string value.  Records are dynamically filtered according to the string typed with each key pressed.\n\n![dropdownList.png](/uploads/dropdown_List_b8f8db6fe0.png) – Dropdown list\n\nCurrent Records Displayed – An indication of the currently displayed records and number of available records is displayed in the bottom left hand corner of the Records List Grid View.  For exaTNSmple ![records.png](/uploads/records_e5c617ca42.png),  indicates that the grid currently displays records 1 through 10 and there are 45 totals records as currently filtered.\n\n ![paginationControl.png](/uploads/pagination_Control_11ef1abf7a.png) (Pagination Controls) – The user can select a different page of records to display via the Pagination controls as indicated below:\n\n ![decreaseOnePage.png](/uploads/decrease_One_Page_7afd7305dc.png)– Decrease 1 page of records\n\n ![jumpToPages.png](/uploads/jump_To_Pages_2d2a705c9c.png)– Page 1 of 5 pages is currently being displayed.  The user may jump to pages 2, 3, 4 or 5 by selecting the page number.\n\n ![incraseOnePage.png](/uploads/incrase_One_Page_1399a39b60.png)– Increase 1 page of records\n\n ![exprtButton.png](/uploads/exprt_Button_76405e7933.png)\n (Export Button)– When pressed the details as currently filtered in the Records List Grid View are exported to a Microsoft Excel (.xlsx) file.\n\n",
+                "createdAt": "2023-08-25T20:38:40.197Z",
+                "updatedAt": "2023-08-25T21:10:27.894Z",
+                "publishedAt": "2023-08-25T20:38:42.710Z",
+                "locale": "en",
+                "Title": "Records List Grid View"
+            }
+        },
+        {
+            "id": 5,
+            "attributes": {
+                "userGuide": "Select the ![userIcon.png](/uploads/user_Icon_bff111d6cc.png) icon to display User’s log in details.  \n\n![usersLog.png](/uploads/users_Log_a780b13d27.png)\n\nChoose the “My Profile” option to open the User’s profile page.\n\n![usersProfileDetails.png](/uploads/users_Profile_Details_36050e8564.png)\n",
+                "createdAt": "2023-08-25T21:12:18.823Z",
+                "updatedAt": "2023-08-25T21:17:48.107Z",
+                "publishedAt": "2023-08-25T21:17:48.103Z",
+                "locale": "en",
+                "Title": "User Profile"
+            }
+        },
+        {
+            "id": 6,
+            "attributes": {
+                "userGuide": "Choose the icon ![logout.png](/uploads/logout_a6e5f80a7c.png)\n to log out of the TNSOnline portal.\n",
+                "createdAt": "2023-08-28T20:27:08.220Z",
+                "updatedAt": "2023-08-28T20:29:59.367Z",
+                "publishedAt": "2023-08-29T14:49:44.487Z",
+                "locale": "en",
+                "Title": "Logout"
+            }
+        },
+        {
+            "id": 7,
+            "attributes": {
+                "userGuide": "If a user action results in an Error, an error message is displayed in the upper right-hand corner of the window.\n\n![errorMessage.png](/uploads/error_Message_0b00bc9fbc.png)",
+                "createdAt": "2023-08-28T20:30:59.610Z",
+                "updatedAt": "2023-08-28T20:30:59.610Z",
+                "publishedAt": "2023-08-29T14:49:44.487Z",
+                "locale": "en",
+                "Title": "Error Messages"
+            }
+        },
+        {
+            "id": 8,
+            "attributes": {
+                "userGuide": "The TNSOnline main menu allows a user to access TNS service monitoring features of TNSOnline.  \n\n#### Map View\n\nThe Devices monitoring feature is under the Monitoring main menu item.  After selecting the Monitoring | Devices menu option the Device Monitoring Dashboard is displayed.  The Device dashboard provides a map view of devices.  The user can filter the devices in view by TNS Service Status type across the top and by ACNA – Company Name along the left-hand side. \n\n![ devicesMonitoringDashboard .png](/uploads/devices_Monitoring_Dashboard_b8618341ba.png)\n\n\n \nUsers can include/exclude devices from being viewed via the map by checking/unchecking the boxes beside the TNS Service Status’ above the map and the ACNA groupings on the left side of the map as indicated in figure 10.\n\n![filteringGroupConnectivityStatus.png](/uploads/filtering_Group_Connectivity_Status_c32a1d730d.png)\n\n#### TNS Service Status\n\nThe TNS Service Status values include:\n**Full Service** – Indicates the device is connected to the TNS core network (UP) over all Primary WAN connections configured at the device.\nOn Primary – If a device is configured with more than 1 Primary WAN, the On Primary status indicates the device is UP on a Primary WAN, but at least 1 configured Primary WAN is not available.\n**On Backup**– Indicates the device is UP over a Secondary (backup) WAN connection.\n**Offline** – Indicates the device is not connected to the TNS core network (DOWN).\n**Indeterminate** – Indicates that the device has attempted to connect with the TNS Core Network, but something is not configured properly.  Please escalates this connection status to the TNS Help Desk for assistance.\n**Unknown** – Indicates the device has not yet attempted to connect with the TNS Core Network.  Most likely the device has not yet been installed by the customer. \nDevice Groupings\nDevices are grouped by their assigned ACNA / Company / Member on the left-hand side of the Map.  User’s may choose to include/exclude devices from the Map View and Grid Views by checking/unchecking their ACNA / Company / Member group.\n\n![deviceGroupingACNA.png](/uploads/device_Grouping_ACNA_9ca83e4b3e.png)\n\nThe By ACNA grouping image includes a string providing the customer entity that owns the devices within the group and the unique ACNA value assigned to that entity by TNS.  The number of devices included with the group is indicated in parentheses after the Entity Name.  The format of the By ACNA grouping string is: “<ACNA> - <Entity Name> (# of devices in group)”.  \nA pie chart appears to the left of each device grouping indicating the percentage of devices within the group that have a TNS Service status of Full Service.  The circle border is colored to demonstrate the percentage of devices with other TNS Service status values.  In the example below “apna – Auspaynet (2)” indicates there are 2 devices included with the group, 50% of the group has a TNS Service Status of Full Service and the remaining percentage of devices has a TNS Service Status of On Backup.  \n\n![exampleGroupingByACNA.png](/uploads/example_Grouping_By_ACNA_3d758f60e3.png)\n",
+                "createdAt": "2023-08-28T20:58:20.562Z",
+                "updatedAt": "2023-08-29T13:22:13.175Z",
+                "publishedAt": "2023-08-29T14:49:44.487Z",
+                "locale": "en",
+                "Title": "Monitoring Menu Option"
+            }
+        },
+        {
+            "id": 9,
+            "attributes": {
+                "userGuide": "In locations where a cluster of devices are located, they are depicted together in a circle indicating the number of devices included in the cluster.  Clusters of devices from 2 to 10 are displayed in a blue circle.  Clusters of devices greater than 10 are displayed in a green circle.  A singular device that is not clustered near other devices is depicted with the ![deviceIcon.png](/uploads/device_Icon_8ee40f498a.png) icon. \n\n![clusterOfDevices.png](/uploads/cluster_Of_Devices_d490837f97.png)\n\nSelect a device cluster to zoom in on the cluster.  Once zoomed in close enough, choose a singular device to review device details. \n\n![map ViewDeviceSelection.png](/uploads/map_View_Device_Selection_80ad38587a.png)\n\nSelect the “Select Device” link to display the Device View of the selected device.  \nNote – Refer to the “Device Details View” section of this User Guide for details.\n\nUsers can zoom in or out on the map via the ![zoomMap.png](/uploads/zoom_Map_e1034568e3.png) feature of the map.  The ![restoresZoom.png](/uploads/restores_Zoom_727c1aa806.png) icon restores the map to the maximum zoom out position appropriate for viewing the devices selected by Group and/or TNS Service Status.  \n\nThe user may also reposition the map view by grabbing (mouse button) and dragging the map using the mouse driven “hand” cursor. \nDevices without validated address details \nIn some instances, TNSOnline is not able to identify the Geolocation of the site address where a device is located.  A link to a grid view displaying these devices is available at the top left-hand corner of the map.\n\n![devicesWithoutValidatedSiteAddress.png](/uploads/devices_Without_Validated_Site_Address_8a9a94d15c.png)\n\n The User may elect to switch to the Grid view by selecting the ![gridViewButton.png](/uploads/grid_View_Button_935f2519db.png) button in the upper right-hand corner of the Map.\n\n",
+                "createdAt": "2023-08-29T14:07:42.435Z",
+                "updatedAt": "2023-08-29T14:07:42.435Z",
+                "publishedAt": "2023-08-29T14:49:44.487Z",
+                "locale": "en",
+                "Title": "Device Map View and Controls"
+            }
+        },
+        {
+            "id": 10,
+            "attributes": {
+                "userGuide": "The Grid view lists the devices shown via the map view in a verbose grid.\n\n![devicesMonitoringDashboardGridView.png](/uploads/devices_Monitoring_Dashboard_Grid_View_1be65d4cff.png)\n\nUsers may filter the Grid view via the Group by ACNA and TNS Service Status along the left and top of the Grid view.\nUsers may filter devices further via the Grid View title bar.  The following fields are available to filter devices by.\n**Has Geolocation** – Choose the value to filter by via the dropdown list:\n**Yes** – Indicates the site address is validated and a Geolocation is available.\n**No** – Indicates the site address could not be validated and a Geolocation is not available.\n**Company** – Enter the string of the company to filter by.\n**Country** – Enter the string of the country to filter by.\n**Customer Device Name** – Enter the string of the Customer assigned Device Name to filter by.\n**Operational Status** – Enter the string of the Operational Status to filter by.\n**TNS Device Name** – Enter the string of the TNS assigned Device Name to filter by.\n**Records** - Indicates which records are currently displayed via the Grid. \n![records.png](/uploads/records_ceee4d5d6f.png)\n![navegateToDifferentPage.png](/uploads/navegate_To_Different_Page_ed65adaff2.png) - Navigate to a different page of records to display within the Grid.\n![exportGridData.png](/uploads/export_Grid_Data_3258228396.png)- Export the Grid Data as currently filtered.\nSelect a device via the Grid View to view the device’s details via the Device Details View.\n![selectingDeviceViaGridView.png](/uploads/selecting_Device_Via_Grid_View_3732e55948.png)",
+                "createdAt": "2023-08-29T14:20:50.776Z",
+                "updatedAt": "2023-08-29T14:27:33.746Z",
+                "publishedAt": "2023-08-29T14:49:44.487Z",
+                "locale": "en",
+                "Title": "Grid View"
+            }
+        }
+    ],
+    "meta": {
+        "pagination": {
+            "page": 1,
+            "pageSize": 25,
+            "pageCount": 1,
+            "total": 10
+        }
+    }
+}

@@ -1,0 +1,309 @@
+openapi: "3.0.2"
+info:
+  title: Portal API Endpoints
+  version: "v1.0.0"
+
+components:
+  securitySchemes:
+    BearerToken:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT
+
+  schemas:
+    Authenticate:
+      type: object
+      properties:
+        username:
+          type: string
+        password:
+          type: string
+      example:
+        username: "admin"
+        password: "@dminPWD_2023!"
+
+    AuthenticateResponse:
+      type: object
+      properties:
+        accessToken:
+          type: string
+        refreshToken:
+          type: string
+      example:
+        accessToken: "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJ0b3B0YWwuY29tIiwiZXhwIjoxNDI2NDIwODAwLCJodHRwOi8vdG9wdGFsLmNvbS9qd3RfY2xhaW1zL2lzX2FkbWluIjp0cnVlLCJjb21wYW55IjoiVG9wdGFsIiwiYXdlc29tZSI6dHJ1ZX0.yRQYnWzskCZUxPwaQupWkiUzKELZ49eM7oWxAQK_ZXw"
+        refreshToken: "xRxGGEpVawiUak6He367W3oeOfh"
+
+    PaginationResponse:
+      type: object
+      properties:
+        totalRecords:
+          type: number
+          example: 10
+        returnedRecords:
+          type: number
+          example: 1
+
+    DeviceDataResponse:
+      type: object
+      properties:
+        acna:
+          type: string
+          example: "aafu"
+        companyName:
+          type: string
+          example: Alliance Bernstein
+        connectivityStatus:
+          type: string
+          example: onBackup
+        customerDeviceName:
+          type: string
+          example: Device Center IT
+        country:
+          type: string
+          example: Italy
+        operationalStatus:
+          type: string
+          example: Installed
+        service:
+          type: string
+          example: TNSLink
+        tnsDeviceName:
+          type: string
+          example: aafu1
+
+    connectivityStatus:
+      type: object
+      properties:
+        fullService:
+          type: number
+        onPrimary:
+          type: number
+        onBackup:
+          type: number
+        offline:
+          type: number
+        inderterminate:
+          type: number
+        unknown:
+          type: number
+      example:
+        fullService: 1900
+        onPrimary: 90
+        onBackup: 8
+        offline: 1
+        inderterminate: 0
+        unknown: 1
+
+    GroupsMembers:
+      type: object
+      properties:
+        acna:
+          type: string
+        companyName:
+          type: string
+        totalNumberOfDevices:
+          type: number
+        connectivityStatus:
+          type: object
+          ref: "#/components/schemas/connectivityStatus"
+      example:
+        acna: "apl"
+        companyName: "Apple"
+        totalNumberOfDevices: 2000
+        connectivityStatus:
+          fullService: 1900
+          onPrimary: 90
+          onBackup: 8
+          offline: 1
+          inderterminate: 0
+          unknown: 1
+
+security:
+  - BearerToken: []
+
+paths:
+  /v1/portalapi/authenticate:
+    post:
+      summary: Authenticate
+      security: []
+      tags:
+        - Authentication
+      requestBody:
+        required: true
+        description: User and Password to login
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/Authenticate"
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/AuthenticateResponse"
+        "400":
+          description: Bad Request
+        "404":
+          description: Not Found
+
+  /v1/portalapi/authenticate/refreshToken:
+    post:
+      summary: Refresh Token
+      description: To request a new Access Token when expired
+      security: []
+      tags:
+        - Authentication
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                refreshToken:
+                  type: string
+              example:
+                refreshToken: "xRxGGEpVawiUak6He367W3oeOfh"
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/AuthenticateResponse"
+        "400":
+          description: Bad Request
+        "404":
+          description: Not Found
+
+  /v1/portalapi/devices:
+    get:
+      summary: Fetch All Devices
+      description: To fetch and filter devices information associated to the user
+      tags:
+        - Devices
+      parameters:
+        - in: query
+          name: acnas
+          schema:
+            type: string
+            example: "eftx,bml,aafu"
+        - in: query
+          name: companyName
+          schema:
+            type: string
+            example: "Alliance Bernstein"
+        - in: query
+          name: connectivityStatus
+          schema:
+            type: string
+            example: "fullService,onBackup"
+        - in: query
+          name: customerDeviceName
+          schema:
+            type: string
+            example: "Barclay"
+        - in: query
+          name: countries
+          schema:
+            type: string
+            example: "USA,Italy"
+        - in: query
+          name: operationalStatus
+          schema:
+            type: string
+            example: "configured"
+        - in: query
+          name: orderBy
+          schema:
+            type: string
+            default: ASC
+            example: DESC
+        - in: query
+          name: recordsPerPage
+          schema:
+            type: number
+            maximum: 200
+            default: 100
+            example: 30
+        - in: query
+          name: service
+          schema:
+            type: string
+            example: "tnslink"
+        - in: query
+          name: sortBy
+          schema:
+            type: string
+            default: tnsDeviceName
+            example: connectivityStatus
+        - in: query
+          name: startAtRecord
+          schema:
+            type: number
+            default: 0
+            minimum: 0
+            example: 100
+        - in: query
+          name: tnsDeviceName
+          schema:
+            type: string
+            example: "eftx03043v,bml26153v"
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                allOf:
+                  - $ref: "#/components/schemas/PaginationResponse"
+                  - properties:
+                      devices:
+                        type: array
+                        items:
+                          $ref: "#/components/schemas/DeviceDataResponse"
+        "400":
+          description: Bad Request
+        "404":
+          description: Not Found
+
+  /v1/portalapi/devices/count/connectivityStatus:
+    get:
+      summary: Count Number of Devices Grouped by Connectivity Status
+      description: To count the number of devices, grouped by connectivity status, associated to the user
+      tags:
+        - Devices
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                $ref: "#/components/schemas/connectivityStatus"
+        "400":
+          description: Bad Request
+        "404":
+          description: Not Found
+
+  /v1/portalapi/devices/groups/members:
+    get:
+      summary: Fetch Groups Grouped by Members
+      description: To fetch information per member associated to the user
+      tags:
+        - Devices
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/GroupsMembers"
+        "400":
+          description: Bad Request
+        "404":
+          description: Not Found

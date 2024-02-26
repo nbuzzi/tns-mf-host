@@ -1,0 +1,47 @@
+{
+  "name": "tnso-libs/roles-and-permissions",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "tnso-libs/roles-and-permissions/src",
+  "projectType": "library",
+  "tags": [],
+  "targets": {
+    "lint": {
+      "executor": "@nx/eslint:lint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": [
+          "tnso-libs/roles-and-permissions/**/*.{ts,tsx,js,jsx}"
+        ]
+      }
+    },
+    "build": {
+      "executor": "@nx/vite:build",
+      "outputs": ["{options.outputPath}"],
+      "defaultConfiguration": "production",
+      "options": {
+        "outputPath": "tnso-libs/roles-and-permissions/dist"
+      },
+      "configurations": {
+        "development": {
+          "mode": "development"
+        },
+        "production": {
+          "mode": "production"
+        }
+      }
+    },
+    "pack": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "nx run tnso-libs/roles-and-permissions:build && cd tnso-libs/roles-and-permissions && npm pack && move .\\*.tgz ..\\packages\\"
+      }
+    },
+    "test": {
+      "executor": "@nx/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
+      "options": {
+        "jestConfig": "tnso-libs/roles-and-permissions/jest.config.ts"
+      }
+    }
+  }
+}

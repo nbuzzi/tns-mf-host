@@ -1,0 +1,181 @@
+.date-title {
+  font-family: Helvetica;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 24px;
+  letter-spacing: 0em;
+  text-align: center;
+}
+
+//       <--- Calendar --->
+.rmdp-wrapper.rmdp-shadow {
+  margin-top: 2%;
+  width: 386px;
+  left: 449px;
+  top: 265px;
+  box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 16px;
+  border: none;
+}
+
+.rmdp-calendar {
+  margin-top: 2%;
+  margin-bottom: 3%;
+  width: 386px;
+  height: 280px;
+  border-radius: 16px;
+  border: none;
+}
+
+.rmdp-input {
+  height: 33px;
+  width: 14rem;
+  left: 0px;
+  top: 0px;
+  border-radius: 5px;
+  border: none;
+  padding-left: 11px;
+  padding-right: 15px;
+  background: $primary !important;
+  font-family: Helvetica;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0em;
+  text-align: center;
+  color: white;
+}
+.rmdp-time-picker {
+  input {
+    background-color: $rmdp-pickerd;
+  }
+}
+.rmdp-time-picker div .rmdp-am {
+  color: $black;
+}
+.rmdp-day-picker {
+  display: block !important;
+}
+.rmdp-day-picker,
+.rmdp-year-picker,
+.rmdp-month-picker {
+  background-color: $rmdp-pickerd;
+}
+
+.icon.icon-tabler.icon-tabler-calendar-event {
+  width: 11px;
+  right: 9.5px !important;
+}
+.rmdp-week-day {
+  color: $black;
+}
+
+.ep-arrow.rmdp-ep-arrow.rmdp-ep-shadow {
+  display: none;
+  background: #2b435f !important;
+}
+
+.rmdp-header-values {
+  font-family: Helvetica;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0em;
+  text-align: center;
+  color: $black;
+}
+
+.rmdp-arrow {
+  border: solid $black;
+  border-width: 0 2px 2px 0;
+  font-size: 23px;
+}
+
+@mixin arrow-container-style() {
+  color: #ffffff;
+  margin-top: 2%;
+  background: linear-gradient(0deg, $input-pickerd, $input-pickerd), $input-pickerd;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+}
+.rmdp-arrow-container.rmdp-right {
+  @include arrow-container-style();
+  margin-right: 4%;
+}
+.rmdp-arrow-container.rmdp-left {
+  @include arrow-container-style();
+  margin-left: 4%;
+}
+.rmdp-day.rmdp-selected span:not(.highlight),
+.rmdp-day.rmdp-today span {
+  background-color: $btn-border-primary;
+  border-color: $btn-border-primary;
+}
+
+.rmdp-day.rmdp-selected .highlight-red,
+.rmdp-day.rmdp-selected {
+  background: $btn-border-primary;
+  border-radius: 5px;
+}
+
+.rmdp-day {
+  color: $black !important;
+  span {
+    border-radius: 5px;
+  }
+}
+
+.rmdp-day.rmdp-today {
+  background: $btn-border-primary !important;
+  border-radius: 5px;
+}
+
+.icon-search-datepicker {
+  height: 34px;
+  margin-left: 1rem;
+}
+
+@mixin button-style() {
+  font-family: Helvetica;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 24px;
+  text-align: center;
+  margin-left: 5%;
+  margin-right: 5%;
+  margin-bottom: 10px;
+  height: 34px;
+  width: 150px;
+  left: 0px;
+  top: 0px;
+  border-radius: 5px;
+}
+.Remove {
+  @include button-style();
+  border-radius: 5px;
+  background: $white;
+  border-color: $btn-border-primary;
+}
+.Done {
+  @include button-style();
+  letter-spacing: 0em;
+  color: #ffffff;
+  background: $btn-border-primary;
+  border: none;
+}
+
+@media (max-width: 415px) {
+  .datepicker {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .rmdp-input {
+    width: 11rem;
+  }
+}
+
+@media (max-width: 915px) {
+  .rmdp-input {
+    width: 10rem;
+  }
+}

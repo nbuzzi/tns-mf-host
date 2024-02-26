@@ -1,0 +1,678 @@
+[
+  {
+    "tnsName": "ascend",
+    "status": "fullService",
+    "location": {
+      "country": {
+        "id": "CA",
+        "name": "Canada"
+      },
+      "city": {
+        "id": "CA-ON",
+        "name": "Toronto"
+      },
+      "zipCode": "667777",
+      "latLng": [41.87, -87.65]
+    }
+  },
+  {
+    "tnsName": "ascend-2",
+    "status": "fullService",
+    "location": {
+      "country": {
+        "id": "CA",
+        "name": "Canada"
+      },
+      "city": {
+        "id": "CA-ON",
+        "name": "Toronto"
+      },
+      "zipCode": "667777",
+      "latLng": [41.87, -87.65]
+    }
+  },
+  {
+    "tnsName": "ascend-3",
+    "status": "fullService",
+    "location": {
+      "country": {
+        "id": "CA",
+        "name": "Canada"
+      },
+      "city": {
+        "id": "CA-ON",
+        "name": "Toronto"
+      },
+      "zipCode": "667777",
+      "latLng": [41.87, -87.65]
+    }
+  },
+  {
+    "tnsName": "ascend-4",
+    "status": "fullService",
+    "location": {
+      "country": {
+        "id": "CA",
+        "name": "Canada"
+      },
+      "city": {
+        "id": "CA-ON",
+        "name": "Toronto"
+      },
+      "zipCode": "667777",
+      "latLng": [41.87, -87.65]
+    }
+  },
+  {
+    "tnsName": "ascend-5",
+    "status": "fullService",
+    "location": {
+      "country": {
+        "id": "CA",
+        "name": "Canada"
+      },
+      "city": {
+        "id": "CA-ON",
+        "name": "Toronto"
+      },
+      "zipCode": "667777",
+      "latLng": [41.87, -87.65]
+    }
+  },
+  {
+    "tnsName": "ascend-6",
+    "status": "fullService",
+    "location": {
+      "country": {
+        "id": "CA",
+        "name": "Canada"
+      },
+      "city": {
+        "id": "CA-ON",
+        "name": "Toronto"
+      },
+      "zipCode": "667777",
+      "latLng": [41.87, -87.65]
+    }
+  },
+  {
+    "tnsName": "ascend-7",
+    "status": "fullService",
+    "location": {
+      "country": {
+        "id": "CA",
+        "name": "Canada"
+      },
+      "city": {
+        "id": "CA-ON",
+        "name": "Toronto"
+      },
+      "zipCode": "667777",
+      "latLng": [41.87, -87.65]
+    }
+  },
+  {
+    "tnsName": "ascend-8",
+    "status": "fullService",
+    "location": {
+      "country": {
+        "id": "CA",
+        "name": "Canada"
+      },
+      "city": {
+        "id": "CA-ON",
+        "name": "Toronto"
+      },
+      "zipCode": "667777",
+      "latLng": [41.87, -87.65]
+    }
+  },
+  {
+    "tnsName": "ascend-9",
+    "status": "fullService",
+    "location": {
+      "country": {
+        "id": "CA",
+        "name": "Canada"
+      },
+      "city": {
+        "id": "CA-ON",
+        "name": "Toronto"
+      },
+      "zipCode": "667777",
+      "latLng": [41.87, -87.65]
+    }
+  },
+  {
+    "tnsName": "ascend-10",
+    "status": "fullService",
+    "location": {
+      "country": {
+        "id": "CA",
+        "name": "Canada"
+      },
+      "city": {
+        "id": "CA-ON",
+        "name": "Toronto"
+      },
+      "zipCode": "667777",
+      "latLng": [41.87, -87.65]
+    }
+  },
+  {
+    "tnsName": "ascend-11",
+    "status": "fullService",
+    "location": {
+      "country": {
+        "id": "CA",
+        "name": "Canada"
+      },
+      "city": {
+        "id": "CA-ON",
+        "name": "Toronto"
+      },
+      "zipCode": "667777",
+      "latLng": [41.87, -87.65]
+    }
+  },
+  {
+    "tnsName": "ascend-12",
+    "status": "fullService",
+    "location": {
+      "country": {
+        "id": "CA",
+        "name": "Canada"
+      },
+      "city": {
+        "id": "CA-ON",
+        "name": "Toronto"
+      },
+      "zipCode": "667777",
+      "latLng": [41.87, -87.65]
+    }
+  },
+  {
+    "tnsName": "ascend-13",
+    "status": "fullService",
+    "location": {
+      "country": {
+        "id": "CA",
+        "name": "Canada"
+      },
+      "city": {
+        "id": "CA-ON",
+        "name": "Toronto"
+      },
+      "zipCode": "667777",
+      "latLng": [41.87, -87.65]
+    }
+  },
+  {
+    "tnsName": "ascend-14",
+    "status": "fullService",
+    "location": {
+      "country": {
+        "id": "CA",
+        "name": "Canada"
+      },
+      "city": {
+        "id": "CA-ON",
+        "name": "Toronto"
+      },
+      "zipCode": "667777",
+      "latLng": [41.87, -87.65]
+    }
+  },
+  {
+    "tnsName": "ascend-15",
+    "status": "fullService",
+    "location": {
+      "country": {
+        "id": "CA",
+        "name": "Canada"
+      },
+      "city": {
+        "id": "CA-ON",
+        "name": "Toronto"
+      },
+      "zipCode": "667777",
+      "latLng": [41.87, -87.65]
+    }
+  },
+  {
+    "tnsName": "ascend-16",
+    "status": "fullService",
+    "location": {
+      "country": {
+        "id": "CA",
+        "name": "Canada"
+      },
+      "city": {
+        "id": "CA-ON",
+        "name": "Toronto"
+      },
+      "zipCode": "667777",
+      "latLng": [41.87, -87.65]
+    }
+  },
+  {
+    "tnsName": "ascend-17",
+    "status": "fullService",
+    "location": {
+      "country": {
+        "id": "CA",
+        "name": "Canada"
+      },
+      "city": {
+        "id": "CA-ON",
+        "name": "Toronto"
+      },
+      "zipCode": "667777",
+      "latLng": [41.87, -87.65]
+    }
+  },
+  {
+    "tnsName": "ascend-18",
+    "status": "fullService",
+    "location": {
+      "country": {
+        "id": "CA",
+        "name": "Canada"
+      },
+      "city": {
+        "id": "CA-ON",
+        "name": "Toronto"
+      },
+      "zipCode": "667777",
+      "latLng": [41.87, -87.65]
+    }
+  },
+  {
+    "tnsName": "ascend-19",
+    "status": "fullService",
+    "location": {
+      "country": {
+        "id": "CA",
+        "name": "Canada"
+      },
+      "city": {
+        "id": "CA-ON",
+        "name": "Toronto"
+      },
+      "zipCode": "667777",
+      "latLng": [41.87, -87.65]
+    }
+  },
+  {
+    "tnsName": "ascend-20",
+    "status": "fullService",
+    "location": {
+      "country": {
+        "id": "CA",
+        "name": "Canada"
+      },
+      "city": {
+        "id": "CA-ON",
+        "name": "Toronto"
+      },
+      "zipCode": "667777",
+      "latLng": [41.87, -87.65]
+    }
+  },
+  {
+    "tnsName": "ascend-21",
+    "status": "fullService",
+    "location": {
+      "country": {
+        "id": "CA",
+        "name": "Canada"
+      },
+      "city": {
+        "id": "CA-ON",
+        "name": "Toronto"
+      },
+      "zipCode": "667777",
+      "latLng": [41.87, -87.65]
+    }
+  },
+  {
+    "tnsName": "ascend-2",
+    "status": "fullService",
+    "location": {
+      "country": {
+        "id": "CA",
+        "name": "Canada"
+      },
+      "city": {
+        "id": "CA-ON",
+        "name": "Toronto"
+      },
+      "zipCode": "667777",
+      "latLng": [41.87, -87.65]
+    }
+  },
+  {
+    "tnsName": "ascend-23",
+    "status": "fullService",
+    "location": {
+      "country": {
+        "id": "CA",
+        "name": "Canada"
+      },
+      "city": {
+        "id": "CA-ON",
+        "name": "Toronto"
+      },
+      "zipCode": "667777",
+      "latLng": [41.87, -87.65]
+    }
+  },
+  {
+    "tnsName": "ascend-24",
+    "status": "fullService",
+    "location": {
+      "country": {
+        "id": "CA",
+        "name": "Canada"
+      },
+      "city": {
+        "id": "CA-ON",
+        "name": "Toronto"
+      },
+      "zipCode": "667777",
+      "latLng": [41.87, -87.65]
+    }
+  },
+  {
+    "tnsName": "ascend-25",
+    "status": "fullService",
+    "location": {
+      "country": {
+        "id": "CA",
+        "name": "Canada"
+      },
+      "city": {
+        "id": "CA-ON",
+        "name": "Toronto"
+      },
+      "zipCode": "667777",
+      "latLng": [41.87, -87.65]
+    }
+  },
+  {
+    "tnsName": "ascend-26",
+    "status": "fullService",
+    "location": {
+      "country": {
+        "id": "US",
+        "name": "USA"
+      },
+      "city": {
+        "id": "US-NY",
+        "name": "New York"
+      },
+      "zipCode": "10001",
+      "latLng": [63.4208, -103.69]
+    }
+  },
+  {
+    "tnsName": "ascend-27",
+    "status": "fullService",
+    "location": {
+      "country": {
+        "id": "IT",
+        "name": "Italy"
+      },
+      "city": {
+        "id": "IT-RO",
+        "name": "Rome"
+      },
+      "zipCode": "10042",
+      "latLng": [62.95, -102.9]
+    }
+  },
+  {
+    "tnsName": "ascend-28",
+    "status": "fullService",
+    "location": {
+      "country": {
+        "id": "IT",
+        "name": "Italy"
+      },
+      "city": {
+        "id": "IT-NA",
+        "name": "Napoles"
+      },
+      "zipCode": "20019",
+      "latLng": [3.08, 101.6]
+    }
+  },
+  {
+    "tnsName": "ascend-29",
+    "status": "fullService",
+    "location": {
+      "country": {
+        "id": "IT",
+        "name": "Italy"
+      },
+      "city": {
+        "id": "IT-MI",
+        "name": "Milan"
+      },
+      "zipCode": "20019",
+      "latLng": [-17.7, -44.5]
+    }
+  },
+  {
+    "tnsName": "ascend-30",
+    "status": "fullService",
+    "location": {
+      "country": {
+        "id": "CA",
+        "name": "Canada"
+      },
+      "city": {
+        "id": "CA-VA",
+        "name": "Vancouver"
+      },
+      "zipCode": "667777",
+      "latLng": [-17.7, -44.5]
+    }
+  },
+  {
+    "tnsName": "ascend-32",
+    "status": "fullService",
+    "location": {
+      "country": {
+        "name": "USA"
+      },
+      "city": {
+        "name": "Chicago"
+      },
+      "zipCode": "60007",
+      "latLng": [-15.7, -41.5]
+    }
+  },
+  {
+    "tnsName": "ascend-33",
+    "status": "fullService",
+    "location": {
+      "country": {
+        "name": "Russia"
+      },
+      "city": {
+        "name": "Moscow"
+      },
+      "zipCode": "101000",
+      "latLng": [-15.7, -41.52]
+    }
+  },
+  {
+    "tnsName": "ascend-34",
+    "status": "fullService",
+    "location": {
+      "country": {
+        "name": "Russia"
+      },
+      "city": {
+        "name": "Moscow"
+      },
+      "zipCode": "101000",
+      "latLng": [-15.7, -41.52]
+    }
+  },
+  {
+    "tnsName": "ascend-35",
+    "status": "fullService",
+    "location": {
+      "country": {
+        "name": "Russia"
+      },
+      "city": {
+        "name": "Samara"
+      },
+      "zipCode": "101000",
+      "latLng": [30.77, 4.05]
+    }
+  },
+  {
+    "tnsName": "ascend-36",
+    "status": "fullService",
+    "location": {
+      "country": {
+        "name": "Australia"
+      },
+      "city": {
+        "name": "Sydney"
+      },
+      "zipCode": "2000",
+      "latLng": [30.7, 4.02]
+    }
+  },
+  {
+    "tnsName": "ascend-37",
+    "status": "fullService",
+    "location": {
+      "country": {
+        "name": "Argentina"
+      },
+      "city": {
+        "name": "Buenos Aires"
+      },
+      "zipCode": "B1460",
+      "latLng": [32.7, 3.02]
+    }
+  },
+  {
+    "tnsName": "ascend-38",
+    "status": "fullService",
+    "location": {
+      "country": {
+        "name": "Brazil"
+      },
+      "city": {
+        "name": "Sao Paulo"
+      },
+      "zipCode": "101000",
+      "latLng": [60.7, 95.52]
+    }
+  },
+  {
+    "tnsName": "ascend-39",
+    "status": "fullService",
+    "location": {
+      "country": {
+        "name": "Australia"
+      },
+      "city": {
+        "name": "Sydney"
+      },
+      "zipCode": "2000",
+      "latLng": [63.4, 97.1]
+    }
+  },
+  {
+    "tnsName": "ascend-40",
+    "status": "fullService",
+    "location": {
+      "country": {
+        "name": "Russia"
+      },
+      "city": {
+        "name": "Samara"
+      },
+      "zipCode": "101001",
+      "latLng": [63.4, 97.1]
+    }
+  },
+  {
+    "tnsName": "ascend-41",
+    "status": "fullService",
+    "location": {
+      "country": {
+        "name": "Australia"
+      },
+      "city": {
+        "name": "Sydney"
+      },
+      "zipCode": "2000",
+      "latLng": [-24.4, 187.1]
+    }
+  },
+  {
+    "tnsName": "ascend-42",
+    "status": "fullService",
+    "location": {
+      "country": {
+        "name": "USA"
+      },
+      "city": {
+        "name": "Chicago"
+      },
+      "zipCode": "60007",
+      "latLng": [-24.3, 128.1]
+    }
+  },
+  {
+    "tnsName": "ascend-43",
+    "status": "fullService",
+    "location": {
+      "country": {
+        "name": "Canada"
+      },
+      "city": {
+        "name": "Toronto"
+      },
+      "zipCode": "667777",
+      "latLng": [32.3, 4.1]
+    }
+  },
+  {
+    "tnsName": "ascend-44",
+    "status": "fullService",
+    "location": {
+      "country": {
+        "name": "Spain"
+      },
+      "city": {
+        "name": "Madrid"
+      },
+      "zipCode": "28001",
+      "latLng": [32.7, 4.1]
+    }
+  },
+  {
+    "tnsName": "ascend-45",
+    "status": "fullService",
+    "location": {
+      "country": {
+        "name": "Spain"
+      },
+      "city": {
+        "name": "Barcelona"
+      },
+      "zipCode": "08001",
+      "latLng": [29.7, 3.5]
+    }
+  }
+]

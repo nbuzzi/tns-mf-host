@@ -1,0 +1,50 @@
+[
+  {
+    "name": "CustomRole1",
+    "canBeDeleted": false,
+    "userCount": 10,
+    "featureGroups": [
+      { "name": "monitoring", "associated": true },
+      { "name": "administration", "associated": true },
+      { "name": "self-service-tools", "associated": false },
+      { "name": "contact", "associated": false },
+      { "name": "support", "associated": true },
+      { "name": "help", "associated": true }
+    ]
+  },
+  {
+    "name": "CustomRole2",
+    "canBeDeleted": false,
+    "userCount": 7,
+    "featureGroups": [
+      { "name": "monitoring", "associated": true },
+      { "name": "administration", "associated": true },
+      { "name": "support", "associated": true }
+    ]
+  },
+  {
+    "name": "CustomRole3",
+    "canBeDeleted": true,
+    "userCount": 12,
+    "featureGroups": [
+      { "name": "monitoring", "associated": true },
+      { "name": "administration", "associated": true },
+      { "name": "support", "associated": true }
+    ]
+  },
+  {
+    "name": "CustomRole4",
+    "canBeDeleted": true,
+    "userCount": 12,
+    "featureGroups": [
+      { "name": "administration", "associated": true },
+      { "name": "support", "associated": true }
+    ]
+  },
+  {
+    "name": "CustomRole5",
+    "canBeDeleted": true,
+    "userCount": 9,
+    "featureGroups": [{ "name": "support", "associated": true }]
+  }
+]

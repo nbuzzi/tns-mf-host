@@ -1,0 +1,87 @@
+@import "../../assets/scss/colors/colors";
+
+.container-graph{ 
+  height: 40rem;
+  margin-top: 2rem;
+  z-index: 1;
+}
+
+.bi.bi-diagram {
+  /* Estilos que deseas aplicar al elemento */
+  background-color: transparent !important;
+}
+
+.bi.bi-diagram .bi-link-canvas-layer .bi-diagram-link .bi-link-path {
+  stroke-width: 0.17rem;
+  cursor: default;
+}
+.bi.bi-diagram .bi-link-canvas-layer .bi-diagram-link .bi-link-path:hover {
+  cursor: default;
+}
+
+.bi.bi-diagram .bi-link-canvas-layer .readonly-link.link-upTnsNetwork .bi-link-path {
+  stroke: #007fdc;
+}
+
+.bi.bi-diagram .bi-link-canvas-layer .readonly-link.link-down .bi-link-path {
+  stroke: #ff2d2e;
+  stroke-dasharray: 10;
+}
+
+.bi.bi-diagram .bi-link-canvas-layer .readonly-link.link-upSiteToSite .bi-link-path {
+  stroke: #eb9646;
+}
+
+.bi.bi-diagram .bi-link-canvas-layer .readonly-link.link-upFullSiteToSite .bi-link-path {
+  stroke: #00b929;
+}
+
+.leyend-container-members {
+  width: 98%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  align-items: end;
+  margin-top: -42rem;
+  gap: 0.5rem;
+
+  .circle-status {
+    border-radius: 50%;
+    width: 1.2rem;
+    height: 1.2rem;
+    margin-left: -0.4rem;
+  }
+
+  .status-connection,
+  .member-connection {
+    border: 1px solid $text-gray-date-chart-color;
+    border-radius: 0.2rem;
+    width: 26rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0.5rem;
+
+    .text-status {
+      font-size: 0.7rem;
+      font-family: "Helvetica", Helvetica, Arial, sans-serif;
+      color: $text-gray-date-chart-color;
+    }
+  }
+}
+.no-data {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 70vh;
+}
+
+ @media screen and (max-width: 1510px) {
+  .container-graph{
+    height: 54rem;
+  }
+  .leyend-container-members{
+    margin-top: -55rem;
+  }
+ }

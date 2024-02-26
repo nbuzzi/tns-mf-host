@@ -1,0 +1,90 @@
+.select-with-search {
+  position: relative;
+  width: 100%;
+  max-height: 32px;
+  font-family: "Helveltica";
+  .select-icon {
+    position: absolute;
+    top: 8px;
+    left: 5px;
+    font-size: 12px;
+    z-index: 1;
+  }
+  .ant-select {
+    width: 100%;
+    height: 100%;
+    color: $black;
+
+    .ant-select-selector {
+      padding-left: 12px;
+      padding-right: 0px;
+      background-color: transparent;
+      max-height: 25px;
+      border-top: none;
+      border-bottom: none;
+    }
+
+    .ant-select-selection-item {
+      background-color: $table-bg;
+      color: $black;
+      width: 100%;
+      border: none;
+      font-family: "Helveltica";
+    }
+
+    .ant-select-selection-search,
+    .ant-select-selection-search-input {
+      height: 100%;
+    }
+    .ant-select-arrow {
+      color: $black;
+    }
+    .anticon.anticon-close {
+      color: $black;
+    }
+    .ant-select-clear {
+      color: $black;
+
+      background: transparent;
+      svg {
+        color: $black;
+      }
+
+      .anticon-close-circle {
+        position: absolute;
+        top: 0px;
+      }
+    }
+  }
+}
+.ant-select-dropdown {
+  background-color: $table-bg;
+  border-radius: $border-radius;
+  border: 1px solid $table-border;
+  .ant-select-item {
+    &:hover {
+      background-color: $tree-menu-hover;
+    }
+    &:active {
+      background-color: $primary;
+    }
+  }
+  .ant-select-item.ant-select-item-option.ant-select-item-option-active {
+    background-color: $info;
+    &:hover {
+      background-color: $info;
+    }
+  }
+  [aria-selected="true"] {
+    background-color: $primary;
+    &:hover {
+      background-color: $info;
+    }
+  }
+  .anticon-check {
+    color: white;
+  }
+  div {
+    color: $black;
+  }
+}

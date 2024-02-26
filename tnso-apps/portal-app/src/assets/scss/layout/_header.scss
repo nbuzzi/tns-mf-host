@@ -1,0 +1,27 @@
+.nav-container {
+  .nav-dropdown-header {
+    .navDropdown {
+      text-decoration: none;
+      color: white;
+      font-size: 5rem;
+    }
+    ::after {
+      display: none;
+    }
+    @media (max-width: 541px) {
+      .navDropdown {
+        font-size: 50px;
+      }
+    }
+  }
+  .user-container {
+    @include font-frutiger(1rem);
+    .user-info {
+      font-weight: 700;
+      margin-right: 5px;
+    }
+    i {
+      font-size: 1rem;
+    }
+  }
+}

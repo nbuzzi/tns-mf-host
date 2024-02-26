@@ -1,0 +1,1106 @@
+[
+  {
+    "acna": "exbc1",
+    "companyName": "Malaysia Electronic Payment System SDN BHD",
+    "connectivityStatus": "fullService",
+    "country": "string",
+    "customerDeviceName": "MPWACA1",
+    "operationalStatus": "string",
+    "service": "TNSLink",
+    "tnsDeviceName": "ascend"
+  },
+  {
+    "acna": "exbc9",
+    "companyName": "Malaysia Electronic Payment System SDN BHD",
+    "connectivityStatus": "fullService",
+    "country": "string",
+    "customerDeviceName": "MPWACA2",
+    "operationalStatus": "string",
+    "service": "TNSLink",
+    "tnsDeviceName": "ascend-2"
+  },
+  {
+    "acna": "exbc2",
+    "companyName": "Malaysia Electronic Payment System SDN BHD",
+    "connectivityStatus": "unknown",
+    "country": "string",
+    "customerDeviceName": "MPWACA3",
+    "operationalStatus": "string",
+    "service": "TNSLink",
+    "tnsDeviceName": "ascend-3"
+  },
+  {
+    "acna": "exbc3",
+    "companyName": "Malaysia Electronic Payment System SDN BHD",
+    "connectivityStatus": "onBackup",
+    "country": "string",
+    "customerDeviceName": "MPWACA4",
+    "operationalStatus": "string",
+    "service": "TNSLink",
+    "tnsDeviceName": "ascend-4"
+  },
+  {
+    "acna": "exbc1",
+    "companyName": "Malaysia Electronic Payment System SDN BHD",
+    "connectivityStatus": "offline",
+    "country": "string",
+    "customerDeviceName": "MPWACA5",
+    "operationalStatus": "string",
+    "service": "TNSLink",
+    "tnsDeviceName": "ascend-5"
+  },
+  {
+    "acna": "exbc4",
+    "companyName": "Malaysia Electronic Payment System SDN BHD",
+    "connectivityStatus": "fullService",
+    "country": "string",
+    "customerDeviceName": "MPWACA6",
+    "operationalStatus": "string",
+    "service": "TNSLink",
+    "tnsDeviceName": "ascend-6"
+  },
+  {
+    "acna": "exbc5",
+    "companyName": "Malaysia Electronic Payment System SDN BHD",
+    "connectivityStatus": "fullService",
+    "country": "string",
+    "customerDeviceName": "MPWACA7",
+    "operationalStatus": "string",
+    "service": "TNSLink",
+    "tnsDeviceName": "ascend-7"
+  },
+  {
+    "acna": "exbc4",
+    "companyName": "Malaysia Electronic Payment System SDN BHD",
+    "connectivityStatus": "offline",
+    "country": "string",
+    "customerDeviceName": "MPWACA8",
+    "operationalStatus": "string",
+    "service": "TNSLink",
+    "tnsDeviceName": "ascend-8"
+  },
+  {
+    "acna": "exbc6",
+    "companyName": "Malaysia Electronic Payment System SDN BHD",
+    "connectivityStatus": "unknown",
+    "country": "string",
+    "customerDeviceName": "MPWACA9",
+    "operationalStatus": "string",
+    "service": "TNSLink",
+    "tnsDeviceName": "ascend-9"
+  },
+  {
+    "acna": "exbc8",
+    "companyName": "Malaysia Electronic Payment System SDN BHD",
+    "connectivityStatus": "fullService",
+    "country": "string",
+    "customerDeviceName": "MPWACA10",
+    "operationalStatus": "string",
+    "service": "TNSLink",
+    "tnsDeviceName": "ascend-10"
+  },
+  {
+    "acna": "exbc7",
+    "companyName": "Malaysia Electronic Payment System SDN BHD",
+    "connectivityStatus": "offline",
+    "country": "string",
+    "customerDeviceName": "MPWACA11",
+    "operationalStatus": "string",
+    "service": "TNSLink",
+    "tnsDeviceName": "ascend-11"
+  },
+  {
+    "acna": "exbc2",
+    "companyName": "Malaysia Electronic Payment System SDN BHD",
+    "country": "string",
+    "connectivityStatus": "indeterminate",
+    "customerDeviceName": "MPWACA12",
+    "operationalStatus": "string",
+    "service": "TNSLink",
+    "tnsDeviceName": "ascend-12"
+  },
+  {
+    "acna": "exbc7",
+    "companyName": "Malaysia Electronic Payment System SDN BHD",
+    "connectivityStatus": "fullService",
+    "country": "string",
+    "customerDeviceName": "MPWACA13",
+    "operationalStatus": "string",
+    "service": "TNSLink",
+    "tnsDeviceName": "ascend-13"
+  },
+  {
+    "acna": "exbc7",
+    "companyName": "Malaysia Electronic Payment System SDN BHD",
+    "connectivityStatus": "onPrimary",
+    "country": "string",
+    "customerDeviceName": "MPWACA14",
+    "operationalStatus": "string",
+    "service": "TNSLink",
+    "tnsDeviceName": "ascend-14"
+  },
+  {
+    "acna": "exbc8",
+    "companyName": "Malaysia Electronic Payment System SDN BHD",
+    "connectivityStatus": "fullService",
+    "country": "string",
+    "customerDeviceName": "MPWACA15",
+    "operationalStatus": "string",
+    "service": "TNSLink",
+    "tnsDeviceName": "ascend-15"
+  },
+  {
+    "acna": "exbc6",
+    "companyName": "Malaysia Electronic Payment System SDN BHD",
+    "connectivityStatus": "fullService",
+    "country": "string",
+    "customerDeviceName": "MPWACA16",
+    "operationalStatus": "string",
+    "service": "TNSLink",
+    "tnsDeviceName": "ascend-16"
+  },
+  {
+    "acna": "exbc10",
+    "companyName": "Malaysia Electronic Payment System SDN BHD",
+    "connectivityStatus": "fullService",
+    "country": "string",
+    "customerDeviceName": "MPWACA17",
+    "operationalStatus": "string",
+    "service": "TNSLink",
+    "tnsDeviceName": "ascend-17"
+  },
+  {
+    "acna": "exbc9",
+    "companyName": "Malaysia Electronic Payment System SDN BHD",
+    "connectivityStatus": "fullService",
+    "country": "string",
+    "customerDeviceName": "MPWACA18",
+    "operationalStatus": "string",
+    "service": "TNSLink",
+    "tnsDeviceName": "ascend-18"
+  },
+  {
+    "acna": "exbc9",
+    "companyName": "Malaysia Electronic Payment System SDN BHD",
+    "connectivityStatus": "onBackup",
+    "country": "string",
+    "customerDeviceName": "MPWACA19",
+    "operationalStatus": "string",
+    "service": "TNSLink",
+    "tnsDeviceName": "ascend-19"
+  },
+  {
+    "acna": "exbc10",
+    "companyName": "Malaysia Electronic Payment System SDN BHD",
+    "connectivityStatus": "onBackup",
+    "country": "string",
+    "customerDeviceName": "MPWACA20",
+    "operationalStatus": "string",
+    "service": "TNSLink",
+    "tnsDeviceName": "ascend-20"
+  },
+  {
+    "acna": "exbc1",
+    "companyName": "Malaysia Electronic Payment System SDN BHD",
+    "connectivityStatus": "fullService",
+    "country": "string",
+    "customerDeviceName": "MPWACA21",
+    "operationalStatus": "string",
+    "service": "TNSLink",
+    "tnsDeviceName": "ascend-21"
+  },
+  {
+    "acna": "exbc5",
+    "companyName": "Malaysia Electronic Payment System SDN BHD",
+    "connectivityStatus": "fullService",
+    "country": "string",
+    "customerDeviceName": "MPWACA22",
+    "operationalStatus": "string",
+    "service": "TNSLink",
+    "tnsDeviceName": "ascend-22"
+  },
+  {
+    "acna": "exbc4",
+    "companyName": "Malaysia Electronic Payment System SDN BHD",
+    "connectivityStatus": "onBackup",
+    "country": "string",
+    "customerDeviceName": "MPWACA23",
+    "operationalStatus": "string",
+    "service": "TNSLink",
+    "tnsDeviceName": "ascend-23"
+  },
+  {
+    "acna": "exbc5",
+    "companyName": "Malaysia Electronic Payment System SDN BHD",
+    "connectivityStatus": "fullService",
+    "country": "string",
+    "customerDeviceName": "MPWACA24",
+    "operationalStatus": "string",
+    "service": "TNSLink",
+    "tnsDeviceName": "ascend-24"
+  },
+  {
+    "acna": "exbc1",
+    "companyName": "Malaysia Electronic Payment System SDN BHD",
+    "connectivityStatus": "fullService",
+    "country": "string",
+    "customerDeviceName": "MPWACA25",
+    "operationalStatus": "string",
+    "service": "TNSLink",
+    "tnsDeviceName": "ascend25"
+  },
+  {
+    "acna": "exbc9",
+    "companyName": "Malaysia Electronic Payment System SDN BHD",
+    "connectivityStatus": "fullService",
+    "country": "string",
+    "customerDeviceName": "MPWACA26",
+    "operationalStatus": "string",
+    "service": "TNSLink",
+    "tnsDeviceName": "ascend-26"
+  },
+  {
+    "acna": "exbc2",
+    "companyName": "Malaysia Electronic Payment System SDN BHD",
+    "connectivityStatus": "unknown",
+    "country": "string",
+    "customerDeviceName": "MPWACA27",
+    "operationalStatus": "string",
+    "service": "TNSLink",
+    "tnsDeviceName": "ascend-27"
+  },
+  {
+    "acna": "exbc3",
+    "companyName": "Malaysia Electronic Payment System SDN BHD",
+    "connectivityStatus": "indeterminate",
+    "country": "string",
+    "customerDeviceName": "MPWACA28",
+    "operationalStatus": "string",
+    "service": "TNSLink",
+    "tnsDeviceName": "ascend-28"
+  },
+  {
+    "acna": "exbc1",
+    "companyName": "Malaysia Electronic Payment System SDN BHD",
+    "connectivityStatus": "offline",
+    "country": "string",
+    "customerDeviceName": "MPWACA29",
+    "operationalStatus": "string",
+    "service": "TNSLink",
+    "tnsDeviceName": "ascend-29"
+  },
+  {
+    "acna": "exbc4",
+    "companyName": "Malaysia Electronic Payment System SDN BHD",
+    "connectivityStatus": "fullService",
+    "country": "string",
+    "customerDeviceName": "MPWACA30",
+    "operationalStatus": "string",
+    "service": "TNSLink",
+    "tnsDeviceName": "ascend-30"
+  },
+  {
+    "acna": "exbc5",
+    "companyName": "Malaysia Electronic Payment System SDN BHD",
+    "connectivityStatus": "fullService",
+    "country": "string",
+    "customerDeviceName": "MPWACA31",
+    "operationalStatus": "string",
+    "service": "TNSLink",
+    "tnsDeviceName": "ascend-31"
+  },
+  {
+    "acna": "exbc4",
+    "companyName": "Malaysia Electronic Payment System SDN BHD",
+    "connectivityStatus": "offline",
+    "country": "string",
+    "customerDeviceName": "MPWACA32",
+    "operationalStatus": "string",
+    "service": "TNSLink",
+    "tnsDeviceName": "ascend-32"
+  },
+  {
+    "acna": "exbc6",
+    "companyName": "Malaysia Electronic Payment System SDN BHD",
+    "connectivityStatus": "unknown",
+    "country": "string",
+    "customerDeviceName": "MPWACA33",
+    "operationalStatus": "string",
+    "service": "TNSLink",
+    "tnsDeviceName": "ascend-33"
+  },
+  {
+    "acna": "exbc8",
+    "companyName": "Malaysia Electronic Payment System SDN BHD",
+    "connectivityStatus": "fullService",
+    "country": "string",
+    "customerDeviceName": "MPWACA34",
+    "operationalStatus": "string",
+    "service": "TNSLink",
+    "tnsDeviceName": "ascend-34"
+  },
+  {
+    "acna": "exbc7",
+    "companyName": "Malaysia Electronic Payment System SDN BHD",
+    "connectivityStatus": "indeterminate",
+    "country": "string",
+    "customerDeviceName": "MPWACA35",
+    "operationalStatus": "string",
+    "service": "TNSLink",
+    "tnsDeviceName": "ascend-35"
+  },
+  {
+    "acna": "exbc2",
+    "companyName": "Malaysia Electronic Payment System SDN BHD",
+    "connectivityStatus": "unknown",
+    "country": "string",
+    "customerDeviceName": "MPWACA36",
+    "operationalStatus": "string",
+    "service": "TNSLink",
+    "tnsDeviceName": "ascend-36"
+  },
+  {
+    "acna": "exbc7",
+    "companyName": "Malaysia Electronic Payment System SDN BHD",
+    "connectivityStatus": "unknown",
+    "country": "string",
+    "customerDeviceName": "MPWACA37",
+    "operationalStatus": "string",
+    "service": "TNSLink",
+    "tnsDeviceName": "ascend-37"
+  },
+  {
+    "acna": "exbc7",
+    "companyName": "Malaysia Electronic Payment System SDN BHD",
+    "connectivityStatus": "unknown",
+    "country": "string",
+    "customerDeviceName": "MPWACA38",
+    "operationalStatus": "string",
+    "service": "TNSLink",
+    "tnsDeviceName": "ascend-38"
+  },
+  {
+    "acna": "exbc8",
+    "companyName": "Malaysia Electronic Payment System SDN BHD",
+    "connectivityStatus": "fullService",
+    "country": "string",
+    "customerDeviceName": "MPWACA39",
+    "operationalStatus": "string",
+    "service": "TNSLink",
+    "tnsDeviceName": "ascend-39"
+  },
+  {
+    "acna": "exbc6",
+    "companyName": "Malaysia Electronic Payment System SDN BHD",
+    "connectivityStatus": "fullService",
+    "country": "string",
+    "customerDeviceName": "MPWACA40",
+    "operationalStatus": "string",
+    "service": "TNSLink",
+    "tnsDeviceName": "ascend-40"
+  },
+  {
+    "acna": "exbc10",
+    "companyName": "Malaysia Electronic Payment System SDN BHD",
+    "connectivityStatus": "fullService",
+    "country": "string",
+    "customerDeviceName": "MPWACA41",
+    "operationalStatus": "string",
+    "service": "TNSLink",
+    "tnsDeviceName": "ascend-41"
+  },
+  {
+    "acna": "exbc9",
+    "companyName": "Malaysia Electronic Payment System SDN BHD",
+    "connectivityStatus": "fullService",
+    "country": "string",
+    "customerDeviceName": "MPWACA42",
+    "operationalStatus": "string",
+    "service": "TNSLink",
+    "tnsDeviceName": "ascend-42"
+  },
+  {
+    "acna": "exbc9",
+    "companyName": "Malaysia Electronic Payment System SDN BHD",
+    "connectivityStatus": "onBackup",
+    "country": "string",
+    "customerDeviceName": "MPWACA43",
+    "operationalStatus": "string",
+    "service": "TNSLink",
+    "tnsDeviceName": "ascend-43"
+  },
+  {
+    "acna": "exbc10",
+    "companyName": "Malaysia Electronic Payment System SDN BHD",
+    "connectivityStatus": "onBackup",
+    "country": "string",
+    "customerDeviceName": "MPWACA44",
+    "operationalStatus": "string",
+    "service": "TNSLink",
+    "tnsDeviceName": "ascend-44"
+  },
+  {
+    "acna": "exbc1",
+    "companyName": "Malaysia Electronic Payment System SDN BHD",
+    "connectivityStatus": "fullService",
+    "country": "string",
+    "customerDeviceName": "MPWACA45",
+    "operationalStatus": "string",
+    "service": "TNSLink",
+    "tnsDeviceName": "ascend-45"
+  },
+  {
+    "acna": "exbc5",
+    "companyName": "Malaysia Electronic Payment System SDN BHD",
+    "connectivityStatus": "fullService",
+    "country": "string",
+    "customerDeviceName": "MPWACA46",
+    "operationalStatus": "string",
+    "service": "TNSLink",
+    "tnsDeviceName": "ascend-46"
+  },
+  {
+    "acna": "exbc4",
+    "companyName": "Malaysia Electronic Payment System SDN BHD",
+    "connectivityStatus": "onBackup",
+    "country": "string",
+    "customerDeviceName": "MPWACA47",
+    "operationalStatus": "string",
+    "service": "TNSLink",
+    "tnsDeviceName": "ascend-47"
+  },
+  {
+    "acna": "exbc5",
+    "companyName": "Malaysia Electronic Payment System SDN BHD",
+    "connectivityStatus": "fullService",
+    "country": "string",
+    "customerDeviceName": "MPWACA48",
+    "operationalStatus": "string",
+    "service": "TNSLink",
+    "tnsDeviceName": "ascend-48"
+  },
+  {
+    "acna": "exbc10",
+    "companyName": "Malaysia Electronic Payment System SDN BHD",
+    "connectivityStatus": "fullService",
+    "country": "string",
+    "customerDeviceName": "MPWACA49",
+    "operationalStatus": "string",
+    "service": "TNSLink",
+    "tnsDeviceName": "ascend-49"
+  },
+
+  {
+    "acna": "exbc10",
+    "companyName": "Malaysia Electronic Payment System SDN BHD",
+    "connectivityStatus": "fullService",
+    "country": "string",
+    "customerDeviceName": "MPWACA50",
+    "operationalStatus": "string",
+    "service": "TNSLink",
+    "tnsDeviceName": "ascend-50"
+  },
+  {
+    "acna": "exbc10",
+    "companyName": "Malaysia Electronic Payment System SDN BHD",
+    "connectivityStatus": "fullService",
+    "country": "string",
+    "customerDeviceName": "MPWACA51",
+    "operationalStatus": "string",
+    "service": "TNSLink",
+    "tnsDeviceName": "ascend-51"
+  },
+  {
+    "acna": "exbc9",
+    "companyName": "Malaysia Electronic Payment System SDN BHD",
+    "connectivityStatus": "fullService",
+    "country": "string",
+    "customerDeviceName": "MPWACA52",
+    "operationalStatus": "string",
+    "service": "TNSLink",
+    "tnsDeviceName": "ascend-52"
+  },
+  {
+    "acna": "exbc9",
+    "companyName": "Malaysia Electronic Payment System SDN BHD",
+    "connectivityStatus": "onBackup",
+    "country": "string",
+    "customerDeviceName": "MPWACA53",
+    "operationalStatus": "string",
+    "service": "TNSLink",
+    "tnsDeviceName": "ascend-53"
+  },
+  {
+    "acna": "exbc10",
+    "companyName": "Malaysia Electronic Payment System SDN BHD",
+    "connectivityStatus": "onBackup",
+    "country": "string",
+    "customerDeviceName": "MPWACA54",
+    "operationalStatus": "string",
+    "service": "TNSLink",
+    "tnsDeviceName": "ascend-54"
+  },
+  {
+    "acna": "exbc1",
+    "companyName": "Malaysia Electronic Payment System SDN BHD",
+    "connectivityStatus": "fullService",
+    "country": "string",
+    "customerDeviceName": "MPWACA55",
+    "operationalStatus": "string",
+    "service": "TNSLink",
+    "tnsDeviceName": "ascend-55"
+  },
+  {
+    "acna": "exbc5",
+    "companyName": "Malaysia Electronic Payment System SDN BHD",
+    "connectivityStatus": "fullService",
+    "country": "string",
+    "customerDeviceName": "MPWACA56",
+    "operationalStatus": "string",
+    "service": "TNSLink",
+    "tnsDeviceName": "ascend-56"
+  },
+  {
+    "acna": "exbc4",
+    "companyName": "Malaysia Electronic Payment System SDN BHD",
+    "connectivityStatus": "onBackup",
+    "country": "string",
+    "customerDeviceName": "MPWACA57",
+    "operationalStatus": "string",
+    "service": "TNSLink",
+    "tnsDeviceName": "ascend-57"
+  },
+  {
+    "acna": "exbc4",
+    "companyName": "Malaysia Electronic Payment System SDN BHD",
+    "connectivityStatus": "onBackup",
+    "country": "string",
+    "customerDeviceName": "MPWACA58",
+    "operationalStatus": "string",
+    "service": "TNSLink",
+    "tnsDeviceName": "ascend-58"
+  },
+  {
+    "acna": "exbc5",
+    "companyName": "Malaysia Electronic Payment System SDN BHD",
+    "connectivityStatus": "fullService",
+    "country": "string",
+    "customerDeviceName": "MPWACA59",
+    "operationalStatus": "string",
+    "service": "TNSLink",
+    "tnsDeviceName": "ascend-59"
+  },
+
+  {
+    "acna": "exbc10",
+    "companyName": "Malaysia Electronic Payment System SDN BHD",
+    "connectivityStatus": "fullService",
+    "country": "string",
+    "customerDeviceName": "MPWACA60",
+    "operationalStatus": "string",
+    "service": "TNSLink",
+    "tnsDeviceName": "ascend-60"
+  },
+  {
+    "acna": "exbc10",
+    "companyName": "Malaysia Electronic Payment System SDN BHD",
+    "connectivityStatus": "fullService",
+    "country": "string",
+    "customerDeviceName": "MPWACA61",
+    "operationalStatus": "string",
+    "service": "TNSLink",
+    "tnsDeviceName": "ascend-61"
+  },
+  {
+    "acna": "exbc9",
+    "companyName": "Malaysia Electronic Payment System SDN BHD",
+    "connectivityStatus": "fullService",
+    "country": "string",
+    "customerDeviceName": "MPWACA62",
+    "operationalStatus": "string",
+    "service": "TNSLink",
+    "tnsDeviceName": "ascend-62"
+  },
+  {
+    "acna": "exbc9",
+    "companyName": "Malaysia Electronic Payment System SDN BHD",
+    "connectivityStatus": "onBackup",
+    "country": "string",
+    "customerDeviceName": "MPWACA63",
+    "operationalStatus": "string",
+    "service": "TNSLink",
+    "tnsDeviceName": "ascend-63"
+  },
+  {
+    "acna": "exbc10",
+    "companyName": "Malaysia Electronic Payment System SDN BHD",
+    "connectivityStatus": "onBackup",
+    "country": "string",
+    "customerDeviceName": "MPWACA64",
+    "operationalStatus": "string",
+    "service": "TNSLink",
+    "tnsDeviceName": "ascend-64"
+  },
+  {
+    "acna": "exbc1",
+    "companyName": "Malaysia Electronic Payment System SDN BHD",
+    "connectivityStatus": "fullService",
+    "country": "string",
+    "customerDeviceName": "MPWACA65",
+    "operationalStatus": "string",
+    "service": "TNSLink",
+    "tnsDeviceName": "ascend-65"
+  },
+  {
+    "acna": "exbc5",
+    "companyName": "Malaysia Electronic Payment System SDN BHD",
+    "connectivityStatus": "fullService",
+    "country": "string",
+    "customerDeviceName": "MPWACA66",
+    "operationalStatus": "string",
+    "service": "TNSLink",
+    "tnsDeviceName": "ascend-66"
+  },
+  {
+    "acna": "exbc4",
+    "companyName": "Malaysia Electronic Payment System SDN BHD",
+    "connectivityStatus": "onBackup",
+    "country": "string",
+    "customerDeviceName": "MPWACA67",
+    "operationalStatus": "string",
+    "service": "TNSLink",
+    "tnsDeviceName": "ascend-67"
+  },
+  {
+    "acna": "exbc4",
+    "companyName": "Malaysia Electronic Payment System SDN BHD",
+    "connectivityStatus": "onBackup",
+    "country": "string",
+    "customerDeviceName": "MPWACA68",
+    "operationalStatus": "string",
+    "service": "TNSLink",
+    "tnsDeviceName": "ascend-68"
+  },
+  {
+    "acna": "exbc5",
+    "companyName": "Malaysia Electronic Payment System SDN BHD",
+    "connectivityStatus": "fullService",
+    "country": "string",
+    "customerDeviceName": "MPWACA69",
+    "operationalStatus": "string",
+    "service": "TNSLink",
+    "tnsDeviceName": "ascend-69"
+  },
+  {
+    "acna": "exbc5",
+    "companyName": "Malaysia Electronic Payment System SDN BHD",
+    "connectivityStatus": "fullService",
+    "country": "string",
+    "customerDeviceName": "MPWACA70",
+    "operationalStatus": "string",
+    "service": "TNSLink",
+    "tnsDeviceName": "ascend-70"
+  },
+  {
+    "acna": "exbc10",
+    "companyName": "Malaysia Electronic Payment System SDN BHD",
+    "connectivityStatus": "fullService",
+    "country": "string",
+    "customerDeviceName": "MPWACA71",
+    "operationalStatus": "string",
+    "service": "TNSLink",
+    "tnsDeviceName": "ascend-71"
+  },
+  {
+    "acna": "exbc9",
+    "companyName": "Malaysia Electronic Payment System SDN BHD",
+    "connectivityStatus": "fullService",
+    "country": "string",
+    "customerDeviceName": "MPWACA72",
+    "operationalStatus": "string",
+    "service": "TNSLink",
+    "tnsDeviceName": "ascend-72"
+  },
+  {
+    "acna": "exbc9",
+    "companyName": "Malaysia Electronic Payment System SDN BHD",
+    "connectivityStatus": "onBackup",
+    "country": "string",
+    "customerDeviceName": "MPWACA73",
+    "operationalStatus": "string",
+    "service": "TNSLink",
+    "tnsDeviceName": "ascend-73"
+  },
+  {
+    "acna": "exbc10",
+    "companyName": "Malaysia Electronic Payment System SDN BHD",
+    "connectivityStatus": "onBackup",
+    "country": "string",
+    "customerDeviceName": "MPWACA74",
+    "operationalStatus": "string",
+    "service": "TNSLink",
+    "tnsDeviceName": "ascend-74"
+  },
+  {
+    "acna": "exbc1",
+    "companyName": "Malaysia Electronic Payment System SDN BHD",
+    "connectivityStatus": "fullService",
+    "country": "string",
+    "customerDeviceName": "MPWACA75",
+    "operationalStatus": "string",
+    "service": "TNSLink",
+    "tnsDeviceName": "ascend-75"
+  },
+  {
+    "acna": "exbc5",
+    "companyName": "Malaysia Electronic Payment System SDN BHD",
+    "connectivityStatus": "fullService",
+    "country": "string",
+    "customerDeviceName": "MPWACA76",
+    "operationalStatus": "string",
+    "service": "TNSLink",
+    "tnsDeviceName": "ascend-76"
+  },
+  {
+    "acna": "exbc4",
+    "companyName": "Malaysia Electronic Payment System SDN BHD",
+    "connectivityStatus": "onBackup",
+    "country": "string",
+    "customerDeviceName": "MPWACA77",
+    "operationalStatus": "string",
+    "service": "TNSLink",
+    "tnsDeviceName": "ascend-77"
+  },
+  {
+    "acna": "exbc4",
+    "companyName": "Malaysia Electronic Payment System SDN BHD",
+    "connectivityStatus": "onBackup",
+    "country": "string",
+    "customerDeviceName": "MPWACA78",
+    "operationalStatus": "string",
+    "service": "TNSLink",
+    "tnsDeviceName": "ascend-78"
+  },
+  {
+    "acna": "exbc5",
+    "companyName": "Malaysia Electronic Payment System SDN BHD",
+    "connectivityStatus": "fullService",
+    "country": "string",
+    "customerDeviceName": "MPWACA79",
+    "operationalStatus": "string",
+    "service": "TNSLink",
+    "tnsDeviceName": "ascend-79"
+  },
+  {
+    "acna": "exbc5",
+    "companyName": "Malaysia Electronic Payment System SDN BHD",
+    "connectivityStatus": "fullService",
+    "country": "string",
+    "customerDeviceName": "MPWACA80",
+    "operationalStatus": "string",
+    "service": "TNSLink",
+    "tnsDeviceName": "ascend-80"
+  },
+  {
+    "acna": "exbc10",
+    "companyName": "Malaysia Electronic Payment System SDN BHD",
+    "connectivityStatus": "fullService",
+    "country": "string",
+    "customerDeviceName": "MPWACA81",
+    "operationalStatus": "string",
+    "service": "TNSLink",
+    "tnsDeviceName": "ascend-81"
+  },
+  {
+    "acna": "exbc9",
+    "companyName": "Malaysia Electronic Payment System SDN BHD",
+    "connectivityStatus": "fullService",
+    "country": "string",
+    "customerDeviceName": "MPWACA82",
+    "operationalStatus": "string",
+    "service": "TNSLink",
+    "tnsDeviceName": "ascend-82"
+  },
+  {
+    "acna": "exbc9",
+    "companyName": "Malaysia Electronic Payment System SDN BHD",
+    "connectivityStatus": "onBackup",
+    "country": "string",
+    "customerDeviceName": "MPWACA83",
+    "operationalStatus": "string",
+    "service": "TNSLink",
+    "tnsDeviceName": "ascend-83"
+  },
+  {
+    "acna": "exbc10",
+    "companyName": "Malaysia Electronic Payment System SDN BHD",
+    "connectivityStatus": "onBackup",
+    "country": "string",
+    "customerDeviceName": "MPWACA84",
+    "operationalStatus": "string",
+    "service": "TNSLink",
+    "tnsDeviceName": "ascend-84"
+  },
+  {
+    "acna": "exbc1",
+    "companyName": "Malaysia Electronic Payment System SDN BHD",
+    "connectivityStatus": "fullService",
+    "country": "string",
+    "customerDeviceName": "MPWACA85",
+    "operationalStatus": "string",
+    "service": "TNSLink",
+    "tnsDeviceName": "ascend-85"
+  },
+  {
+    "acna": "exbc5",
+    "companyName": "Malaysia Electronic Payment System SDN BHD",
+    "connectivityStatus": "fullService",
+    "country": "string",
+    "customerDeviceName": "MPWACA86",
+    "operationalStatus": "string",
+    "service": "TNSLink",
+    "tnsDeviceName": "ascend-86"
+  },
+  {
+    "acna": "exbc4",
+    "companyName": "Malaysia Electronic Payment System SDN BHD",
+    "connectivityStatus": "onBackup",
+    "country": "string",
+    "customerDeviceName": "MPWACA87",
+    "operationalStatus": "string",
+    "service": "TNSLink",
+    "tnsDeviceName": "ascend-87"
+  },
+
+  {
+    "acna": "exbc4",
+    "companyName": "Malaysia Electronic Payment System SDN BHD",
+    "connectivityStatus": "onBackup",
+    "country": "string",
+    "customerDeviceName": "MPWACA88",
+    "operationalStatus": "string",
+    "service": "TNSLink",
+    "tnsDeviceName": "ascend-88"
+  },
+  {
+    "acna": "exbc5",
+    "companyName": "Malaysia Electronic Payment System SDN BHD",
+    "connectivityStatus": "fullService",
+    "country": "string",
+    "customerDeviceName": "MPWACA89",
+    "operationalStatus": "string",
+    "service": "TNSLink",
+    "tnsDeviceName": "ascend-89"
+  },
+  {
+    "acna": "exbc5",
+    "companyName": "Malaysia Electronic Payment System SDN BHD",
+    "connectivityStatus": "fullService",
+    "country": "string",
+    "customerDeviceName": "MPWACA90",
+    "operationalStatus": "string",
+    "service": "TNSLink",
+    "tnsDeviceName": "ascend-90"
+  },
+  {
+    "acna": "exbc10",
+    "companyName": "Malaysia Electronic Payment System SDN BHD",
+    "connectivityStatus": "fullService",
+    "country": "string",
+    "customerDeviceName": "MPWACA91",
+    "operationalStatus": "string",
+    "service": "TNSLink",
+    "tnsDeviceName": "ascend-91"
+  },
+  {
+    "acna": "exbc9",
+    "companyName": "Malaysia Electronic Payment System SDN BHD",
+    "connectivityStatus": "fullService",
+    "country": "string",
+    "customerDeviceName": "MPWACA92",
+    "operationalStatus": "string",
+    "service": "TNSLink",
+    "tnsDeviceName": "ascend-92"
+  },
+  {
+    "acna": "exbc9",
+    "companyName": "Malaysia Electronic Payment System SDN BHD",
+    "connectivityStatus": "onBackup",
+    "country": "string",
+    "customerDeviceName": "MPWACA93",
+    "operationalStatus": "string",
+    "service": "TNSLink",
+    "tnsDeviceName": "ascend-93"
+  },
+  {
+    "acna": "exbc10",
+    "companyName": "Malaysia Electronic Payment System SDN BHD",
+    "connectivityStatus": "onBackup",
+    "country": "string",
+    "customerDeviceName": "MPWACA94",
+    "operationalStatus": "string",
+    "service": "TNSLink",
+    "tnsDeviceName": "ascend-94"
+  },
+  {
+    "acna": "exbc1",
+    "companyName": "Malaysia Electronic Payment System SDN BHD",
+    "connectivityStatus": "fullService",
+    "country": "string",
+    "customerDeviceName": "MPWACA95",
+    "operationalStatus": "string",
+    "service": "TNSLink",
+    "tnsDeviceName": "ascend-95"
+  },
+  {
+    "acna": "exbc5",
+    "companyName": "Malaysia Electronic Payment System SDN BHD",
+    "connectivityStatus": "fullService",
+    "country": "string",
+    "customerDeviceName": "MPWACA96",
+    "operationalStatus": "string",
+    "service": "TNSLink",
+    "tnsDeviceName": "ascend-96"
+  },
+  {
+    "acna": "exbc4",
+    "companyName": "Malaysia Electronic Payment System SDN BHD",
+    "connectivityStatus": "onBackup",
+    "country": "string",
+    "customerDeviceName": "MPWACA97",
+    "operationalStatus": "string",
+    "service": "TNSLink",
+    "tnsDeviceName": "ascend-97"
+  },
+  {
+    "acna": "exbc5",
+    "companyName": "Malaysia Electronic Payment System SDN BHD",
+    "connectivityStatus": "fullService",
+    "country": "string",
+    "customerDeviceName": "MPWACA98",
+    "operationalStatus": "string",
+    "service": "TNSLink",
+    "tnsDeviceName": "ascend-98"
+  },
+  {
+    "acna": "exbc4",
+    "companyName": "Malaysia Electronic Payment System SDN BHD",
+    "connectivityStatus": "onBackup",
+    "country": "string",
+    "customerDeviceName": "MPWACA99",
+    "operationalStatus": "string",
+    "service": "TNSLink",
+    "tnsDeviceName": "ascend-99"
+  },
+  {
+    "acna": "exbc5",
+    "companyName": "Malaysia Electronic Payment System SDN BHD",
+    "connectivityStatus": "fullService",
+    "country": "string",
+    "customerDeviceName": "MPWACA100",
+    "operationalStatus": "string",
+    "service": "TNSLink",
+    "tnsDeviceName": "ascend-100"
+  },
+
+  {
+    "acna": "exbc5",
+    "companyName": "Malaysia Electronic Payment System SDN BHD",
+    "connectivityStatus": "fullService",
+    "country": "string",
+    "customerDeviceName": "MPWACA101",
+    "operationalStatus": "string",
+    "service": "TNSLink",
+    "tnsDeviceName": "ascend-101"
+  },
+  {
+    "acna": "exbc4",
+    "companyName": "Malaysia Electronic Payment System SDN BHD",
+    "connectivityStatus": "onBackup",
+    "country": "string",
+    "customerDeviceName": "MPWACA102",
+    "operationalStatus": "string",
+    "service": "TNSLink",
+    "tnsDeviceName": "ascend-102"
+  },
+  {
+    "acna": "exbc5",
+    "companyName": "Malaysia Electronic Payment System SDN BHD",
+    "connectivityStatus": "fullService",
+    "country": "string",
+    "customerDeviceName": "MPWACA103",
+    "operationalStatus": "string",
+    "service": "TNSLink",
+    "tnsDeviceName": "ascend-103"
+  },
+  {
+    "acna": "exbc4",
+    "companyName": "Malaysia Electronic Payment System SDN BHD",
+    "connectivityStatus": "onBackup",
+    "country": "string",
+    "customerDeviceName": "MPWACA104",
+    "operationalStatus": "string",
+    "service": "TNSLink",
+    "tnsDeviceName": "ascend-104"
+  },
+  {
+    "acna": "exbc5",
+    "companyName": "Malaysia Electronic Payment System SDN BHD",
+    "connectivityStatus": "offline",
+    "country": "string",
+    "customerDeviceName": "MPWACA105",
+    "operationalStatus": "string",
+    "service": "TNSLink",
+    "tnsDeviceName": "ascend-105"
+  },
+  {
+    "acna": "exbc11",
+    "companyName": "Malaysia Electronic Payment System SDN BHD",
+    "connectivityStatus": "unknown",
+    "country": "string",
+    "customerDeviceName": "MPWACA111",
+    "operationalStatus": "string",
+    "service": "TNSLink",
+    "tnsDeviceName": "ascend-111"
+  },
+  {
+    "acna": "exbc12",
+    "companyName": "Malaysia Electronic Payment System SDN BHD",
+    "connectivityStatus": "onPrimary",
+    "country": "string",
+    "customerDeviceName": "MPWACA112",
+    "operationalStatus": "string",
+    "service": "TNSLink",
+    "tnsDeviceName": "ascend-112"
+  },
+  {
+    "acna": "exbc13",
+    "companyName": "Malaysia Electronic Payment System SDN BHD",
+    "connectivityStatus": "onBackup",
+    "country": "string",
+    "customerDeviceName": "MPWACA113",
+    "operationalStatus": "string",
+    "service": "TNSLink",
+    "tnsDeviceName": "ascend-113"
+  },
+  {
+    "acna": "exbc14",
+    "companyName": "Malaysia Electronic Payment System SDN BHD",
+    "connectivityStatus": "fullService",
+    "country": "string",
+    "customerDeviceName": "MPWACA114",
+    "operationalStatus": "string",
+    "service": "TNSLink",
+    "tnsDeviceName": "ascend-114"
+  },
+  {
+    "acna": "exbc15",
+    "companyName": "Malaysia Electronic Payment System SDN BHD",
+    "connectivityStatus": "indeterminate",
+    "country": "string",
+    "customerDeviceName": "MPWACA115",
+    "operationalStatus": "string",
+    "service": "TNSLink",
+    "tnsDeviceName": "ascend-115"
+  }
+]

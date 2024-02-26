@@ -1,0 +1,195 @@
+@import "./colors/darkcolors";
+@font-face {
+  font-family: "FRUTIGER";
+  src: url("../fonts/FRUTIGER.TTF") format("truetype");
+}
+@font-face {
+  font-family: "Helveltica";
+  src: url("../fonts/HELVETICA.TTF") format("truetype");
+}
+@font-face {
+  font-family: "Helveltica Light";
+  src: url("../fonts/HELVETICA-LIGHT.TTF") format("truetype");
+}
+/*******************/
+// Theme Fonts
+/********************/
+$font-family-sans-serif: "FRUTIGER" !important;
+
+@mixin font-frutiger($size: 24px) {
+  font-family: "frutiger" !important;
+  font-size: $size !important;
+}
+@mixin font-helveltica($size: 15px) {
+  // font-family: "helveltica" !important;
+  font-family: "helveltica";
+  font-size: $size !important;
+}
+a {
+  font-size: 18px;
+}
+p,
+tr,
+h1,
+h2,
+h3,
+h4,
+h6,
+span,
+em,
+label,
+::placeholder {
+  font-family: "Helveltica";
+}
+/*******************/
+// Theme Colors
+/********************/
+$primary: #007fdc;
+$info: #2cabe3;
+$danger: #ff5050;
+$success: #2cd07e;
+$warning: #ffb22b;
+$info-bg: #eafcff;
+$danger-bg: #fff6f8;
+$success-bg: #e3fbeb;
+$warning-bg: #fff2dc;
+$dark: #0c2037;
+$light: #303a45;
+$secondary: #001e3c;
+//$darker: #1A202C;
+$darker: #0c2037;
+$button-primary: #2a588d;
+$button-secundary: #007fdc;
+$button-terciary: #ffffff;
+$btn-border-primary: #007fdc;
+$input-pickerd: #007fdc;
+$button-pickerd: #007fdc;
+$rmdp-pickerd: #2d2d39;
+$chart-info: #ffffff;
+$footer-map: #2b435f;
+$footer-primary: #363645;
+$footer-secundary: #ffffff;
+$header-title: #7c7c7c;
+$cardconfig-header: #202020;
+$inputSearch: #007fdc;
+$modalButton: #242632;
+$icon-user: #ffffff;
+$theme-colors: (
+  "buttonprimary": $button-primary,
+  "primary": $primary,
+  "secondary": $secondary,
+  "success": $success,
+  "info": $info,
+  "warning": $warning,
+  "danger": $danger,
+  "light": $light,
+  "dark": $dark,
+  "darker": $darker,
+  "light-primary": #1e446d,
+  "light-success": #1c656e,
+  "light-info": #312578,
+  "light-warning": #5a5446,
+  "light-danger": #662b36,
+  "light-secondary": #121927,
+  "input-pickerd": $input-pickerd
+);
+
+$grid-breakpoints: (
+  xs: 0,
+  sm: 281px,
+  md: 541px,
+  lg: 769px,
+  xl: 1281px,
+  xxl: 1321px
+);
+
+// scss-docs-start gray-color-variables
+$white: #192430 !default;
+$gray-100: #192430 !default;
+$gray-200: #303a45 !default;
+$gray-300: #475059 !default;
+$gray-400: #5e666e !default;
+$gray-500: #757c83 !default;
+$gray-600: #8c9298 !default;
+$gray-700: #a3a7ac !default;
+$gray-800: #babdc1 !default;
+$gray-900: #e6e9ec !default;
+$black: rgba(255, 255, 255, 0.9) !default;
+/*******************/
+// Theme Text Contrast
+/********************/
+$min-contrast-ratio: 1.6 !default;
+$enable-shadows: false !default;
+$font-size-base: 0.95rem !default;
+/*******************/
+// Theme body bg & text color
+/********************/
+$body-bg: #242632 !default;
+$body-color: $gray-900 !default;
+$btn-focus-box-shadow: 0;
+// heading fonts setting
+$h1-font-size: 36px !default;
+$h2-font-size: 30px !default;
+$h3-font-size: 26px !default;
+$h4-font-size: 24px !default;
+$h5-font-size: 20px !default;
+$h6-font-size: 16px !default;
+// Font size
+$font-sizes: (
+  1: 36px,
+  2: 24px,
+  3: 21px,
+  4: 18px,
+  5: 16px,
+  6: 14px,
+  7: 12px
+);
+/*******************/
+// Theme common variable
+/********************/
+$border-radius: 0.3rem !default;
+$border-radius-primary: 1.25rem !default;
+$border-radius-secondary: 1rem !default;
+$box-shadow: 0;
+$headings-font-weight: 500 !default;
+$font-size-base: 1rem !default; // Assumes the browser default, typically `16px`
+$font-weight-lighter: 300 !default;
+$font-weight-light: 400 !default;
+$font-weight-normal: 500 !default;
+$font-weight-bold: 600 !default;
+$font-weight-bolder: 700 !default;
+$h5-font-size: $font-size-base * 1.1 !default;
+$card-border-width: 0 !default;
+$card-box-shadow: $box-shadow !default;
+$card-spacer-y: 1.25rem !default;
+$card-spacer-x: 1.25rem !default;
+$grid-gutter-width: 1.85rem !default;
+// $headings-color: $gray-900 !default;
+$input-bg: $white !default;
+$badge-font-weight: 300 !default;
+$badge-padding-y: 0.35em !default;
+$badge-padding-x: 0.7em !default;
+$badge-pill-padding-x: 0.7em !default;
+$badge-pill-padding-y: 1em !default;
+// Progress bars
+$progress-height: 6px !default;
+/*******************/
+// Theme btn
+$btn-focus-width: 0px;
+$btn-box-shadow: none !default;
+$btn-font-size: 1.2rem !default;
+$btn-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.1);
+/*******************/
+// Theme sidebar width
+/********************/
+$sidebarWidth: 11%;
+$sidebartext: #ffffff;
+$sidebartextlight: rgba(255, 255, 255, 0.6);
+$miniSidebarWidth: 4.5%;
+$topbarHeight: 7vh;
+$dropdown-border-width: 0 !default;
+$dropdown-box-shadow: $box-shadow !default;
+$dropdown-link-hover-bg: $gray-100 !default;
+$enable-negative-margins: true;
+$table-cell-padding-y: 0.75rem !default;
+$table-cell-padding-x: 0.75rem !default;

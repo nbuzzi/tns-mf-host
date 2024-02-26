@@ -1,0 +1,688 @@
+openapi: '3.0.2'
+info:
+  title: Devices endpoint for PSD API
+  version: '1.0'
+servers:
+  - url: http://localhost:3000/
+
+components:
+  securitySchemes:
+    token:
+      type: apiKey
+      name: X-API-TOKEN
+      in: query
+    appId:
+      type: apiKey
+      name: X-API-ID
+      in: query
+  schemas:
+    PaginationResponse:
+      type: object
+      properties:
+        totalRecords:
+          type: number
+        displayRecords:
+          type: number
+    AcnasRequest:
+      type: object
+      properties:
+        acnas:
+          type: array
+    DevicesRequest:
+      description: all these parameters are optional
+      type: object
+      properties:
+        sortBy:
+          type: string
+          example: status
+        startAtRecord:
+          type: number
+        acnas:
+          type: array
+          example: ["gpi", "tsys"]
+        names:
+          type: array        
+          example: ["pen02", "gnp50b"]
+        search:
+          type: object
+          properties:
+            name: 
+              type: string
+              example: "*pen"
+            service:
+              type: string
+              example: "tnslink"
+            vendor:
+              type: string
+              example: "up"
+
+    RequestDelivered:
+      type: string
+      example: "ok"
+    Acna:
+      type: string
+      example: "gpi"
+    DeviceName:
+      type: string
+    DateAsStandard:
+      type: string
+      example: "2020-10-01"
+    DeviceData:
+      type: object
+      properties:
+        createTime:
+          type: string  
+        updateTime:
+          type: string
+        tnsName:
+          type: string
+        customerName:
+          type: string
+        status:
+          type: string
+        oprationalStatus:
+          type: string
+        statusTieBreaker:
+          type: string
+        acna:
+          type: string
+        service:
+          type: string
+        region:
+          type: number
+        source:
+          type: string
+    SignalData:
+      type: object
+      properties:
+        tnsName:
+          type: string  
+        model:
+          type: string
+        timestamp:
+          type: string
+        hour:
+          type: string
+        dayName:
+          type: string
+        high:
+          type: number
+        low:
+          type: number
+        updateTime:
+          type: string
+        service:
+          type: string
+    DeviceUsageData:
+      type: object
+      properties:
+        tnsName:
+          type: string  
+        startDate:
+          type: string
+        endDate:
+          type: string
+        bandwith:
+          type: number
+        rx:
+          type: number
+        tx:
+          type: number
+        total:
+          type: number
+        percentage:
+          type: number
+        overage:
+          type: number
+    DeviceUptimeMonthlyData:
+      type: object
+      properties:
+        tnsName:
+          type: string  
+        month:
+          type: string
+        uptime:
+          type: number
+    DeviceUptimeDailyData:
+      type: object
+      properties:
+        tnsName:
+          type: string  
+        date:
+          type: string
+        uptime:
+          type: number
+    DeviceConfigurationData:
+    # @todo: add all fields
+      type: object
+      properties:
+        tnsName:
+          type: string  
+        customerName:
+          type: string
+        macAddress:
+          type: string
+        serialNumber:
+          type: string
+        OperationalSince:
+          type: string
+        oprationalStatus:
+          type: string
+        deviceType:
+          type: string
+        model:
+          type: string
+        tnsService:
+          type: string
+        vendor:
+          type: number
+        monitoringType:
+          type: string
+        sponsor:
+          type: string
+        acna:
+          type: string
+    DeviceLVCData:
+    # @todo: add all fields
+      type: object
+      properties:
+        ticket:
+          type: string  
+        lvcId:
+          type: string
+        saluesStatus:
+          type: string
+        ep1_host:
+          type: string
+        ep2_host:
+          type: string
+        division:
+          type: string
+        divistionType:
+          type: string
+        ep1_real_ip:
+          type: string
+        ep2_real_ip:
+          type: string
+
+    InterfaceData:
+      type: object
+      properties:
+        createTime:
+          type: string  
+        updateTime:
+          type: string
+        name:
+          type: string
+        status:
+          type: string
+        speed:
+          type: string
+    DeviceSoftwareData:
+      type: object
+      properties:
+        updateTime:
+          type: string
+        software:
+          type: string
+        deviceVersion:
+          type: string
+        currentVersion:
+          type: string
+    DeviceUtilizationData:
+      type: object
+      properties:
+        updateTime:
+          type: string
+        tnsName:
+          type: string
+        date:
+          type: string
+        utilization:
+          type: string
+
+paths:
+  /V01/devices/:
+    get:
+      requestBody:
+        description: optional filter by acnas or names - all optional (data from DevicesDB)
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/DevicesRequest'
+      responses:
+        '200':
+          description: All devices with status
+          content:
+            application/json:
+              schema:
+                type: object
+                allOf:
+                  - $ref: "#/components/schemas/PaginationResponse"
+                  - properties: 
+                      devices:
+                        type: array
+                        items: 
+                          $ref: "#/components/schemas/DeviceData"
+        '400':
+          description: incorrect parameter
+        '404':
+          description: no devices not found
+    put:
+      description: Force a status update for one device - netreo (push to kafka)
+      responses:
+        '200':
+          description: request delivered to kafka succesfully
+          content:
+            application/json:
+              schema:
+                type: object
+                oneOf:
+                  - $ref: "#/components/schemas/RequestDelivered"
+        '400':
+          description: request not deliverd (kafka down?)
+        '404':
+          description: device not found
+  
+  /V01/devices/{DeviceName}:
+    get:
+      responses:
+        '200':
+          description: Single device info with status (data from DevicesDB)
+          content:
+            application/json:
+              schema:
+                type: object
+                oneOf:
+                  - $ref: "#/components/schemas/DeviceData"
+        '400':
+          description: incorrect parameter
+        '404':
+          description: device not found
+              
+  /V01/devices/{DeviceName}/interfaces:
+    get:
+      responses:
+        '200':
+          description: Device interfaces with status (data from DevicesDB)
+          content:
+            application/json:
+              schema:
+                type: object
+                allOf:
+                  - $ref: "#/components/schemas/PaginationResponse"
+                  - properties:
+                      devices:
+                        type: array
+                        items: 
+                          $ref: "#/components/schemas/InterfaceData"
+        '400':
+          description: incorrect parameter
+        '404':
+          description: device not found
+
+  /V01/devices/{DeviceName}/lvcs:
+    get:
+      responses:
+        '200':
+          description: LVC form device (data from DevicesDB)
+          content:
+            application/json:
+              schema:
+                type: object
+                allOf:
+                  - $ref: "#/components/schemas/PaginationResponse"
+                  - properties:
+                      devices:
+                        type: array
+                        items: 
+                          $ref: "#/components/schemas/DeviceLVCData"
+        '400':
+          description: incorrect parameter
+        '404':
+          description: device not found
+
+  /V01/devices/{DeviceName}/configuration:
+    get:
+      description: bulk update configuration, optional by acnas(push to kafka) - remedy
+      responses:
+        '200':
+          description: Single device info with status (data from DevicesDB)
+          content:
+            application/json:
+              schema:
+                type: object
+                oneOf:
+                  - $ref: "#/components/schemas/DeviceConfigurationData"
+        '400':
+          description: incorrect parameter
+        '404':
+          description: device not found
+    put:
+      description: update a device status with the needed downstream services (push to kafka)
+      responses:
+        '200':
+          description: request delivered to kafka succesfully
+          content:
+            application/json:
+              schema:
+                type: object
+                oneOf:
+                  - $ref: "#/components/schemas/RequestDelivered"
+        '400':
+          description: request not deliverd (kafka down?)
+        '404':
+          description: device not found
+
+  /V01/devices/{DeviceName}/usage/current:
+    summary: Device usage info, current (proxy CPMS)
+    get:
+      responses:
+        '200':
+          description: Data from CPMS formatted
+          content:
+            application/json:
+              schema:
+                type: object
+                oneOf:
+                  - $ref: "#/components/schemas/DeviceUsageData"
+        '400':
+          description: incorrect parameter
+        '404':
+          description: device not found
+
+  /V01/devices/{DeviceName}/usage/historical:
+    summary: Device usage info, historical (proxy CPMS)
+    get:
+      responses:
+        '200':
+          description: Data from CPMS formatted
+          content:
+            application/json:
+              schema:
+                type: object
+                allOf:
+                  - $ref: "#/components/schemas/PaginationResponse"
+                  - properties:
+                      historical:
+                        type: array
+                        items: 
+                          $ref: "#/components/schemas/DeviceUsageData"
+        '400':
+          description: incorrect parameter
+        '404':
+          description: device not found
+
+  /V01/devices/{DeviceName}/software:
+    summary: Device software info, historical (proxy CPMS)
+    get:
+      responses:
+        '200':
+          description: Data from CPMS formatted
+          content:
+            application/json:
+              schema:
+                type: object
+                oneOf:
+                  - $ref: "#/components/schemas/DeviceSoftwareData"
+
+        '400':
+          description: incorrect parameter
+        '404':
+          description: device not found
+
+  /V01/devices/{DeviceName}/signal:
+    summary: Device signal info by date (proxy CPMS)
+    get:
+      requestBody:
+        description: Start date 
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/DateAsStandard'
+
+      responses:
+        '200':
+          description: Signal data information from CPMS formatted
+          content:
+            application/json:
+              schema:
+                type: object
+                allOf:
+                  - $ref: "#/components/schemas/PaginationResponse"
+                  - properties:
+                      historical:
+                        type: array
+                        items: 
+                          $ref: "#/components/schemas/SignalData"
+        '400':
+          description: incorrect parameter
+        '404':
+          description: device not found
+    put:
+      description: update a device status with the needed downstream services - cpms (push to kafka)
+      responses:
+        '200':
+          description: request delivered to kafka succesfully
+          content:
+            application/json:
+              schema:
+                type: object
+                oneOf:
+                  - $ref: "#/components/schemas/RequestDelivered"
+        '400':
+          description: incorrect parameter
+        '404':
+          description: device not found
+
+  /V01/devices/{DeviceName}/uptime/monthly:
+    summary: Device usage info, historical (from Devices DB)
+    get:
+      responses:
+        '200':
+          description: Formatted Data
+          content:
+            application/json:
+              schema:
+                type: object
+                allOf:
+                  - $ref: "#/components/schemas/PaginationResponse"
+                  - properties:
+                      historical:
+                        type: array
+                        items: 
+                          $ref: "#/components/schemas/DeviceUptimeMonthlyData"
+        '400':
+          description: incorrect parameter
+        '404':
+          description: device not found
+
+  /V01/devices/{DeviceName}/uptime/daily:
+    summary: Device usage info, historical (from Devices DB)
+    get:
+      responses:
+        '200':
+          description: Formatted Data
+          content:
+            application/json:
+              schema:
+                type: object
+                allOf:
+                  - $ref: "#/components/schemas/PaginationResponse"
+                  - properties:
+                      historical:
+                        type: array
+                        items: 
+                          $ref: "#/components/schemas/DeviceUptimeDailyData"
+        '400':
+          description: incorrect parameter
+        '404':
+          description: device not found
+
+  /V01/devices/{DeviceName}/utilization/weekly:
+    summary: Device utilization info, historical (passthrou netreo)
+    get:
+      responses:
+        '200':
+          description: Formatted Data
+          content:
+            application/json:
+              schema:
+                type: object
+                allOf:
+                  - $ref: "#/components/schemas/PaginationResponse"
+                  - properties:
+                      historical:
+                        type: array
+                        items: 
+                          $ref: "#/components/schemas/DeviceUtilizationData"
+        '400':
+          description: incorrect parameter
+        '404':
+          description: device not found
+
+  /V01/devices/{DeviceName}/utilization/monthly:
+    summary: Device utilization info, historical (passthrou netreo)
+    get:
+      responses:
+        '200':
+          description: Formatted Data
+          content:
+            application/json:
+              schema:
+                type: object
+                allOf:
+                  - $ref: "#/components/schemas/PaginationResponse"
+                  - properties:
+                      historical:
+                        type: array
+                        items: 
+                          $ref: "#/components/schemas/DeviceUtilizationData"
+        '400':
+          description: incorrect parameter
+        '404':
+          description: device not found
+
+  /V01/devices/{DeviceName}/utilization/yearly:
+    summary: Device utilization info, historical (passthrou netreo)
+    get:
+      responses:
+        '200':
+          description: Formatted Data
+          content:
+            application/json:
+              schema:
+                type: object
+                allOf:
+                  - $ref: "#/components/schemas/PaginationResponse"
+                  - properties:
+                      historical:
+                        type: array
+                        items: 
+                          $ref: "#/components/schemas/DeviceUtilizationData"
+        '400':
+          description: incorrect parameter
+        '404':
+          description: device not found
+
+# ---
+# update methods
+# ---
+
+  /V01/devices/uptime/dump:
+    description: Request uptime dump for all device (push to kafka)
+    put:
+      responses:
+        '200':
+          description: request delivered to kafka succesfully
+          content:
+            application/json:
+              schema:
+                type: object
+                oneOf:
+                  - $ref: "#/components/schemas/RequestDelivered"
+        '400':
+          description: request not deliverd (kafka down?)
+        '404':
+          description: device not found
+  
+  # /V01/devices/{DeviceName}/asyncUpdateStatus:
+  #   description: Force a status update for one device (push to kafka)
+  #   put:
+  #     responses:
+  #       '200':
+  #         description: request delivered to kafka succesfully
+  #         content:
+  #           application/json:
+  #             schema:
+  #               type: object
+  #               oneOf:
+  #                 - $ref: "#/components/schemas/RequestDelivered"
+  #       '400':
+  #         description: request not deliverd (kafka down?)
+  #       '404':
+  #         description: device not found
+  /V01/devices/discovery:
+    put:
+      description: bulk update configuration, optional by acnas(push to kafka)
+      requestBody:
+        description: "optional: acnas to update, none for all"
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Acna'
+
+      responses:
+        '200':
+          description: request delivered to kafka succesfully
+          content:
+            application/json:
+              schema:
+                type: object
+                oneOf:
+                  - $ref: "#/components/schemas/RequestDelivered"
+        '400':
+          description: request not deliverd (kafka down?)
+        '404':
+          description: device not found
+
+
+  /V01/devices/bulk:
+    put:
+      description: bulk update status, optional by acnas - netreo/cpms (push to kafka)
+      requestBody:
+        description: optional by acnas(push to kafka)
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Acna'
+
+      responses:
+        '200':
+          description: Force a remedy update (push to kafka)
+          content:
+            application/json:
+              schema:
+                type: object
+                oneOf:
+                  - $ref: "#/components/schemas/RequestDelivered"
+        '400':
+          description: request not deliverd (kafka down?)
+        '404':
+          description: device not found
+    delete:
+      description: delete old status (push to kafka)
+      responses:
+        '200':
+          description: Force a remedy update (push to kafka)
+          content:
+            application/json:
+              schema:
+                type: object
+                oneOf:
+                  - $ref: "#/components/schemas/RequestDelivered"
+        '400':
+          description: request not deliverd (kafka down?)
+        '404':
+          description: device not found

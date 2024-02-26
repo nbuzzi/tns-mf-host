@@ -1,0 +1,68 @@
+[
+    {
+      "changeTicketId": "USCHM0000145978",
+      "changeStartTime": 1558843200,
+      "companyName": "Cardtronics UK Limited",
+      "changeDescription": "USTTK0000379063 - T3 taking errors (COD Ref: USCOD0000041757).",
+      "statusOfChange": "Requested",
+      "maximumDuration": 6.5,
+      "impactType": "Minor",
+      "ticket_info": {
+        "type": "Standard",
+        "impactType": "Major",
+        "statusOfChange": "completed",
+        "changeStartTime": 1558843200,
+        "maximumDuration": 9,
+        "reasonForChange": "T3 taking err(COD Ref)",
+        "changesPlanned": "AT&T has been scheduled to perform",
+        "changeImpact": "tnsonline",
+        "devices": [
+          {
+            "tnsDeviceName": "meps00112",
+            "companyName": "Auspaynet",
+            "customerDeviceName": "meps-p00112",
+            "customerSiteName": "test",
+            "merchantName": "test"
+          }
+        ]
+      }
+    },
+    {
+      "changeTicketId": "ABCDE0000145978",
+      "changeStartTime": 2022843200,
+      "companyName": "Walmart UK Limited",
+      "changeDescription": "USTTK0000379063 - T3 taking errors (COD Ref: USCOD0000041757).",
+      "statusOfChange": "Requested",
+      "maximumDuration": 6.5,
+      "impactType": "Minor",
+      "ticket_info": {
+        "type": "Standard",
+        "impactType": "Major",
+        "statusOfChange": "completed",
+        "changeStartTime": 1558843200,
+        "maximumDuration": 9,
+        "reasonForChange": "T3 taking err(COD Ref)",
+        "changesPlanned": "AT&T has been scheduled to perform",
+        "changeImpact": "tnsonline",
+        "devices":[
+          {
+            "tnsDeviceName": "abcd00112",
+            "companyName": "Carrefour",
+            "customerDeviceName": "meps-p00112",
+            "customerSiteName": "test",
+            "merchantName": "test"
+          }
+        ]
+      }
+    },
+    {
+      "changeTicketId": "USCHM0000145978",
+      "changeStartTime": 1024122002,
+      "companyName": "Adidas UK Limited",
+      "changeDescription": "USTTK0000379063 - T3 taking errors (COD Ref: USCOD0000041757).",
+      "statusOfChange": "Requested",
+      "maximumDuration": 9.5,
+      "impactType": "Minor"
+    }
+  ]
+  

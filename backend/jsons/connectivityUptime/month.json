@@ -1,0 +1,56 @@
+[
+  {
+    "tnsDeviceName": "string",
+    "month": "January",
+    "year": "2023",
+    "uptime": 47
+  },
+  {
+    "tnsDeviceName": "string",
+    "month": "December",
+    "year": "2022",
+    "uptime": 58
+  },
+  {
+    "tnsDeviceName": "string",
+    "month": "November",
+    "year": "2022",
+    "uptime": 67
+  },
+  {
+    "tnsDeviceName": "string",
+    "month": "October",
+    "year": "2022",
+    "uptime": 77
+  },
+  {
+    "tnsDeviceName": "string",
+    "month": "September",
+    "year": "2022",
+    "uptime": 86
+  },
+  {
+    "tnsDeviceName": "string",
+    "month": "August",
+    "year": "2022",
+    "uptime": 97
+  },
+  {
+    "tnsDeviceName": "string",
+    "month": "July",
+    "year": "2022",
+    "uptime": 97
+  },
+  {
+    "tnsDeviceName": "string",
+    "month": "June",
+    "year": "2022",
+    "uptime": 97
+  },
+  {
+    "tnsDeviceName": "string",
+    "month": "May",
+    "year": "2022",
+    "uptime": 97
+  }
+]

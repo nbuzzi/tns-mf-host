@@ -1,0 +1,6 @@
+.container-user-profile {
+  h3 {
+    @include font-frutiger();
+    color: $black;
+  }
+}

@@ -1,0 +1,119 @@
+.pageWrapper {
+  min-height: 100vh;
+}
+.contentArea {
+  flex-grow: 1;
+}
+.boxContainer {
+  width: 89%;
+  margin-left: $sidebarWidth;
+  background-color: #0f0f1a;
+}
+.boxContainerMini {
+  width: 95%;
+  background-color: #0f0f1a;
+  margin-left: $miniSidebarWidth;
+}
+.card {
+  margin-bottom: 30px;
+  border-radius: 1rem;
+  box-shadow: $box-shadow;
+  background-color: $bg-detail-card !important;
+}
+.card-group {
+  margin-bottom: 30px;
+}
+.dropdown-menu {
+  box-shadow: $box-shadow;
+}
+.cursor-pointer {
+  cursor: pointer;
+}
+.circle-box {
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  border-radius: 100%;
+  &.lg-box {
+    width: 60px;
+    height: 60px;
+    font-size: 21px;
+    line-height: 60px;
+  }
+  &.md-box {
+    width: 50px;
+    height: 50px;
+    font-size: 18px;
+    line-height: 50px;
+  }
+}
+.button-group .btn {
+  margin: 3px;
+}
+.btn-white {
+  border: 1px solid $border-color;
+}
+.simplebar-scrollbar:before {
+  background: #a0a0a0;
+}
+.apexcharts-toolbar {
+  z-index: 0 !important;
+}
+.leftRightBox {
+  overflow: hidden;
+}
+.op-3 {
+  opacity: 0.3;
+}
+/*************Left right two column ***************/
+.leftPart {
+  width: 300px;
+  min-height: calc(100vh - 200px);
+  position: relative;
+  transition: 0.1s ease-in;
+  .openCloseBtn {
+    position: absolute;
+    right: -42px;
+    top: 13px;
+  }
+}
+.threeColumn {
+  .leftPart {
+    width: 250px;
+  }
+}
+.rightPart {
+  flex-grow: 1;
+  min-height: calc(100vh - 200px);
+  transition: 0.1s ease-in;
+}
+.closeRbtn {
+  right: 15px;
+  top: 15px;
+  z-index: 2;
+}
+.contentOverlay {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  top: 0;
+  left: 0;
+}
+#scroll {
+  overflow: scroll;
+  overflow: overlay;
+  overflow-x: hidden;
+  max-height: 85vh;
+}
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background-color: #475059;
+}
+::-webkit-scrollbar-thumb {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  border-radius: 8px;
+}

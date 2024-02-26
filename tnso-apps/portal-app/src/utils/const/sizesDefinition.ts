@@ -1,0 +1,7 @@
+export const SIZE = {
+  MOBILE_XS: 280,
+  MOBILE: 540,
+  TABLET_XS: 768,
+  TABLET: 912,
+  DESKTOP: 1024
+};

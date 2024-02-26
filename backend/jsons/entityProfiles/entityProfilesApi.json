@@ -1,0 +1,34 @@
+[
+    {
+      "name": "EP1",
+      "userCount": 10,
+      "canBeDeleted": false,
+      "devices": [
+        "aafu00003v"
+      ]
+    },
+    {
+      "name": "EP2",
+      "userCount": 10,
+      "canBeDeleted": false,
+      "devices": [
+        "aafu00003v"
+      ]
+    },
+    {
+      "name": "EP3",
+      "userCount": 10,
+      "canBeDeleted": false,
+      "devices": [
+        "aafu00003v"
+      ]
+    },
+    {
+      "name": "EP4",
+      "userCount": 10,
+      "canBeDeleted": false,
+      "devices": [
+        "aafu00003v"
+      ]
+    }
+  ]

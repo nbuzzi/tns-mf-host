@@ -1,0 +1,31 @@
+:where(.css-dev-only-do-not-override-nllxry).ant-dropdown .ant-table-filter-dropdown {
+  background-color: #142248;
+  border-color: #1d4696;
+}
+
+:where(.css-dev-only-do-not-override-1adbn6x).ant-checkbox-wrapper {
+  color: white;
+}
+
+.tnso-button-primary {
+  color: white;
+  border: none;
+  background-color: #1d4696;
+}
+
+.tnso-link-button {
+  color: #3275de;
+  border: none;
+  background-color: transparent;
+}
+
+.ant-dropdown .ant-dropdown-menu,
+:where(.css-dev-only-do-not-override-1adbn6x).ant-dropdown-menu-submenu .ant-dropdown-menu {
+  background-color: #142248 !important;
+  border-color: #1d4696 !important;
+  li {
+    span {
+      color: white !important;
+    }
+  }
+}

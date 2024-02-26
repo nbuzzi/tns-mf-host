@@ -1,0 +1,209 @@
+@import "base";
+
+/*******************/
+// Theme Colors
+/********************/
+$light-tns: #f9f9f9;
+$white: #ffffff;
+$black: #000000;
+$dark-tns: #3e5569;
+/*******************/
+// Theme body bg & text color
+/********************/
+$body-bg-tns: #efefef !default;
+$body-color-text-tns: $black !default;
+/*******************/
+// Forms bg & text color
+/********************/
+/********************/
+$page-login: #aaa6a6;
+$header-bg: $white !default;
+$input-bg: $white !default;
+$form-bg: $light-tns !default;
+$input-color-text: $black !default;
+$label-color-text: $black !default;
+$fgt-password: #007fdc;
+// Progress bars
+$progress-height: 6px !default;
+/*******************/
+// Theme btn
+/********************/
+$btn-color-text: #ffffff !default;
+$btn-bg: #2a588d;
+$btn-shadow: 0px 4px 4px rgba($black, 0.1) !default;
+/*******************/
+// Theme Icon
+/********************/
+$icon-color: $black !default;
+/*******************/
+// Theme tabs
+/********************/
+$color-tabs: #818181 !default;
+$color-border-tabs: #818181 !default;
+/*******************/
+// Theme Table
+/********************/
+$hover-table: rgba(42, 88, 141, 0.4) !default;
+$table-bg: #f4f6f9;
+$table-header-bg: #7c7c7c;
+$table-header-title: #202020;
+$table-border: #bebebe !default;
+/*******************/
+// Theme Tree Menu
+/*******************/
+$tree-menu-bg: #ffffff !default;
+$tree-menu-hover: #aaa6a6 !default;
+$item-list-bg: #f9f9f9 !default;
+$item-list-color-text: black !default;
+$item-list-color-icon: #2a588d !default;
+$box-shadow-item: 0px 2px 2px rgba($black, 0.4) !default;
+$item-hover-bg: #f3f3f3;
+$checkbox-disabled: #e6e6e6;
+/*******************/
+// Theme Transfer Menu
+/*******************/
+$transfer-bg: #f9f9f9 !default;
+/*******************/
+// Theme Device Information
+/********************/
+$device-header-bg: #2d2d39;
+$device-card-bg: #ffffff !default;
+$device-calendar-bg: #ffffff !default;
+/*******************/
+// Theme Card
+/********************/
+$card-label: #989898;
+/********************/
+// Theme Chart
+/********************/
+$text-header-color: #202020 !default;
+$axis-chart-color: #a3aed0 !default;
+$text-legend-color: #000000 !default;
+$text-date-chart-color: #a3aed0 !default;
+$text-gray-date-chart-color: #949aab !default;
+$text-legend-data-color: #a3aed0 !default;
+$text-legend-chart-color: #a3aed0 !default;
+$box-shadow-chart-tns: 0px 4px 4px 0px rgba(142, 142, 142, 0.4);
+/********************/
+// Theme Card
+/********************/
+$bg-detail-card: #f9f9f9;
+
+//--------------------------------------- ne design system ---------------------------------------
+// Primary Colors
+$primary-color-blue: #111d3d;
+$primary-color-black: #000000;
+$primary-color-grey: #7a8889;
+// Secondary Colors
+$secondary-color-dark-blue: #150829;
+$secondary-color-blue: #172d63;
+$secondary-color-light-blue: #3275de;
+$secondary-color-aqua: #43d5c9;
+$secondary-color-violet: #8231dc;
+$secondary-color-green: #8bc53f;
+$secondary-color-orange: #eb9646;
+$secondary-color-pink: #e53c96;
+$secondary-color-yellow: #c7b000;
+$secondary-color-grey: #acacac;
+
+//Body Colors
+$body-bg-color: #0f0f1a;
+
+// Button Colors
+// ---------------- primary-btn
+$tnso-btn-bg-primary: #1d4696;
+$tnso-btn-bg-primary-hover: #256ad0;
+$tnso-btn-bg-primary-active: #557fbe;
+$tnso-btn-bg-primary-disabled: #516f9b;
+$tnso-btn-text-primary: #ffffff;
+$tnso-btn-text-primary-disabled: #ffffff33;
+$tnso-btn-border-primary: #111d3d;
+$tnso-btn-border-primary-hover: #0f408a;
+$tnso-btn-border-primary-active: #1152b4;
+$tnso-btn-border-primary-disabled: #283e5f;
+// ---------------- secondary-btn
+$tnso-btn-bg-secondary: #111d3d;
+$tnso-btn-bg-secondary-hover: #0f408a;
+$tnso-btn-bg-secondary-active: #1152b4;
+$tnso-btn-bg-secondary-disabled: #283e5f;
+$tnso-btn-text-secondary: #ffffff;
+$tnso-btn-text-secondary-disabled: #ffffff33;
+$tnso-btn-border-secondary: #1d4696;
+$tnso-btn-border-secondary-hover: #256ad0;
+$tnso-btn-border-secondary-active: #557fbe;
+$tnso-btn-border-secondary-disabled: #516f9b;
+// ---------------- outline-primary-btn
+// ---------------- outline-secondary-btn
+
+// Card Colors
+$tnso-card-bg: #0f19335c;
+$tnso-card-border: #1d4696;
+
+// Layout Colors
+// ---------------- header
+$tnso-header-bg: $primary-color-blue;
+$tnso-header-text: #ffffff;
+$tnso-header-border: #1d4696;
+// ---------------- sider
+$tnso-sider-bg: $primary-color-blue;
+$tnso-sider-text: #ffffff;
+$tnso-sider-border: #1d4696;
+// ---------------- footer
+$tnso-footer-bg: $primary-color-blue;
+$tnso-footer-text: #ffffff;
+$tnso-footer-border: #1d4696;
+
+// Input Colors
+// ---------------- default
+$tnso-input-bg: #131b32;
+$tnso-input-text: #ffffff;
+$tnso-input-border: #1d46964a;
+$tnso-input-border-active: #131b32;
+$tnso-input-bg-disabled: #1e2843;
+$tnso-input-text-disabled: #ffffff75;
+$tnso-input-border-disabled: #4b5e7a;
+// ---------------- search
+$tnso-search-bg: #0f1322;
+$tnso-search-text: #ffffff;
+$tnso-search-border: #516f9b;
+$tnso-search-border-active: #131b32;
+$tnso-search-bg-disabled: #131725;
+$tnso-search-text-disabled: #ffffff75;
+$tnso-search-border-disabled: #1d469600;
+// ---------------- select
+$tnso-select-bg: #0f1322;
+$tnso-select-text: #ffffff;
+$tnso-select-border: #1d4696;
+$tnso-select-border-active: #131b32;
+$tnso-select-bg-disabled: #131725;
+$tnso-select-text-disabled: #ffffff75;
+$tnso-select-border-disabled: #1d469600;
+$tnso-select-option-selected: #142248;
+
+// Modal Colors
+$tnso-modal-bg: $primary-color-blue;
+$tnso-modal-text: $primary-color-black;
+
+// Toast Colors
+// ---------------- success-toast
+$tnso-toast-bg-success: #5ada7629;
+$tnso-toast-text-success: #52c41a;
+$tnso-toast-border-success: #058020c9;
+// ---------------- error-toast
+$tnso-toast-bg-error: #fc858529;
+$tnso-toast-text-error: #ff2d2e;
+$tnso-toast-border-error: #f60b0c;
+// ---------------- warning-toast
+// ---------------- info-toast
+
+// Grid Color
+$tnso-text-grid: #ffffff;
+// ---------------- header grid
+$tnso-bg-h-grid: #142248;
+$tnso-border-h-grid: #0000000f;
+$tnso-bg-sh-grid: #1d4696;
+// ---------------- body grid
+$tnso-bg-b-grid: #131b32;
+$tnso-hover-b-grid: #212b4d;
+$tnso-border-b-grid: #fff;
+$tnso-bg-sb-grid: #1c294d;

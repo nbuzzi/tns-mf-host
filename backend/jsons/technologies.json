@@ -1,0 +1,5 @@
+{
+  "3G": ["All 3G (RSSI and EC/IO)","3G RSSI", "3G EC/IO"],
+  "4G": ["All 4G (RSSI, RSRP and SINR)","4G RSSI", "4G RSRP", "4G SINR"],
+  "others":["Signal Quality", "TNS Normalized"]
+}

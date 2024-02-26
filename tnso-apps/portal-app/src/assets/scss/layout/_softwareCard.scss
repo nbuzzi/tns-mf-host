@@ -1,0 +1,41 @@
+.software-card {
+  background-color: $bg-detail-card;
+  height: 62vh;
+  @mixin font-size-custom($size: 15px) {
+    font-size: $size;
+  }
+  .chart-button {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+  }
+  .title {
+    @include font-helveltica(19px);
+    margin-top: 10px;
+    font-weight: 400;
+  }
+  .gray-label {
+    @include font-helveltica();
+    font-weight: 700;
+    padding-right: 5px;
+    color: #989898;
+  }
+  .description {
+    @include font-helveltica();
+    font-weight: 400;
+  }
+}
+.title-card {
+  @include font-helveltica(19px);
+  margin-top: 10px;
+  font-weight: 400;
+}
+
+@media (max-width: 514px) {
+  .software-card {
+    .gray-label,
+    .description {
+      @include font-helveltica(0.8rem);
+    }
+  }
+}

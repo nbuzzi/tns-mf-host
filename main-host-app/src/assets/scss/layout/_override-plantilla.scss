@@ -1,0 +1,25 @@
+.page-link {
+  z-index: 3;
+  color: var(--bs-pagination-focus-color);
+  background-color: var(--bs-pagination-focus-bg);
+  outline: 0;
+  box-shadow: none !important;
+}
+.page-link:focus {
+  z-index: 3;
+  color: var(--bs-pagination-focus-color);
+  background-color: var(--bs-pagination-focus-bg);
+  outline: 0;
+  box-shadow: none !important;
+}
+.rmdp-calendar {
+  background: $white !important;
+  color: $black !important;
+}
+.rmdp-wrapper.rmdp-shadow {
+  background: $white !important;
+  color: $black !important;
+}
+.rmdp-day {
+  color: $black !important;
+}

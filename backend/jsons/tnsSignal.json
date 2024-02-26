@@ -1,0 +1,142 @@
+[
+  {
+    "technology": "4G Connection",
+    "type": "RSSI",
+    "current": -85
+  },
+  {
+    "technology": "4G Connection",
+    "type": "RSRP",
+    "current": -88
+  },
+  {
+    "technology": "4G Connection",
+    "type": "RSRP",
+    "current": -81
+  },
+  {
+    "technology": "4G Connection",
+    "type": "RSCP",
+    "current": -72
+  },
+  {
+    "technology": "4G Connection",
+    "type": "RSCP",
+    "current": -75
+  },
+  {
+    "technology": "4G Connection",
+    "type": "RSSI",
+    "current": -79
+  },
+  {
+    "technology": "3G Connection",
+    "type": "RSSI",
+    "current": -90
+  },
+  {
+    "technology": "3G Connection",
+    "type": "RSSI",
+    "current": -90
+  },
+  {
+    "technology": "3G Connection",
+    "type": "RSSI",
+    "current": -90
+  },
+  {
+    "technology": "3G Connection",
+    "type": "SINR",
+    "current": -90
+  },
+  {
+    "technology": "2G Connection",
+    "type": "RSSI",
+    "current": -90
+  },
+  {
+    "technology": "2G Connection",
+    "type": "RSSI",
+    "current": -96
+  },
+  {
+    "technology": "2G Connection",
+    "type": "RSSI",
+    "current": -102
+  },
+  {
+    "technology": "4G Connection",
+    "type": "RSSI",
+    "current": -98
+  },
+  {
+    "technology": "4G Connection",
+    "type": "RSSI",
+    "current": -86
+  },
+  {
+    "technology": "4G Connection",
+    "type": "RSSI",
+    "current": -75
+  },
+  {
+    "technology": "4G Connection",
+    "type": "RSSI",
+    "current": -65
+  },
+  {
+    "technology": "4G Connection",
+    "type": "RSSI",
+    "current": -55
+  },
+  {
+    "technology": "4G Connection",
+    "type": "RSSI",
+    "current": -58
+  },
+  {
+    "technology": "4G Connection",
+    "type": "RSSI",
+    "current": -61
+  },
+  {
+    "technology": "4G Connection",
+    "type": "RSSI",
+    "current": -64
+  },
+  {
+    "technology": "4G Connection",
+    "type": "RSSI",
+    "current": -67
+  },
+  {
+    "technology": "4G Connection",
+    "type": "RSSI",
+    "current": -70
+  },
+  {
+    "technology": "4G Connection",
+    "type": "RSSI",
+    "current": -86
+  },
+  {
+    "technology": "4G Connection",
+    "type": "RSSI",
+    "current": -86
+  },
+  {
+    "technology": "4G Connection",
+    "type": "RSSI",
+    "current": -89
+  },
+  {
+    "technology": "4G Connection",
+    "type": "RSSI",
+    "current": -87
+  },
+  {
+    "technology": "4G Connection",
+    "type": "RSSI",
+    "current": -85
+  }
+]

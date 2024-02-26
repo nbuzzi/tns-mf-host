@@ -1,0 +1,212 @@
+[
+  {
+    "acna": "exbc1",
+    "knownAs": "exbc1",
+    "totalNumberOfDevices": 0,
+    "companyName": "Malaysia Electronic Payment System SDN BHD",
+    "connectivityStatus": {
+      "fullService": 0,
+      "onPrimary": 0,
+      "onBackup": 0,
+      "offline": 0,
+      "indeterminate": 0,
+      "unknown": 0
+    }
+  },
+  {
+    "acna": "exbc2",
+    "knownAs": "exbc2",
+    "totalNumberOfDevices": 0,
+    "companyName": "Malaysia Electronic Payment System SDN BHD",
+    "connectivityStatus": {
+      "fullService": 0,
+      "onPrimary": 0,
+      "onBackup": 0,
+      "offline": 0,
+      "indeterminate": 0,
+      "unknown": 0
+    }
+  },
+  {
+    "acna": "exbc3",
+    "knownAs": "exbc3",
+    "totalNumberOfDevices": 0,
+    "companyName": "Malaysia Electronic Payment System SDN BHD",
+    "connectivityStatus": {
+      "fullService": 0,
+      "onPrimary": 0,
+      "onBackup": 0,
+      "offline": 0,
+      "indeterminate": 0,
+      "unknown": 0
+    }
+  },
+  {
+    "acna": "exbc4",
+    "knownAs": "exbc4",
+    "totalNumberOfDevices": 0,
+    "companyName": "Malaysia Electronic Payment System SDN BHD",
+    "connectivityStatus": {
+      "fullService": 0,
+      "onPrimary": 0,
+      "onBackup": 0,
+      "offline": 0,
+      "indeterminate": 0,
+      "unknown": 1
+    }
+  },
+  {
+    "acna": "exbc5",
+    "knownAs": "exbc5",
+    "totalNumberOfDevices": 0,
+    "companyName": "Malaysia Electronic Payment System SDN BHD",
+    "connectivityStatus": {
+      "fullService": 0,
+      "onPrimary": 6,
+      "onBackup": 0,
+      "offline": 0,
+      "indeterminate": 3,
+      "unknown": 5
+    }
+  },
+  {
+    "acna": "exbc6",
+    "knownAs": "exbc6",
+    "totalNumberOfDevices": 0,
+    "companyName": "Malaysia Electronic Payment System SDN BHD",
+    "connectivityStatus": {
+      "fullService": 0,
+      "onPrimary": 1,
+      "onBackup": 3,
+      "offline": 0,
+      "indeterminate": 0,
+      "unknown": 0
+    }
+  },
+  {
+    "acna": "exbc7",
+    "knownAs": "exbc7",
+    "totalNumberOfDevices": 0,
+    "companyName": "Malaysia Electronic Payment System SDN BHD",
+    "connectivityStatus": {
+      "fullService": 5,
+      "onPrimary": 3,
+      "onBackup": 0,
+      "offline": 0,
+      "indeterminate": 0,
+      "unknown": 0
+    }
+  },
+  {
+    "acna": "exbc8",
+    "knownAs": "exbc8",
+    "totalNumberOfDevices": 0,
+    "companyName": "Malaysia Electronic Payment System SDN BHD",
+    "connectivityStatus": {
+      "fullService": 0,
+      "onPrimary": 0,
+      "onBackup": 1,
+      "offline": 0,
+      "indeterminate": 0,
+      "unknown": 0
+    }
+  },
+  {
+    "acna": "exbc9",
+    "knownAs": "exbc9",
+    "totalNumberOfDevices": 0,
+    "companyName": "Malaysia Electronic Payment System SDN BHD",
+    "connectivityStatus": {
+      "fullService": 0,
+      "onPrimary": 2,
+      "onBackup": 0,
+      "offline": 0,
+      "indeterminate": 0,
+      "unknown": 0
+    }
+  },
+  {
+    "acna": "exbc10",
+    "knownAs": "exbc10",
+    "totalNumberOfDevices": 0,
+    "companyName": "Malaysia Electronic Payment System SDN BHD",
+    "connectivityStatus": {
+      "fullService": 2,
+      "onPrimary": 3,
+      "onBackup": 1,
+      "offline": 0,
+      "indeterminate": 0,
+      "unknown": 0
+    }
+  },
+  {
+    "acna": "exbc11",
+    "knownAs": "exbc11",
+    "totalNumberOfDevices": 0,
+    "companyName": "Malaysia Electronic Payment System SDN BHD",
+    "connectivityStatus": {
+      "fullService": 2,
+      "onPrimary": 3,
+      "onBackup": 1,
+      "offline": 0,
+      "indeterminate": 0,
+      "unknown": 0
+    }
+  },
+  {
+    "acna": "exbc12",
+    "knownAs": "exbc12",
+    "totalNumberOfDevices": 0,
+    "companyName": "Malaysia Electronic Payment System SDN BHD",
+    "connectivityStatus": {
+      "fullService": 2,
+      "onPrimary": 3,
+      "onBackup": 1,
+      "offline": 0,
+      "indeterminate": 0,
+      "unknown": 0
+    }
+  },
+  {
+    "acna": "exbc13",
+    "knownAs": "exbc13",
+    "totalNumberOfDevices": 0,
+    "companyName": "Malaysia Electronic Payment System SDN BHD",
+    "connectivityStatus": {
+      "fullService": 2,
+      "onPrimary": 3,
+      "onBackup": 1,
+      "offline": 0,
+      "indeterminate": 0,
+      "unknown": 0
+    }
+  },
+  {
+    "acna": "exbc14",
+    "knownAs": "exbc14",
+    "totalNumberOfDevices": 0,
+    "companyName": "Malaysia Electronic Payment System SDN BHD",
+    "connectivityStatus": {
+      "fullService": 2,
+      "onPrimary": 3,
+      "onBackup": 1,
+      "offline": 0,
+      "indeterminate": 0,
+      "unknown": 0
+    }
+  },
+  {
+    "acna": "exbc15",
+    "knownAs": "exbc15",
+    "totalNumberOfDevices": 0,
+    "companyName": "Malaysia Electronic Payment System SDN BHD",
+    "connectivityStatus": {
+      "fullService": 2,
+      "onPrimary": 3,
+      "onBackup": 1,
+      "offline": 0,
+      "indeterminate": 0,
+      "unknown": 0
+    }
+  }
+]

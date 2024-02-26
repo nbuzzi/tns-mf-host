@@ -1,0 +1,1110 @@
+openapi: '3.0.2'
+info:
+  title: Devices endpoint for PSD API
+  version: '1.0'
+servers:
+  - url: https://psdwapi/
+
+components:
+  securitySchemes:
+    token:
+      type: apiKey
+      name: X-API-TOKEN
+      in: query
+    appId:
+      type: apiKey
+      name: X-API-ID
+      in: query
+  schemas:
+    PaginationResponse:
+      type: object
+      properties:
+        totalRecords:
+          type: number
+        returnedRecords:
+          type: number
+    AcnasRequest:
+      type: object
+      properties:
+        acnas:
+          type: array
+          items: 
+            type: string
+    DevicesRequest:
+      description: all these parameters are optional
+      type: object
+      properties:
+        sortBy:
+          type: string
+          example: status
+        startAtRecord:
+          type: number
+        recordsPerPage:
+          type: number
+          default: 100
+        acnas:
+          type: array
+          items: 
+            type: string
+          example: ["gpi", "tsys"]
+        search:
+          type: object
+          properties:
+            names:
+              type: array        
+              example: ["pen02", "gnp50b"]
+              items: 
+                type: string
+            service:
+              type: string
+              example: "tnslink"
+            status:
+              type: string
+              example: "up"
+    RequestDelivered:
+      type: string
+      example: "ok"
+    RequestError:
+      type: object
+      properties:
+        type:
+          type: string  
+          example: "error"
+        upstreamResponse:
+          type: string
+    RequestExecuted:
+      type: object
+      properties:
+        type:
+          type: string  
+        updateTime:
+          type: string
+        upstreamResponse:
+          type: string
+        payload:
+          type: string
+    Acna:
+      type: string
+      example: "gpi"
+    DeviceName:
+      type: string
+    DateAsStandard:
+      type: string
+      example: "2020-10-01"
+    MonthYearStandard:
+      type: string
+      example: "Sep-2021"
+    DeviceData:
+      type: object
+      properties:
+        createTime:
+          type: string  
+        updateTime:
+          type: string
+        tnsName:
+          type: string
+        customerName:
+          type: string
+        status:
+          type: string
+        operationalStatus:
+          type: string
+        statusTieBreaker:
+          type: string
+        acna:
+          type: string
+        company: 
+          type: string
+        country: 
+          type: string
+        service:
+          type: string
+        region:
+          type: number
+        source:
+          type: string
+    DeviceNameUpdateRequest:
+      type: object
+      properties:
+        tnsName:
+          type: string
+        updatedcustomerName:
+          type: string  
+        customerName:
+          type: string
+    DeviceGroupRequest:
+      type: object
+      properties:
+        name:
+          type: string
+        parentId:
+          type: integer
+        userId:
+          type: string
+    DeviceGroupResponse:
+      type: object
+      properties:
+        groupName:
+          type: string
+        rowsAffected:
+          type: string
+        error:
+          type: string
+    DeleteGroup:
+      type: object
+      properties:
+        rowsAffected:
+          type: string
+        error:
+          type: string
+    NormalizedSignalData:
+      type: object
+      properties:
+        tnsName:
+          type: string  
+        model:
+          type: string
+        timestamp:
+          type: string
+        hour:
+          type: string
+        day:
+          type: string
+        high:
+          type: number
+        low:
+          type: number
+        updateTime:
+          type: string
+        service:
+          type: string
+    DeviceUsageData:
+      type: object
+      properties:
+        tnsName:
+          type: string  
+        startDate:
+          type: string
+        endDate:
+          type: string
+        bandwith:
+          type: number
+        rx:
+          type: number
+        tx:
+          type: number
+        total:
+          type: number
+        percentage:
+          type: number
+        overage:
+          type: number
+    DeviceConnectivityUptimeMonthlyData:
+      type: object
+      properties:
+        tnsName:
+          type: string  
+        month:
+          type: string
+        uptime:
+          type: number
+    DeviceConnectivityUptimeDailyData:
+      type: object
+      properties:
+        tnsName:
+          type: string  
+        date:
+          type: string
+        uptime:
+          type: number
+    DeviceNote:
+      type: object
+      properties:
+        tnsName:
+          type: string  
+        note:
+          type: string
+    DeviceDetailConfigResponse:
+    # @todo: add all fields
+      type: object
+      properties:
+        tnsName:
+          type: string  
+        customerName:
+          type: string
+        macAddress:
+          type: string
+        serialNumber:
+          type: string
+        operationalDate:
+          type: string
+        operationalStatus:
+          type: string
+        deviceType:
+          type: string
+        model:
+          type: string
+        tnsService:
+          type: string
+        vendor:
+          type: number
+        monitoringType:
+          type: string
+        sponsor:
+          type: string
+        acna:
+          type: string
+        manufacturer:
+          type: string
+        modelNo:
+          type: string
+        protocol:
+          type: string
+        serialBaudRate:
+          type: string
+        pollAddress:
+          type: string
+        deviceAddress:
+          type: string
+        hostCharacterSet:
+          type: string
+        company:
+          type: string
+        person:
+          type: string
+        email:
+          type: string
+        phone:
+          type: string
+        cell:
+          type: string
+        fax:
+          type: string
+        address:
+          type: string
+        city:
+          type: string
+        state:
+          type: string
+        country:
+          type: string
+        siteName:
+          type: string
+        customerSiteName:
+          type: string
+        customerAddress:
+          type: string
+        customerCity:
+          type: string
+        customerState:
+          type: string
+    DeviceLVCData:
+      type: object
+      properties:
+        ticket:
+          type: string  
+        lvcId:
+          type: string
+        salesStatus:
+          type: string
+        dateOperational:
+          type: string
+        ep1Host:
+          type: string
+        ep2Host:
+          type: string
+        ep1DeviceName:
+          type: string
+        ep2DeviceName:
+          type: string
+        ep1CustomerSiteId:
+          type: string
+        ep2CustomerSiteId:
+          type: string
+        ep1Customer:
+          type: string
+        ep2Customer:
+          type: string
+        ep1DeviceData:
+          $ref: "#/components/schemas/DeviceData"
+        ep2DeviceData:
+          $ref: "#/components/schemas/DeviceData"
+        ep1KnownEp2:
+          type: string
+        ep2KnownEp1:
+          type: string
+        division:
+          type: string
+        divisionType:
+          type: string
+        ep1_real_ip:
+          type: string
+        ep2_real_ip:
+          type: string
+
+    InterfaceData:
+      type: object
+      properties:
+        createTime:
+          type: string  
+        updateTime:
+          type: string
+        name:
+          type: string
+        status:
+          type: string
+        stringDefinition:
+          type: string
+        capacityUp:
+          type: string
+        capacityDown:
+          type: string
+        wirelessCapabilities:
+          type: string
+    DeviceSoftwareData:
+      type: object
+      properties:
+        updateTime:
+          type: string
+        software:
+          type: string
+        deviceVersion:
+          type: string
+        currentVersion:
+          type: string
+    DeviceUtilizationData:
+      type: object
+      properties:
+        tnsName:
+          type: string
+        date:
+          type: string
+        utilizationDownload:
+          type: string
+        utilizationUpload:
+          type: string
+
+security:
+  - token: []
+  - appId: []
+  
+paths:
+  /V01/devices/:
+    get:
+      parameters:
+        - in: query
+          name: filters
+          schema:
+            $ref: '#/components/schemas/DevicesRequest'
+          description: optional filters and sorting (data from DevicesDB)
+      responses:
+        '200':
+          description: Return data for all devices with status (from devicesDB)
+          content:
+            application/json:
+              schema:
+                type: object
+                allOf:
+                  - $ref: "#/components/schemas/PaginationResponse"
+                  - properties: 
+                      devices:
+                        type: array
+                        items: 
+                          $ref: "#/components/schemas/DeviceData"
+        '400':
+          description: incorrect parameter
+        '404':
+          description: no devices not found
+    put:
+      description: Force a status update all devices, optional by acna (push to rabbitmq)
+      requestBody:
+        description: optional by acnas(push to rabbitmq)
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/AcnasRequest'
+
+      responses:
+        '200':
+          description: request delivered to rabbitmq succesfully
+          content:
+            application/json:
+              schema:
+                type: object
+                oneOf:
+                  - $ref: "#/components/schemas/RequestDelivered"
+        '400':
+          description: request not deliverd (rabbitmq down?)
+        '404':
+          description: acna not found
+  
+  /V01/devices/{DeviceName}:
+    get:
+      parameters:
+        - in: path
+          name: DeviceName
+          schema:
+            type: string
+          required: true
+          description: name of the device to get
+      responses:
+        '200':
+          description: Single device info with status (data from DevicesDB)
+          content:
+            application/json:
+              schema:
+                type: object
+                oneOf:
+                  - $ref: "#/components/schemas/DeviceData"
+        '400':
+          description: incorrect parameter
+        '404':
+          description: device not found
+    post:
+      parameters:
+        - in: path
+          name: DeviceName
+          schema:
+            type: string
+          required: true
+          description: name of the device to get
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/DeviceData"
+
+      responses:
+        '200':
+          description: Mixed update call, it can update our local database and remedy on case of the "costumerDeviceName"
+          content:
+            application/json:
+              schema:
+                type: object
+                oneOf:
+                  - $ref: "#/components/schemas/DeviceData"
+        '400':
+          description: incorrect parameter
+        '404':
+          description: device not found
+
+  /V01/devices/{DeviceName}/interfaces:
+    get:
+      parameters:
+        - in: path
+          name: DeviceName
+          schema:
+            type: string
+          required: true
+          description: name of the device to get
+      responses:
+        '200':
+          description: Device interfaces with status (data from DevicesDB)
+          content:
+            application/json:
+              schema:
+                type: object
+                allOf:
+                  - $ref: "#/components/schemas/PaginationResponse"
+                  - properties:
+                      devices:
+                        type: array
+                        items: 
+                          $ref: "#/components/schemas/InterfaceData"
+        '400':
+          description: incorrect parameter
+        '404':
+          description: device not found
+
+
+  /V01/devices/{DeviceName}/note:
+    get:
+      parameters:
+        - in: path
+          name: DeviceName
+          schema:
+            type: string
+          required: true
+          description: name of the device to get the note
+      responses:
+        '200':
+          description: Device note (data from DevicesDB) - not mirrored to remedy, this may change
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/DeviceNote"
+        '400':
+          description: incorrect parameter
+        '404':
+          description: device not found
+    post:
+      parameters:
+        - in: path
+          name: DeviceName
+          schema:
+            type: string
+          required: true
+          description: name of the device to get the note
+      requestBody:
+        description: "note content"
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/DeviceNote'
+      responses:
+        '200':
+          description: Device note (data from DevicesDB) - not mirrored to remedy, this may change
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/DeviceNote"
+        '400':
+          description: incorrect parameter
+        '404':
+          description: device not found
+
+  /V01/devices/{DeviceName}/lvcs:
+    get:
+      parameters:
+        - in: path
+          name: DeviceName
+          schema:
+            type: string
+          required: true
+          description: name of the device to get
+
+      responses:
+        '200':
+          description: LVC form device (data from DevicesDB)
+          content:
+            application/json:
+              schema:
+                type: object
+                allOf:
+                  - $ref: "#/components/schemas/PaginationResponse"
+                  - properties:
+                      devices:
+                        type: array
+                        items: 
+                          $ref: "#/components/schemas/DeviceLVCData"
+        '400':
+          description: incorrect parameter
+        '404':
+          description: device not found
+
+  /V01/devices/{DeviceName}/configuration:
+    get:
+      parameters:
+        - in: path
+          name: DeviceName
+          schema:
+            type: string
+          required: true
+          description: name of the device to get
+      description: Single device configuration (data from DevicesDB)
+      responses:
+        '200':
+          description: Single device configuration (data from DevicesDB)
+          content:
+            application/json:
+              schema:
+                type: object
+                oneOf:
+                  - $ref: "#/components/schemas/DeviceDetailConfigResponse"
+        '400':
+          description: incorrect parameter
+        '404':
+          description: device not found
+    put:
+      parameters:
+        - in: path
+          name: DeviceName
+          schema:
+            type: string
+          required: true
+          description: name of the device to get
+      description: update a device configuration with the needed downstream services (push to rabbitmq) - remedy
+      responses:
+        '200':
+          description: request delivered to rabbitmq succesfully
+          content:
+            application/json:
+              schema:
+                type: object
+                oneOf:
+                  - $ref: "#/components/schemas/RequestDelivered"
+        '400':
+          description: request not deliverd (rabbitmq down?)
+        '404':
+          description: device not found
+
+  /V01/devices/{DeviceName}/usage/current:
+    summary: Device usage info, current (proxy CPMS)
+    get:
+      parameters:
+        - in: path
+          name: DeviceName
+          schema:
+            type: string
+          required: true
+          description: name of the device to get
+        - in: query
+          name: Date
+          schema:
+            $ref: '#/components/schemas/MonthYearStandard'
+          description: Selected Date
+      responses:
+        '200':
+          description: Data from CPMS formatted
+          content:
+            application/json:
+              schema:
+                type: object
+                oneOf:
+                  - $ref: "#/components/schemas/DeviceUsageData"
+        '400':
+          description: incorrect parameter
+        '404':
+          description: device not found
+
+  /V01/devices/{DeviceName}/usage/historical:
+    summary: Device usage info, historical (proxy CPMS)
+    get:
+      parameters:
+        - in: path
+          name: DeviceName
+          schema:
+            type: string
+          required: true
+          description: name of the device to get
+      responses:
+        '200':
+          description: Data from CPMS formatted
+          content:
+            application/json:
+              schema:
+                type: object
+                allOf:
+                  - $ref: "#/components/schemas/PaginationResponse"
+                  - properties:
+                      historical:
+                        type: array
+                        items: 
+                          $ref: "#/components/schemas/DeviceUsageData"
+        '400':
+          description: incorrect parameter
+        '404':
+          description: device not found
+
+  /V01/devices/{DeviceName}/software:
+    summary: Device software info, historical (proxy CPMS)
+    get:
+      parameters:
+        - in: path
+          name: DeviceName
+          schema:
+            type: string
+          required: true
+          description: name of the device to get
+      responses:
+        '200':
+          description: Data from CPMS formatted
+          content:
+            application/json:
+              schema:
+                type: object
+                allOf:
+                  - $ref: "#/components/schemas/PaginationResponse"
+                  - properties:
+                      configurations:
+                        type: array
+                        items: 
+                          $ref: "#/components/schemas/DeviceSoftwareData"
+
+        '400':
+          description: incorrect parameter
+        '404':
+          description: device not found
+
+  /V01/devices/{DeviceName}/normalizedSignal:
+    summary: Device normalized signal info by date (proxy CPMS)
+    get:
+      parameters:
+        - in: path
+          name: DeviceName
+          schema:
+            type: string
+          required: true
+          description: name of the device to get
+        - in: query
+          name: Start date
+          schema:
+            $ref: '#/components/schemas/DateAsStandard'
+          description: Start date
+      responses:
+        '200':
+          description: Normalized signal data information from CPMS formatted
+          content:
+            application/json:
+              schema:
+                type: object
+                allOf:
+                  - $ref: "#/components/schemas/PaginationResponse"
+                  - properties:
+                      historical:
+                        type: array
+                        items: 
+                          $ref: "#/components/schemas/NormalizedSignalData"
+        '400':
+          description: incorrect parameter
+        '404':
+          description: device not found
+    put:
+      parameters:
+        - in: path
+          name: DeviceName
+          schema:
+            type: string
+          required: true
+          description: name of the device to get
+      description: update a device status with the needed downstream services - cpms (push to CPMS API)
+      responses:
+        '200':
+          description: request delivered to rabbitmq succesfully
+          content:
+            application/json:
+              schema:
+                type: object
+                oneOf:
+                  - $ref: "#/components/schemas/RequestDelivered"
+        '400':
+          description: incorrect parameter
+        '404':
+          description: device not found
+
+  /V01/devices/{DeviceName}/connectivityUptime/monthly:
+    summary: Device usage info, historical (from Devices DB)
+    get:
+      parameters:
+        - in: path
+          name: DeviceName
+          schema:
+            type: string
+          required: true
+          description: name of the device to get
+      responses:
+        '200':
+          description: Device usage info, historical (from Devices DB)
+          content:
+            application/json:
+              schema:
+                type: object
+                allOf:
+                  - $ref: "#/components/schemas/PaginationResponse"
+                  - properties:
+                      historical:
+                        type: array
+                        items: 
+                          $ref: "#/components/schemas/DeviceConnectivityUptimeMonthlyData"
+        '400':
+          description: incorrect parameter
+        '404':
+          description: device not found
+
+  /V01/devices/{DeviceName}/connectivityUptime/daily:
+    summary: Device uptime info, historical (from Devices DB)
+    get:
+      parameters:
+        - in: path
+          name: DeviceName
+          schema:
+            type: string
+          required: true
+          description: name of the device to get
+      responses:
+        '200':
+          description: Device uptime info, historical (from Devices DB)
+          content:
+            application/json:
+              schema:
+                type: object
+                allOf:
+                  - $ref: "#/components/schemas/PaginationResponse"
+                  - properties:
+                      historical:
+                        type: array
+                        items: 
+                          $ref: "#/components/schemas/DeviceConnectivityUptimeDailyData"
+        '400':
+          description: incorrect parameter
+        '404':
+          description: device not found
+
+  /V01/devices/{DeviceName}/{interface}/utilization/weekly:
+    summary: Device utilization info, historical (passthrou netreo)
+    post:
+      parameters:
+        - in: path
+          name: DeviceName
+          schema:
+            type: string
+          required: true
+          description: name of the device to get
+        - in: path
+          name: interface
+          schema:
+            type: string
+          required: true
+          description: name of the interface to get the normalized utilization information
+      requestBody:
+        description: "weekly utilization"
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/DeviceUtilizationData'
+      responses:
+        '200':
+          description: Device utilization info, historical (passthrou netreo)
+          content:
+            application/json:
+              schema:
+                type: object
+                allOf:
+                  - $ref: "#/components/schemas/PaginationResponse"
+                  - properties:
+                      historical:
+                        type: array
+                        items: 
+                          $ref: "#/components/schemas/DeviceUtilizationData"
+        '400':
+          description: incorrect parameter
+        '404':
+          description: device not found
+
+  /V01/devices/{DeviceName}/{interface}/utilization/monthly:
+    summary: Device utilization info, historical (passthrou netreo)
+    post:
+      parameters:
+        - in: path
+          name: DeviceName
+          schema:
+            type: string
+          required: true
+          description: name of the device to get
+        - in: path
+          name: interface
+          schema:
+            type: string
+          required: true
+          description: name of the interface to get the utilization information
+      requestBody:
+        description: "monthly utilization"
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/DeviceUtilizationData'
+      responses:
+        '200':
+          description: Device utilization info, historical (passthrou netreo)
+          content:
+            application/json:
+              schema:
+                type: object
+                allOf:
+                  - $ref: "#/components/schemas/PaginationResponse"
+                  - properties:
+                      historical:
+                        type: array
+                        items: 
+                          $ref: "#/components/schemas/DeviceUtilizationData"
+        '400':
+          description: incorrect parameter
+        '404':
+          description: device not found
+
+  /V01/devices/{DeviceName}/{interface}/utilization/yearly:
+    summary: Device utilization info, historical (passthrou netreo)
+    post:
+      parameters:
+        - in: path
+          name: DeviceName
+          schema:
+            type: string
+          required: true
+          description: name of the device to get
+        - in: path
+          name: interface
+          schema:
+            type: string
+          required: true
+          description: name of the interface to get the utilization information
+      requestBody:
+        description: "yearly utilization"
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/DeviceUtilizationData'
+      responses:
+        '200':
+          description: Formatted Data
+          content:
+            application/json:
+              schema:
+                type: object
+                allOf:
+                  - $ref: "#/components/schemas/PaginationResponse"
+                  - properties:
+                      historical:
+                        type: array
+                        items: 
+                          $ref: "#/components/schemas/DeviceUtilizationData"
+        '400':
+          description: incorrect parameter
+        '404':
+          description: device not found
+  /V01/devices/createGroup:
+    description: Create new group in devices2
+    post:
+      requestBody:
+        description: name of the group to create
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/DeviceGroupRequest'
+      responses:
+        '200':
+          description: Add Single Group (update to devices)
+          content:
+            application/json:
+              schema:
+                type: object
+                oneOf:
+                  - $ref: "#/components/schemas/DeviceGroupResponse"
+        '400':
+          description: incorrect parameter
+        '404':
+          description: not found
+  /V01/devices/deleteGroup:
+    delete:
+      description: delete device group
+      responses:
+        '200':
+          description: delete device group in devices2
+          content:
+            application/json:
+              schema:
+                type: object
+                oneOf:
+                  - $ref: "#/components/schemas/DeleteGroup"
+        '400':
+          description: incorrect parameter
+        '404':
+          description: not found
+
+# ---
+# update methods
+# ---
+
+  /V01/devices/connectivityUptime/:
+    description: Request connectivity uptime dump for all device (push to rabbitmq)
+    put:
+      requestBody:
+        description: optional by acnas(push to rabbitmq)
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/AcnasRequest'
+      responses:
+        '200':
+          description: Request connectivity uptime dump for all device (push to rabbitmq)
+          content:
+            application/json:
+              schema:
+                type: object
+                oneOf:
+                  - $ref: "#/components/schemas/RequestDelivered"
+        '400':
+          description: request not deliverd (rabbitmq down?)
+        '404':
+          description: device not found
+    delete:
+      description: delete old status (push to rabbitmq)
+      responses:
+        '200':
+          description: delete old connectivity status (push to rabbitmq)
+          content:
+            application/json:
+              schema:
+                type: object
+                oneOf:
+                  - $ref: "#/components/schemas/RequestDelivered"
+        '400':
+          description: request not deliverd (rabbitmq down?)
+        '404':
+          description: device not found
+  
+  # /V01/devices/{DeviceName}/asyncUpdateStatus:
+  #   description: Force a status update for one device (push to rabbitmq)
+  #   put:
+  #     responses:
+  #       '200':
+  #         description: request delivered to rabbitmq succesfully
+  #         content:
+  #           application/json:
+  #             schema:
+  #               type: object
+  #               oneOf:
+  #                 - $ref: "#/components/schemas/RequestDelivered"
+  #       '400':
+  #         description: request not deliverd (rabbitmq down?)
+  #       '404':
+  #         description: device not found
+
+  /V01/devices/discovery:
+    put:
+      description: bulk update configuration (remedy), optional by acnas(push to rabbitmq)
+      requestBody:
+        description: optional by acnas(push to rabbitmq)
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/AcnasRequest'
+
+      responses:
+        '200':
+          description: request delivered to rabbitmq succesfully
+          content:
+            application/json:
+              schema:
+                type: object
+                oneOf:
+                  - $ref: "#/components/schemas/RequestDelivered"
+        '400':
+          description: request not deliverd (rabbitmq down?)
+        '404':
+          description: device not found
+
+  /V01/devices/interfacesBulk:
+    description: Request interfaces dump for all devices (push to rabbitmq)
+    put:
+      requestBody:
+        description: optional by acnas(push to rabbitmq)
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/AcnasRequest'
+      responses:
+        '200':
+          description: Request interfaces dump for all devices (push to rabbitmq)
+          content:
+            application/json:
+              schema:
+                type: object
+                oneOf:
+                  - $ref: "#/components/schemas/RequestDelivered"
+        '400':
+          description: request not deliverd (rabbitmq down?)
+        '404':
+          description: device not found
+

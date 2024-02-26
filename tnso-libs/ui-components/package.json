@@ -1,0 +1,13 @@
+{
+  "name": "@tnso/ui-components",
+  "version": "0.1.14",
+  "main": "./index.js",
+  "types": "./index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./index.mjs",
+      "require": "./index.js"
+    },
+    "./dist": "./dist"
+  }
+}

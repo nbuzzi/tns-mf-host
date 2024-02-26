@@ -1,0 +1,98 @@
+{
+  "name": "i18n-module",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "tnso-modules/i18n-module/src",
+  "projectType": "application",
+  "targets": {
+    "build": {
+      "executor": "@nx/webpack:webpack",
+      "outputs": ["{options.outputPath}"],
+      "defaultConfiguration": "production",
+      "options": {
+        "compiler": "babel",
+        "outputPath": "dist/tnso-modules/i18n-module",
+        "index": "tnso-modules/i18n-module/src/index.html",
+        "baseHref": "/",
+        "main": "tnso-modules/i18n-module/src/main.ts",
+        "tsConfig": "tnso-modules/i18n-module/tsconfig.app.json",
+        "assets": [
+          "tnso-modules/i18n-module/src/favicon.ico",
+          "tnso-modules/i18n-module/src/assets"
+        ],
+        "styles": [],
+        "scripts": [],
+        "webpackConfig": "tnso-modules/i18n-module/webpack.config.ts"
+      },
+      "configurations": {
+        "development": {
+          "extractLicenses": false,
+          "optimization": false,
+          "sourceMap": true,
+          "vendorChunk": true
+        },
+        "production": {
+          "fileReplacements": [
+            {
+              "replace": "env.ts",
+              "with": "env.ts.sample"
+            }
+          ],
+          "optimization": true,
+          "outputHashing": "all",
+          "sourceMap": false,
+          "namedChunks": false,
+          "extractLicenses": true,
+          "vendorChunk": false,
+          "webpackConfig": "tnso-modules/i18n-module/webpack.config.prod.ts"
+        }
+      }
+    },
+    "serve": {
+      "executor": "@nx/react:module-federation-dev-server",
+      "defaultConfiguration": "development",
+      "options": {
+        "buildTarget": "i18n-module:build",
+        "hmr": true,
+        "port": 8082
+      },
+      "configurations": {
+        "development": {
+          "buildTarget": "i18n-module:build:development"
+        },
+        "production": {
+          "buildTarget": "i18n-module:build:production",
+          "hmr": false
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nx/eslint:lint",
+      "outputs": ["{options.outputFile}"]
+    },
+    "serve-static": {
+      "executor": "@nx/web:file-server",
+      "defaultConfiguration": "production",
+      "options": {
+        "buildTarget": "i18n-module:build",
+        "watch": false,
+        "port": 8082
+      },
+      "configurations": {
+        "development": {
+          "buildTarget": "i18n-module:build:development"
+        },
+        "production": {
+          "buildTarget": "i18n-module:build:production"
+        }
+      }
+    },
+    "test": {
+      "executor": "@nx/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
+      "options": {
+        "jestConfig": "tnso-modules/i18n-module/jest.config.ts"
+      }
+    }
+  },
+  "tags": []
+}

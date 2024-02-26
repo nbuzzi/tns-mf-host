@@ -1,0 +1,60 @@
+/*******************/
+// Logo Colors
+/********************/
+$logo-primary-tns: #07477B;
+$logo-dark-tns: #000000;
+$logo-light-tns: #7A8889;
+/*******************/
+// Theme Colors
+/********************/
+$primary-tns: #172D63;
+$secondary-tns: #0C2037;
+$blue-tns: #3275DE;
+$light-blue-tns: #43D5C9;
+$violet-tns: #8231DC;
+$green-tns: #8DC53F;
+$orange-tns: #EB9646;
+$light-orange-tns: #C7B000;
+$pink-tns: #e43c96;
+$gray-tns: #ACACAC;
+$login-bg-tns: #0C2037;
+$danger: #ff5050;
+$success: #2cd07e;
+$warning: #ffb22b;
+$theme-colors: (
+  'primary': $primary-tns,
+  'secondary': $secondary-tns,
+  'blue': $blue-tns,
+  'light-blue':$light-blue-tns,
+  'violet': $violet-tns,
+  'green': $green-tns,
+  'orange': $orange-tns,
+  'light-orange': $light-orange-tns,
+  'pink': $pink-tns,
+  'gray': $gray-tns,
+);
+/*******************/
+// Gradients Colors
+/********************/
+$gradient-primary-tns: #43D5C9;
+$gradient-secondary-tns: #3276DE;
+$linear-gradient-tns: linear-gradient(45deg, rgba($gradient-primary-tns, 1) 0%, rgba($gradient-secondary-tns, 1) 75%);
+
+/*******************/
+// Pastel Colors
+/********************/
+$ptl-gray-tns: #D1D5E0;
+$ptl-light-brown-tns: #FBEADA;
+$ptl-brown-tns: #D0CED4;
+$ptl-light-blue-tns: #D6E3F8;
+$ptl-aqua-tns: #D9F7F4;
+$ptl-light-violet-tns: #E6D6F8;
+$ptl-violet-tns: #FAD8EA;
+$ptl-light-yelow-tns: #E8F3D9;
+$ptl-yellow-tns: #F4EFCC;
+/*******************/
+// Shadow Colors
+/********************/
+// $box-shadow: 0 0.5rem 1rem rgba(0,0,0, 0.05);
+$box-shadow-tns: 0px 4px 4px 0px rgba(0, 0, 0, 0.5);
+$input-shadow-tns: 0px 4px 4px 0px rgba(0, 0, 0, 0.2);

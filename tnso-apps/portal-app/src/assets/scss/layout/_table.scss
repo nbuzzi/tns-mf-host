@@ -1,0 +1,121 @@
+.container-table {
+  background-color: $header-bg;
+  width: 100%;
+  box-shadow: none !important;
+  .table-bg {
+    table-layout: fixed;
+    box-shadow: $box-shadow;
+    border: 1px solid $table-border;
+  }
+  .head-table {
+    border-color: $table-border;
+    vertical-align: middle;
+    color: white;
+  }
+  .head-input-table {
+    vertical-align: middle;
+  }
+  .body-table {
+    background-color: $table-bg;
+    padding: 0.8rem 0.8rem;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    font-size: 0.9rem;
+    overflow: hidden;
+    vertical-align: middle;
+    span {
+      font-family: Helvetica Light, Helvetica, Arial, sans-serif;
+    }
+    .rct-tree-items-container {
+      background-color: transparent;
+      width: 100%;
+    }
+  }
+  .title-head {
+    padding: 10px 0 10px 0;
+    background-color: $header-title;
+  }
+  .head-table {
+    .title-head {
+      @include font-frutiger(0.9rem);
+    }
+  }
+  .btn-table,
+  .select-table {
+    border: none;
+    background-color: $light;
+    color: $black;
+    padding: 0.3rem 10rem;
+    border-radius: $border-radius;
+  }
+  .select-table {
+    padding: 0.3rem 0.5rem;
+  }
+  .pages-table {
+    gap: 1rem;
+  }
+  .input-group-table {
+    width: 100%;
+  }
+  .anticon.anticon-close-circle {
+    display: none;
+  }
+
+  @mixin input-global() {
+    border: none;
+    border-bottom: solid 1px $table-border;
+    background-color: $input-bg;
+    height: 1.6rem;
+    margin-bottom: 5px;
+    border-radius: 0px !important;
+  }
+  .icon-search-global {
+    @include input-global;
+    color: $inputSearch;
+  }
+  .input-global-table {
+    @include input-global;
+    max-width: 40rem;
+    width: auto;
+    box-shadow: none;
+  }
+  .input-table {
+    border: none;
+    height: 1.3rem;
+    background-color: $input-bg;
+    box-shadow: none;
+  }
+  .icon-table {
+    color: $table-border;
+  }
+  .hover-bg:hover {
+    background-color: $hover-table;
+  }
+}
+
+.raw-data-table {
+  background-color: #131b32;
+}
+
+.option-pagination {
+  color: $black;
+}
+
+@media (max-width: 768px) {
+  .container-table {
+    .head-table {
+      .title-head {
+        @include font-frutiger(0.8rem);
+      }
+    }
+  }
+}
+
+.table {
+  border: none !important;
+  border-radius: 0.3rem;
+  overflow: hidden;
+  height: 100%;
+  margin-bottom: 0% !important;
+  margin-top: 0% !important;
+}

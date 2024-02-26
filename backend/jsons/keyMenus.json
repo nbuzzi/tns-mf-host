@@ -1,0 +1,29 @@
+{
+  "menu": [
+    {
+      "featureGroup": "monitoring",
+      "featureList": ["monitoring_devices", "member_connectivity"]
+    },
+    {
+      "featureGroup": "administration",
+      "featureList": [
+        "company_profile_administration",
+        "user_administration",
+        "entity_profile_administration",
+        "role_administration"
+      ]
+    },
+    {
+      "featureGroup": "contact",
+      "featureList": ["contact_information"]
+    },
+    {
+      "featureGroup": "support",
+      "featureList": ["change_management"]
+    },
+    {
+      "featureGroup": "help",
+      "featureList": ["contact_us", "user_guide"]
+    }
+  ]
+}

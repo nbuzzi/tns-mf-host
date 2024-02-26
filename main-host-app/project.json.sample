@@ -1,0 +1,116 @@
+{
+  "name": "main-host-app",
+  "$schema": "../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "main-host-app/src",
+  "projectType": "application",
+  "targets": {
+    "build": {
+      "executor": "@nx/webpack:webpack",
+      "outputs": ["{options.outputPath}"],
+      "defaultConfiguration": "production",
+      "options": {
+        "compiler": "babel",
+        "outputPath": "dist/main-host-app",
+        "index": "main-host-app/src/index.html",
+        "baseHref": "/",
+        "main": "main-host-app/src/main.ts",
+        "tsConfig": "main-host-app/tsconfig.app.json",
+        "assets": ["main-host-app/src/favicon.ico", "main-host-app/src/assets"],
+        "styles": ["main-host-app/src/styles.scss"],
+        "scripts": [],
+        "isolatedConfig": true,
+        "webpackConfig": "main-host-app/webpack.config.ts"
+      },
+      "configurations": {
+        "development": {
+          "extractLicenses": false,
+          "optimization": false,
+          "sourceMap": true,
+          "vendorChunk": true
+        },
+        "production": {
+          "fileReplacements": [
+            {
+              "replace": "env.ts",
+              "with": "env.prod.ts.sample"
+            }
+          ],
+          "optimization": true,
+          "outputHashing": "all",
+          "sourceMap": false,
+          "namedChunks": false,
+          "extractLicenses": true,
+          "vendorChunk": false,
+          "webpackConfig": "main-host-app/webpack.config.prod.ts"
+        }
+      }
+    },
+    "serve": {
+      "executor": "@nx/react:module-federation-dev-server",
+      "defaultConfiguration": ${VITE_PORTAL_ENVIRONMENT},
+      "options": {
+        "buildTarget": "main-host-app:build",
+        "hmr": true,
+        "host": "${VITE_PORTAL_IP_HOST}",
+        "port": "${VITE_PORTAL_PORT_HOST}"
+      },
+      "configurations": {
+        "development": {
+          "buildTarget": "main-host-app:build:development"
+        },
+        "production": {
+          "buildTarget": "main-host-app:build:production",
+          "hmr": false
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nx/eslint:lint",
+      "outputs": ["{options.outputFile}"]
+    },
+    "serve-static": {
+      "executor": "@nx/web:file-server",
+      "defaultConfiguration": "production",
+      "options": {
+        "buildTarget": "main-host-app:build",
+        "watch": false,
+        "port": 4200
+      },
+      "configurations": {
+        "development": {
+          "buildTarget": "main-host-app:build:development"
+        },
+        "production": {
+          "buildTarget": "main-host-app:build:production"
+        }
+      }
+    },
+    "test": {
+      "executor": "@nx/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
+      "options": {
+        "jestConfig": "main-host-app/jest.config.ts"
+      }
+    },
+    "test-with-coverage": {
+      "executor": "nx:run-commands",
+      "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
+      "options": {
+        "command": "npx nx run main-host-app:test --code-coverage --coverageReporters=text --silent"
+      }
+    },
+    "many-test": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "npx nx run-many -t test --projects=tnso-apps/*-app --code-coverage --coverageReporters=text-sumary --silent"
+      }
+    },
+    "many-build": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "npx nx run-many -t build"
+      }
+    }
+  },
+  "tags": []
+}

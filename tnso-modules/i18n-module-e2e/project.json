@@ -1,0 +1,30 @@
+{
+  "name": "i18n-module-e2e",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "application",
+  "sourceRoot": "tnso-modules/i18n-module-e2e/src",
+  "targets": {
+    "e2e": {
+      "executor": "@nx/cypress:cypress",
+      "options": {
+        "cypressConfig": "tnso-modules/i18n-module-e2e/cypress.config.ts",
+        "testingType": "e2e",
+        "devServerTarget": "i18n-module:serve"
+      },
+      "configurations": {
+        "production": {
+          "devServerTarget": "i18n-module:serve:production"
+        },
+        "ci": {
+          "devServerTarget": "i18n-module:serve-static"
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nx/eslint:lint",
+      "outputs": ["{options.outputFile}"]
+    }
+  },
+  "implicitDependencies": ["i18n-module"],
+  "tags": []
+}

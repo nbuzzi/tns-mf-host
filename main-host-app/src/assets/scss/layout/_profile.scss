@@ -1,0 +1,30 @@
+.user-menu {
+  a {
+    text-decoration: none !important;
+    color: $black;
+  }
+
+  .icon-switch {
+    font-size: 0.6rem;
+  }
+
+  .my-profile {
+    text-decoration: none !important;
+    margin-left: -5px;
+    svg {
+      vertical-align: -3px;
+    }
+  }
+  .icon-user {
+    font-size: 3rem;
+    color: $icon-user;
+  }
+}
+.profile-info {
+  color: $black;
+}
+
+.dropdown-menu.show {
+  border: 1px solid #1d4696 !important;
+  background-color: #0f1322;
+}

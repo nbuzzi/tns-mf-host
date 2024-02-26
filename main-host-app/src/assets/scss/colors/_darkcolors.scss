@@ -1,0 +1,217 @@
+@import "base";
+/*******************/
+// Theme Colors
+/********************/
+$light-tns: #242632;
+$black: #ffffff;
+$white: #2d2d39;
+$dark-tns: #f9f9f9;
+/*******************/
+// Theme body bg & text color
+/********************/
+$body-bg-tns: #0a1118 !default;
+$body-color-text-tns: $black !default;
+/*******************/
+// Forms bg & text color
+/********************/
+$page-login: #121212;
+$form-bg: $light-tns !default;
+$header-bg: #363645 !default;
+$input-bg: #2d2d39 !default;
+$input-color-text: $black !default;
+$label-color-text: $black !default;
+$fgt-password: #2a588d;
+// Progress bars
+$progress-height: 6px !default;
+/*******************/
+// Theme btn
+/********************/
+$btn-color-text: #ffffff !default;
+$btn-bg: #2a588d;
+$btn-shadow: 0px 4px 4px rgba($black, 0.1) !default;
+/*******************/
+// Theme Icon
+/********************/
+$icon-color: $black !default;
+/*******************/
+// Theme tabs
+/********************/
+$color-tabs: #cbcbcb !default;
+$color-border-tabs: #cbcbcb !default;
+// scss-docs-start gray-color-variables
+$gray-100: #192430 !default;
+$gray-200: #303a45 !default;
+$gray-300: #475059 !default;
+$gray-400: #5e666e !default;
+$gray-500: #757c83 !default;
+$gray-600: #8c9298 !default;
+$gray-700: #a3a7ac !default;
+$gray-800: #babdc1 !default;
+$gray-900: #e6e9ec !default;
+/*******************/
+// Theme Table
+/********************/
+$hover-table: rgba(0, 127, 220, 0.65) !default;
+$table-bg: #2d2d39;
+$table-header-bg: #cbcbcb;
+$table-header-title: #202020;
+$table-border: #bebebe !default;
+/********************/
+// Theme Tree Menu
+/********************/
+$tree-menu-bg: #2d2d39 !default;
+$tree-menu-hover: #393945 !default;
+$item-list-bg: #2b435f !default;
+$item-list-color-text: $black !default;
+$item-list-color-icon: $black !default;
+$box-shadow-item: 0px 2px 2px rgba(0, 0, 0, 0.3) !default;
+$item-hover-bg: #393945;
+$checkbox-disabled: #3b3b3b;
+/*******************/
+// Theme Transfer Menu
+/*******************/
+$transfer-bg: #363645 !default;
+/*******************/
+// Theme Device Information
+/********************/
+$device-header-bg: #2b435f !default;
+$device-card-bg: #363645 !default;
+$device-calendar-bg: #2b435f !default;
+/*******************/
+// Theme Card
+/********************/
+$card-label: #ffffff;
+/********************/
+// Theme Chart
+/********************/
+$text-header-color: #ffffff !default;
+$axis-chart-color: #a3aed0 !default;
+$text-legend-color: #ffffff !default;
+$text-date-chart-color: #ffffff !default;
+$text-gray-date-chart-color: #949aab !default;
+$text-legend-data-color: #000000 !default;
+$text-legend-chart-color: #ffffff !default;
+$box-shadow-chart-tns: none !default;
+/********************/
+// Theme Card
+/********************/
+$bg-detail-card: #363645 !default;
+
+// -------------------------------- new design system -----------------------------
+// Primary Colors
+$primary-color-blue: #111d3d;
+$primary-color-black: #000000;
+$primary-color-grey: #7a8889;
+// Secondary Colors
+$secondary-color-dark-blue: #150829;
+$secondary-color-blue: #172d63;
+$secondary-color-light-blue: #3275de;
+$secondary-color-aqua: #43d5c9;
+$secondary-color-violet: #8231dc;
+$secondary-color-green: #8bc53f;
+$secondary-color-orange: #eb9646;
+$secondary-color-pink: #e53c96;
+$secondary-color-yellow: #c7b000;
+$secondary-color-grey: #acacac;
+
+//Body Colors
+$body-bg-color: #0f0f1a;
+
+// Button Colors
+// ---------------- primary-btn
+$tnso-btn-bg-primary: #1d4696;
+$tnso-btn-bg-primary-hover: #256ad0;
+$tnso-btn-bg-primary-active: #557fbe;
+$tnso-btn-bg-primary-disabled: #516f9b;
+$tnso-btn-text-primary: #ffffff;
+$tnso-btn-text-primary-disabled: #ffffff33;
+$tnso-btn-border-primary: #111d3d;
+$tnso-btn-border-primary-hover: #0f408a;
+$tnso-btn-border-primary-active: #1152b4;
+$tnso-btn-border-primary-disabled: #283e5f;
+// ---------------- secondary-btn
+$tnso-btn-bg-secondary: #111d3d;
+$tnso-btn-bg-secondary-hover: #0f408a;
+$tnso-btn-bg-secondary-active: #1152b4;
+$tnso-btn-bg-secondary-disabled: #283e5f;
+$tnso-btn-text-secondary: #ffffff;
+$tnso-btn-text-secondary-disabled: #ffffff33;
+$tnso-btn-border-secondary: #1d4696;
+$tnso-btn-border-secondary-hover: #256ad0;
+$tnso-btn-border-secondary-active: #557fbe;
+$tnso-btn-border-secondary-disabled: #516f9b;
+// ---------------- outline-primary-btn
+// ---------------- outline-secondary-btn
+
+// Card Colors
+$tnso-card-bg: #0f19335c;
+$tnso-card-border: #1d4696;
+
+// Layout Colors
+// ---------------- header
+$tnso-header-bg: $primary-color-blue;
+$tnso-header-text: #ffffff;
+$tnso-header-border: #1d4696;
+// ---------------- sider
+$tnso-sider-bg: $primary-color-blue;
+$tnso-sider-text: #ffffff;
+$tnso-sider-border: #1d4696;
+// ---------------- footer
+$tnso-footer-bg: $primary-color-blue;
+$tnso-footer-text: #ffffff;
+$tnso-footer-border: #1d4696;
+
+// Input Colors
+// ---------------- default
+$tnso-input-bg: #131b32;
+$tnso-input-text: #ffffff;
+$tnso-input-border: #1d46964a;
+$tnso-input-border-active: #131b32;
+$tnso-input-bg-disabled: #1e2843;
+$tnso-input-text-disabled: #ffffff75;
+$tnso-input-border-disabled: #4b5e7a;
+// ---------------- search
+$tnso-search-bg: #0f1322;
+$tnso-search-text: #ffffff;
+$tnso-search-border: #516f9b;
+$tnso-search-border-active: #131b32;
+$tnso-search-bg-disabled: #131725;
+$tnso-search-text-disabled: #ffffff75;
+$tnso-search-border-disabled: #1d469600;
+// ---------------- select
+$tnso-select-bg: #0f1322;
+$tnso-select-text: #ffffff;
+$tnso-select-border: #1d4696;
+$tnso-select-border-active: #131b32;
+$tnso-select-bg-disabled: #131725;
+$tnso-select-text-disabled: #ffffff75;
+$tnso-select-border-disabled: #1d469600;
+$tnso-select-option-selected: #142248;
+
+// Modal Colors
+$tnso-modal-bg: $primary-color-blue;
+$tnso-modal-text: $primary-color-black;
+
+// Toast Colors
+// ---------------- success-toast
+$tnso-toast-bg-success: #5ada7629;
+$tnso-toast-text-success: #52c41a;
+$tnso-toast-border-success: #058020c9;
+// ---------------- error-toast
+$tnso-toast-bg-error: #fc858529;
+$tnso-toast-text-error: #ff2d2e;
+$tnso-toast-border-error: #f60b0c;
+// ---------------- warning-toast
+// ---------------- info-toast
+
+// Grid Color
+$tnso-text-grid: #ffffff;
+// ---------------- header grid
+$tnso-bg-h-grid: #142248;
+$tnso-border-h-grid: #0000000f;
+$tnso-bg-sh-grid: #1d4696;
+// ---------------- body grid
+$tnso-bg-b-grid: #131b32;
+$tnso-hover-b-grid: #212b4d;
+$tnso-border-b-grid: #fff;
+$tnso-bg-sb-grid: #1c294d;

@@ -1,0 +1,9 @@
+.language-selector {
+  color: white;
+  font-size: 1rem;
+  font-weight: 400;
+  ::after {
+    text-decoration: none;
+    display: none;
+  }
+}

@@ -1,0 +1,61 @@
+@import "../../../../assets/scss/style.scss";
+@import "../../../../assets/scss/styledark.scss";
+
+.ant-pagination-item {
+  background-color: transparent;
+  color: $black;
+  border: none;
+}
+
+.ant-pagination-item-active {
+  color: $primary;
+}
+
+.ant-pagination-options {
+  display: none;
+}
+
+.ant-pagination {
+  color: $black;
+}
+
+.ant-pagination-jump-prev .ant-pagination-item-container .ant-pagination-item-ellipsis,
+.ant-pagination-jump-next .ant-pagination-item-container .ant-pagination-item-ellipsis {
+  color: $black;
+}
+
+.header {
+  background-color: #cccccc;
+}
+
+.legend-pagination {
+  color: $black;
+  font-size: 14px;
+}
+
+.btn {
+  font-family: Arial, Helvetica, sans-serif;
+  color: $black;
+}
+
+.ant-input-affix-wrapper {
+  background-color: transparent;
+  border-radius: 2rem;
+  width: 40%;
+  margin: auto;
+}
+
+.ant-input-affix-wrapper > .ant-input:not(textarea) {
+  background-color: transparent;
+  color: $black;
+}
+
+.anticon svg {
+  color: $black;
+}
+
+@media (max-width: 768px) {
+  .react-bootstrap-table {
+    max-width: 100% !important;
+  }
+}

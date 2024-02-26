@@ -1,0 +1,32 @@
+// stylelint-disable declaration-no-important
+// Margin and Padding for rtl version
+//
+// Border
+//
+.border-start {
+  border-right: $border-width solid $border-color !important;
+  border-left: 0 !important;
+}
+.border-end {
+  border-left: $border-width solid $border-color !important;
+  border-right: 0 !important;
+}
+.border-end-0 {
+  border-left: 0 !important;
+}
+.border-start-0 {
+  border-right: 0 !important;
+}
+//
+// Border-radius
+//
+.rounded-end {
+  border-top-left-radius: $border-radius !important;
+  border-bottom-left-radius: $border-radius !important;
+}
+.rounded-start {
+  border-top-right-radius: $border-radius !important;
+  border-bottom-right-radius: $border-radius !important;
+}
+
+

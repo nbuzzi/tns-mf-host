@@ -1,0 +1,112 @@
+.transfer-card {
+  padding: 2rem;
+  .container-table {
+    .table {
+      border: 0.5px solid $table-border;
+    }
+    p {
+      font-size: 1.3rem;
+    }
+    .ant-input-affix-wrapper {
+      background-color: transparent;
+      border-radius: 2rem;
+      width: 80%;
+      margin-left: 10%;
+    }
+
+    .ant-input-affix-wrapper > .ant-input:not(textarea) {
+      background-color: transparent;
+      color: $black;
+    }
+
+    .anticon svg {
+      color: $black;
+    }
+  }
+
+  .ant-pagination-item {
+    background-color: transparent;
+    color: $black;
+    border: none;
+  }
+
+  .ant-pagination-item-active {
+    color: $primary;
+  }
+
+  .ant-pagination-options {
+    display: none;
+  }
+
+  .ant-pagination {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    color: $black;
+  }
+
+  .ant-pagination-jump-prev .ant-pagination-item-container .ant-pagination-item-ellipsis,
+  .ant-pagination-jump-next .ant-pagination-item-container .ant-pagination-item-ellipsis {
+    color: $black;
+  }
+
+  .legend-pagination {
+    color: $black;
+    font-size: 14px;
+    width: 100%;
+  }
+
+  .transfer-button,
+  .all-transfer-button {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid $primary;
+    border-radius: 0.6rem;
+    width: 5rem;
+    height: 2rem;
+    color: $primary;
+    background-color: #363645;
+    &:hover {
+      background-color: $primary;
+      color: $black;
+    }
+  }
+
+  .all-transfer-button {
+    background-color: transparent;
+    border: none;
+    color: $black;
+    font-family: "Helveltica";
+    font-size: 0.8rem;
+    height: 3rem;
+    width: 6rem;
+    &:hover {
+      background-color: transparent;
+      color: $black;
+    }
+  }
+
+  .transfer-button:disabled {
+    color: $gray-500;
+    border: 1px solid $gray-500;
+  }
+  .transfer-button:disabled:hover {
+    color: $gray-500;
+    border: 1px solid $gray-500;
+    background-color: #363645;
+  }
+
+  tbody {
+    .td:hover {
+      background-color: $header-title !important;
+      color: $black;
+      cursor: pointer;
+    }
+    .td-active {
+      background-color: $header-title !important;
+      color: $black;
+    }
+  }
+}

@@ -1,0 +1,210 @@
+.primary {
+  color: white !important;
+  background-color: $button-secundary !important;
+  border-color: $button-primary !important;
+  width: 207px !important;
+  left: 732px !important;
+  top: 826px !important;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1) !important;
+  border-radius: 12px !important;
+}
+.primary:hover {
+  color: white !important;
+  background-color: $primary !important;
+  border-color: $primary !important;
+  width: auto !important;
+  left: 732px !important;
+  top: 826px !important;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1) !important;
+  border-radius: 12px !important;
+}
+.primary:active {
+  color: white !important;
+  background-color: $primary !important;
+  border-color: $primary !important;
+  width: auto !important;
+  left: 732px !important;
+  top: 826px !important;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1) !important;
+  border-radius: 12px !important;
+  transition: color 0s 9999999s;
+}
+.btn-outline-p {
+  color: $black !important;
+  background-color: transparent !important;
+  border-color: $primary !important;
+  width: auto !important;
+  left: 732px !important;
+  top: 826px !important;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1) !important;
+}
+.btn-outline-p:focus {
+  @if $white != white {
+    color: $black !important;
+  } @else {
+    color: $white !important;
+  }
+  background-color: $primary !important;
+  border-color: $primary !important;
+  width: auto !important;
+  left: 732px !important;
+  top: 826px !important;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1) !important;
+}
+.btn:active {
+  @if $white != white {
+    color: $black !important;
+  } @else {
+    color: $white !important;
+  }
+  background-color: $primary !important;
+  border-color: $primary !important;
+  width: auto !important;
+  left: 732px !important;
+  top: 826px !important;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1) !important;
+}
+.btn-outline {
+  font-size: 14px;
+  --bs-btn-bg: transparent !important;
+  --bs-btn-border-color: #007fdc;
+  --bs-btn-hover-color: #2d2d39;
+  --bs-btn-hover-bg: #006cbb;
+  --bs-btn-hover-border-color: #0066b0;
+  --bs-btn-focus-shadow-rgb: 7, 115, 196;
+  --bs-btn-active-color: #2d2d39;
+  --bs-btn-active-bg: #0066b0;
+  --bs-btn-active-border-color: #005fa5;
+  --bs-btn-active-shadow: inset 0 3px 5px rgba(255, 255, 255, 0.125);
+  --bs-btn-disabled-color: #2d2d39;
+  --bs-btn-disabled-bg: #007fdc;
+  --bs-btn-disabled-border-color: #007fdc;
+}
+
+@mixin styles-white() {
+  color: #ffffff !important;
+  &:hover,
+  &.active,
+  &.disabled,
+  &:focus {
+    color: white !important;
+  }
+}
+@mixin styles-black() {
+  color: $black !important;
+  &:hover,
+  &.active,
+  &.disabled,
+  &:focus {
+    color: #2a588d;
+  }
+}
+
+.btn-outline-primary,
+.btn-outline {
+  @include font-helveltica(1rem);
+  @include styles-black();
+  border-color: $btn-border-primary;
+}
+.secondary:hover {
+  background-color: var(--bs-btn-hover-bg);
+}
+
+.mr-2.rounded.note-save {
+  @include font-helveltica(20px);
+  @include styles-white();
+  width: 140px !important;
+  background-color: $button-pickerd;
+}
+.btn-search {
+  @include font-helveltica();
+  @include styles-white();
+  background-color: $button-pickerd;
+}
+
+.mr-2.rounded.note-cancel {
+  @include font-helveltica(25);
+  @include styles-black();
+  margin-right: 6px;
+  width: 140px !important;
+  border-color: $btn-border-primary;
+  background-color: $footer-primary;
+}
+
+.btn-link {
+  @include font-helveltica();
+  @include styles-black();
+  background-color: transparent;
+  border: none;
+}
+.btn-link:hover {
+  color: $primary !important;
+  background-color: transparent;
+}
+.btn-link:active {
+  box-shadow: none !important;
+  background-color: transparent !important;
+}
+
+.btn-link-dark {
+  @include font-helveltica();
+  background-color: transparent;
+  color: #000 !important;
+  border: none;
+}
+
+.btn-label-date-picker,
+.btn-chart-more,
+.btn-chart-download,
+.btn-chart-refresh,
+.btn-dropdown,
+.btn-dropdown-02,
+.btn-textButton {
+  @include font-helveltica();
+  @include styles-black();
+  border-color: $btn-border-primary;
+  background-color: #0f1322;
+}
+.dropdown-item:hover {
+  background: #007fdc;
+}
+.btn-textButton {
+  svg {
+    color: $black;
+  }
+}
+.btn-textButton:hover {
+  svg {
+    color: white;
+  }
+}
+
+.swal2-styled.swal2-confirm {
+  background-color: $button-pickerd !important;
+  border-color: none !important;
+  font-family: Helvetica;
+  border: 1px;
+}
+
+.btn.rounded.btn-cancel {
+  @include font-helveltica(25px);
+  @include styles-black();
+  margin-top: 70%;
+  width: 180px !important;
+  border-color: $btn-border-primary;
+  background-color: $footer-primary;
+  @media screen and (max-width: 540px) {
+    margin-top: 10%;
+  }
+}
+
+.btn.rounded.btn-profile {
+  @include font-helveltica(25px);
+  @include styles-white();
+  margin-top: 70%;
+  width: 180px !important;
+  background-color: $button-pickerd;
+  @media screen and (max-width: 540px) {
+    margin-top: 10%;
+  }
+}

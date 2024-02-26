@@ -1,0 +1,61 @@
+[
+  {
+    "members": [
+      {
+        "acna": "asl",
+        "knownAs": "automated state line",
+        "memberConnectivityStatus": "UP",
+        "devices": [
+          {
+            "srcTnsDeviceName": "asl0001v",
+            "srcCustomerDeviceName": "asl0001vas",
+            "destTnsDeviceName": "asl0001v",
+            "destCustomerDeviceName": "asl0001vas",
+            "interfaceDetails": [
+              {
+                "interfaceType": "Primary",
+                "interfaceStatus": "UP"
+              }
+            ]
+          }
+        ],
+        "destMembers": [
+          {
+            "memberConnectivityStatus": "asl0001v",
+            "srcAndDestDevicesDetails": [
+              {
+                "srcTnsDeviceName": "asl0001v",
+                "srcCustomerDeviceName": "asl0001vas",
+                "destAcna": "asl0001vas",
+                "destKnownAs": "asl0001vas",
+                "destTnsDeviceName": "asl0001v",
+                "destCustomerDeviceName": "asl0001vas",
+                "interfaceDetails": [
+                  {
+                    "interfaceType": "Primary",
+                    "interfaceStatus": "UP"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "acnas": [
+          {
+            "srcAcna": "string",
+            "srcKnownAs": "string",
+            "srcAcnaStatus": "string",
+            "connectedMembers": [
+              {
+                "destAcna": "asl",
+                "destKnownAs": "automated state line",
+                "destAcnaStatus": "automated state line",
+                "memberConnectivityStatus": "automated state line"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+]

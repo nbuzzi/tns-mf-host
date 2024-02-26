@@ -1,0 +1,57 @@
+[
+  {
+    "tnsDeviceName": "string",
+    "startDate": "string",
+    "endDate": "string",
+    "rx": 23520365124,
+    "tx": 13520365124,
+    "total": 5235125210,
+    "bandwith": 4235825210,
+    "percentage": 2365.32,
+    "overage": 2326231125
+  },
+  {
+    "tnsDeviceName": "string",
+    "startDate": "string",
+    "endDate": "string",
+    "rx": 23520365124,
+    "tx": 13520365124,
+    "total": 5235125210,
+    "bandwith": 4235825210,
+    "percentage": 2365.32,
+    "overage": 2326231125
+  },
+  {
+    "tnsDeviceName": "string",
+    "startDate": "string",
+    "endDate": "string",
+    "rx": 23520365124,
+    "tx": 13520365124,
+    "total": 5235125210,
+    "bandwith": 4235825210,
+    "percentage": 2365.32,
+    "overage": 2326231125
+  },
+  {
+    "tnsDeviceName": "string",
+    "startDate": "string",
+    "endDate": "string",
+    "rx": 23520365124,
+    "tx": 13520365124,
+    "total": 5235125210,
+    "bandwith": 4235825210,
+    "percentage": 2365.32,
+    "overage": 2326231125
+  },
+  {
+    "tnsDeviceName": "string",
+    "startDate": "string",
+    "endDate": "string",
+    "rx": 23520365124,
+    "tx": 13520365124,
+    "total": 5235125210,
+    "bandwith": 4235825210,
+    "percentage": 2365.32,
+    "overage": 2326231125
+  }
+]

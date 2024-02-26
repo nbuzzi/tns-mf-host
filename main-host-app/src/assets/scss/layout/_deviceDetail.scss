@@ -1,0 +1,767 @@
+.modal-content {
+  background: $modalButton;
+  border-radius: 0%;
+}
+.device_more_info {
+  color: $black !important;
+  background-color: $white !important;
+}
+.gm-style .gm-style-iw-c {
+  background-color: $white !important;
+  padding: 25px !important;
+}
+.gm-style-iw-d {
+  overflow: auto !important;
+}
+.gm-ui-hover-effect {
+  color: $black;
+}
+
+.main-title {
+  font-size: 22px;
+  padding-bottom: 15px;
+}
+
+.device-detail-container {
+  font-family: "Helvetica" !important;
+  .vertical-div {
+    transform: rotate(-90deg);
+    transform-origin: center top;
+    left: -23vw;
+    top: -16vh;
+  }
+  .legend-daily {
+    margin-top: -2rem;
+    margin-left: 12vw;
+  }
+  .container-bar {
+    height: 95%;
+    min-height: 350px;
+  }
+  .nav-tabs .nav-link {
+    font-size: 20px;
+    color: $color-tabs;
+    border: none;
+  }
+  .row {
+    --bs-gutter-x: 1rem !important;
+  }
+  .signal-component-container {
+    margin: 0% -1%;
+    small {
+      text-align: center;
+    }
+  }
+  .nav-tabs .nav-link.active {
+    border-bottom: 3px solid $primary;
+    color: $primary;
+  }
+  .tab-content {
+    width: 100%;
+  }
+  .device-detail {
+    flex-wrap: wrap;
+    .tab-container {
+      width: 100%;
+      border-width: 2px;
+      border-color: $color-border-tabs;
+    }
+    .btn-tabs {
+      @include font-helveltica();
+      font-weight: 500;
+      color: $black;
+      &hover,
+      &active {
+        color: white;
+      }
+    }
+  }
+  .lvc {
+    padding-bottom: 1.5rem;
+    .chart-button {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+    }
+  }
+  .header-detail {
+    background-color: $white;
+    color: $black;
+    font-weight: inherit !important;
+    letter-spacing: 0.2em;
+    font-family: Helvetica;
+    p {
+      font-weight: bold;
+
+      &.bold {
+        font-weight: bold;
+      }
+    }
+
+    span {
+      font-weight: 600;
+      font-size: 13px;
+      font-family: Helvetica;
+      letter-spacing: 0.1em;
+    }
+
+    .header-company {
+      letter-spacing: 0em !important;
+      font-family: Helvetica;
+      font-style: normal;
+      font-weight: 700;
+      gap: 2rem;
+      p {
+        color: $card-label;
+      }
+      span {
+        font-weight: 500;
+        color: $text-header-color;
+      }
+    }
+  }
+  .configuration-view {
+    .chart-button {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+    }
+  }
+  .device-cont {
+    background: $white;
+    padding: 20px;
+    box-shadow: 0px 0px 11px 7px rgba(21, 11, 11, 0.19);
+    -webkit-box-shadow: 0px 0px 11px 7px rgba(21, 11, 11, 0.19);
+    -moz-box-shadow: 0px 0px 11px 7px rgba(21, 11, 11, 0.19);
+    .text-info {
+      color: $black !important;
+    }
+    .text-info-red {
+      color: red;
+    }
+  }
+  .device-name-container {
+    .customer-name {
+      width: 30%;
+    }
+    .tns-status {
+      width: 30%;
+    }
+    .company-name {
+      width: 40%;
+    }
+    .title {
+      letter-spacing: 0em !important;
+      margin-right: 10px;
+    }
+    p {
+      color: $card-label;
+    }
+  }
+  .apexcharts-text tspan {
+    fill: $axis-chart-color;
+    opacity: 0.7;
+  }
+  .apexcharts-yaxis-title text {
+    fill: $dark-tns !important;
+    font-weight: 500;
+  }
+  .apexcharts-xaxis-title text {
+    fill: $dark-tns !important;
+    font-weight: 500;
+  }
+  .apexcharts-datalabel-label {
+    font-size: 0.8rem;
+    font-weight: 600;
+  }
+  .apexcharts-datalabel-value {
+    fill: #ffffff !important;
+    font-weight: bold;
+    font-size: 1.1rem;
+  }
+  .text-red {
+    color: red;
+  }
+  .text-orange {
+    color: orange;
+  }
+
+  .custom-col {
+    margin-left: -0.5rem;
+    margin-right: 0.5rem;
+  }
+
+  .chart-container {
+    position: relative;
+    background-color: $device-card-bg;
+    width: 65%;
+    height: 5rem !important;
+    padding: var(--bs-card-spacer-y) var(--bs-card-spacer-x);
+    border-radius: 0.5rem;
+    .chart-button {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+    }
+    .btn-date-container {
+      width: 20rem;
+    }
+    .title {
+      font-size: 1rem;
+      font-weight: 600;
+    }
+    .chart-info {
+      background-color: #2b435f;
+      height: 95px;
+      width: auto;
+      padding: 15px;
+    }
+    .no-data {
+      font-weight: normal;
+      font-family: Helvetica, Arial, sans-serif;
+    }
+  }
+  .signal-quality-chart.card {
+    padding: 0.5rem;
+    .chart-button {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+    }
+  }
+  .signal-chart-container {
+    width: 55%;
+    margin-bottom: 0%;
+    .title-signal-chart {
+      height: 10%;
+      h5 {
+        margin: 0;
+        padding: 0;
+      }
+      div.dropdown-menu.show.dropdown-menu-light {
+        width: 20px;
+      }
+      .chart-button {
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+      }
+    }
+    .signal-quality-chart {
+      width: 100%;
+      height: 100%;
+      padding: 0.5rem;
+      margin-bottom: 0%;
+      .body-signal-chart {
+        margin-top: -7%;
+        height: 100%;
+        width: 10rem;
+        margin-left: 2reeem;
+      }
+      .footer-signal-chart {
+        height: 30%;
+        width: 100%;
+        small {
+          font-size: 0.6rem;
+        }
+        p {
+          margin: 0;
+          padding: 0;
+        }
+      }
+    }
+    .select-technology {
+      width: 20%;
+    }
+    div.dropdown-menu.show {
+      background-color: red;
+      border: none;
+    }
+  }
+
+  .signal-component-container {
+    width: max-content;
+  }
+
+  .signal-range-container {
+    margin-top: -1rem;
+  }
+
+  .recent-signal-container {
+    width: 100%;
+    height: 150px;
+    padding: 0rem 2rem;
+    padding-top: 20px;
+    gap: 0.5rem;
+    margin-bottom: 30px;
+    .signal-date,
+    .signal-range {
+      margin-top: -1rem;
+      font-family: "Helvetica";
+      font-weight: 500;
+      color: $text-gray-date-chart-color;
+    }
+    .card-title,
+    p {
+      text-align: center;
+    }
+    .recent-signal-quality {
+      position: absolute;
+      font-size: 1rem;
+      font-weight: bold;
+      top: 10rem;
+      right: 2rem;
+    }
+  }
+  .leyend-container {
+    width: 100%;
+    height: 121px;
+    gap: 0.3rem;
+    @media screen and (max-width: 539px) {
+      display: none !important;
+    }
+    .leyend-title {
+      padding-top: 10px;
+      margin-left: 15px;
+      font-size: 18px;
+      color: #777777;
+    }
+    .title-signals {
+      font-size: 15px;
+    }
+  }
+  .btn-leyend {
+    @include font-helveltica();
+    width: 100%;
+    border-color: $input-pickerd;
+    color: $black !important;
+    &:hover,
+    &.active,
+    &.disabled,
+    &:focus {
+      color: white !important;
+      width: 100% !important;
+    }
+  }
+  .leyend-collapse {
+    display: none !important;
+    width: 100%;
+    @media screen and (max-width: 539px) {
+      display: block !important;
+      margin-bottom: 4px !important;
+      .card.card-body {
+        border-radius: 0.5rem;
+      }
+      .btn {
+        border-color: $button-pickerd;
+      }
+    }
+  }
+  .btn-dropdown-2 {
+    background-color: $primary;
+    @if ($black == black) {
+      background-color: transparent;
+      color: black !important;
+    }
+  }
+  .chart-doughnut-container {
+    background-color: $device-card-bg;
+    width: 100%;
+    height: auto;
+    padding: var(--bs-card-spacer-y) var(--bs-card-spacer-x);
+    .body-chart-usage {
+      p {
+        @include font-frutiger(1rem);
+      }
+      .btn-dropdown {
+        width: 5rem;
+        @if ($black == black) {
+          background-color: transparent;
+          color: black;
+        }
+      }
+    }
+    .chart-button {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+    }
+    .chart-info {
+      background-color: $footer-primary;
+      width: auto;
+      padding: 1rem 1rem;
+      border-radius: 5px;
+      margin-right: -2rem;
+      box-shadow: $box-shadow-chart-tns;
+      .block-info {
+        .text-title-info {
+          text-overflow: ellipsis;
+          overflow: hidden;
+        }
+        .block-title {
+          color: $text-legend-chart-color;
+        }
+        .text-info {
+          font-size: 1rem;
+          .text-date {
+            color: $black;
+            letter-spacing: 0.8px;
+          }
+        }
+      }
+      small {
+        font-size: 0.9rem;
+        color: $chart-info;
+      }
+    }
+    .text-chart-container {
+      margin-left: 2rem;
+      // padding-top: 1.1rem;
+      span {
+        color: $text-legend-chart-color;
+      }
+      .color-text {
+        width: 1rem;
+        height: 1rem;
+      }
+    }
+  }
+  .map-container {
+    background-color: $footer-map;
+    width: 35%;
+    height: 265px;
+    .btn-reset-map {
+      position: absolute;
+      z-index: 2;
+      right: 2%;
+      top: 1%;
+    }
+    .map-footer {
+      height: 10%;
+      color: $footer-secundary;
+      background-color: $footer-map;
+    }
+  }
+  .divider {
+    width: 2px;
+    height: 80%;
+    background-color: #2a588d;
+    margin-top: 0.5rem;
+  }
+  .status-img {
+    width: 1.5rem;
+    margin-right: 10px;
+  }
+  p {
+    margin: 0;
+    padding: 0;
+    font-weight: bold;
+  }
+  .device-date-picker {
+    background: $input-pickerd;
+    border: none;
+    .ant-picker-input input {
+      color: $black;
+      background-color: transparent;
+    }
+    .anticon {
+      color: $black;
+    }
+  }
+  .background-doughnutData {
+    position: relative;
+    background-color: #eaf3f4;
+    height: 200px;
+    width: 200px;
+    margin: 0 auto;
+    margin-top: 5%;
+    border-radius: 50% 50%;
+    box-shadow: 0px 2px 15px -5px rgba(255, 255, 255, 0.75);
+    -webkit-box-shadow: 0px 2px 15px -5px rgba(255, 255, 255, 0.75);
+    -moz-box-shadow: 0px 2px 15px -5px rgba(255, 255, 255, 0.75);
+    .absolute-percent {
+      border-radius: 50% 50%;
+      position: absolute;
+      top: 25%;
+      left: auto;
+      width: 100px;
+      height: 100px;
+      color: $black;
+      box-shadow: 0px 2px 15px -5px rgba(0, 0, 0, 0.3);
+      -webkit-box-shadow: 0px 2px 15px -5px rgba(0, 0, 0, 0.3);
+      -moz-box-shadow: 0px 2px 15px -5px rgba(0, 0, 0, 0.3);
+      z-index: inherit;
+      span {
+        font-size: 1.1rem;
+        b {
+          color: black;
+        }
+      }
+      small {
+        font-size: 0.5rem;
+        font-weight: 500;
+        color: $text-legend-data-color;
+      }
+    }
+  }
+  .device-notes {
+    .textarea-note {
+      border: none;
+      overflow: hidden;
+      resize: none;
+      margin-bottom: 2rem;
+    }
+    .textarea-note:disabled {
+      background-color: transparent;
+    }
+  }
+  .text {
+    text-align: end;
+    font-family: "frutiger";
+    font-weight: 400;
+    font-size: 16px;
+    padding-right: 11px;
+    padding-bottom: 11px;
+  }
+  .textarea-list {
+    background-color: $device-card-bg;
+    width: auto;
+  }
+  .note-container {
+    width: fit-content;
+  }
+  .legends {
+    color: $black;
+  }
+}
+.white-space {
+  width: 2.7vw;
+}
+.date-legend-graph-line {
+  width: 95%;
+}
+.signals-container {
+  width: 100%;
+  height: 30%;
+  background-color: #242632;
+
+  .excellent-box,
+  .good-box,
+  .poor-box,
+  .fair-box,
+  .no-signal-box {
+    width: 1vw;
+    height: 1vw;
+    border: white solid 1px;
+    border-radius: 0.2rem;
+  }
+  .excellent-box {
+    background-color: #37c514;
+  }
+  .good-box {
+    background-color: #f8e649;
+  }
+  .poor-box {
+    background-color: #ce0015;
+  }
+  .fair-box {
+    background-color: #fa7130;
+  }
+  .no-signal-box {
+    background-color: transparent;
+  }
+}
+.btn-data-report {
+  margin: 1rem;
+  height: 3rem;
+}
+.apexcharts-yaxis-label {
+  color: #000;
+}
+.ant-picker-panel {
+  border: none;
+}
+.ant-picker-header {
+  background: $white;
+  border: none;
+}
+.ant-picker-date-panel .ant-picker-content th {
+  color: $black;
+}
+.ant-picker-header-view button:not(:first-child) {
+  color: $black;
+}
+.ant-picker-header-view button {
+  color: $black;
+}
+.ant-picker-date-panel .ant-picker-body {
+  background-color: $white;
+  border: none;
+}
+.ant-picker-panel .ant-picker-footer {
+  background: $white;
+  border: none;
+}
+.ant-picker-cell .ant-picker-cell-inner {
+  color: $black;
+  font-weight: 500;
+}
+button.ant-picker-header-super-next-btn {
+  display: none;
+}
+button.ant-picker-header-super-prev-btn {
+  display: none;
+}
+button.ant-picker-header-next-btn,
+button.ant-picker-header-prev-btn {
+  background-color: $primary;
+  min-width: 25px;
+  margin: 0.5rem;
+  border-radius: 0.5rem;
+  color: $black;
+}
+.ant-picker-panel-container {
+  border-radius: 0.5rem;
+  border: none;
+}
+.card {
+  border-radius: 0.5rem;
+  box-shadow: 0px 2px 15px -5px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: 0px 2px 15px -5px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0px 2px 15px -5px rgba(0, 0, 0, 0.3);
+}
+.tooltip-custom {
+  font-weight: 700;
+  color: black;
+  .apexcharts-tooltip-text-y-label {
+    display: none;
+  }
+}
+.value-data-consumed-overage {
+  fill: red;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+.tooltip-donut-custom {
+  font-weight: 700;
+}
+.apexcharts-menu.apexcharts-menu-open {
+  background-color: $device-card-bg;
+}
+.apexcharts-legend-text {
+  color: $black !important;
+}
+
+// ANTD Steps styles end
+
+.circle {
+  width: 1rem;
+  height: 0.7rem;
+}
+
+@media (max-width: 541px) {
+  .device-detail-container .header-detail {
+    span {
+      font-size: 0.6rem;
+      line-height: 0rem;
+    }
+    p {
+      font-size: 0.6rem;
+    }
+  }
+  .device-detail-container {
+    padding: 0.5rem;
+    padding-top: 0;
+    .divider {
+      width: 90%;
+      height: 1px;
+      margin: 0.5rem;
+      background-color: #2a588d;
+    }
+    .lvc {
+      .main-title {
+        font-size: 1rem;
+      }
+    }
+    .header-detail {
+      width: 100%;
+      margin: 1rem auto;
+      padding-top: 1rem;
+      gap: 0rem;
+      letter-spacing: normal;
+      .header-company {
+        width: 100%;
+        padding-left: 1rem;
+        p,
+        span {
+          font-size: 0.8rem;
+          width: 100%;
+        }
+      }
+
+      .device-name-container {
+        width: 100%;
+        padding-left: 1rem;
+        text-align: center;
+        img {
+          width: 1rem;
+        }
+        .title,
+        .data,
+        p {
+          font-size: 0.8rem;
+        }
+        .data {
+          text-overflow: ellipsis;
+          overflow: hidden;
+          letter-spacing: normal;
+        }
+      }
+    }
+    .device-detail {
+      width: 100%;
+      flex-wrap: wrap;
+      .tab-container {
+        overflow: auto;
+        flex-wrap: nowrap;
+      }
+    }
+    .nav-tabs .nav-link {
+      font-size: 0.8rem;
+    }
+  }
+  .chart-container {
+    .chart-info {
+      height: 95px;
+    }
+  }
+  .d-grid {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 1281px) {
+  .device-detail-container {
+    .chart-doughnut-container {
+      .text-chart-container {
+        font-size: 0.8rem;
+      }
+    }
+    .vertical-div {
+      transform: rotate(-90deg);
+      transform-origin: center top;
+      left: -23vw;
+      top: -9vh;
+    }
+    .legend-daily {
+      margin-top: -2rem;
+      margin-left: 6vw;
+    }
+    .device-name-container {
+      gap: 0.5rem;
+      .title {
+        font-size: 0.8rem;
+      }
+    }
+  }
+}

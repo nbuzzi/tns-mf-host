@@ -1,0 +1,11 @@
+.um-title {
+  @include font-frutiger(18px);
+  color: $black;
+  font-weight: 600;
+}
+
+tbody {
+  tr {
+    cursor: pointer;
+  }
+}

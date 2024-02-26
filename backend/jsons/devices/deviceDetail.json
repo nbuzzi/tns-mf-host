@@ -1,0 +1,21 @@
+{
+  "tnsDeviceName": "eftx03043v",
+  "customerDeviceName": "Router DC 3",
+  "acna": "eftx",
+  "knownAs": "eftx",
+  "companyName": "EFTX Corp.",
+  "manufacturer": "Cisco",
+  "model": "C1111-4PLTEEA",
+  "operationalStatus": "Deployed",
+  "connectivityStatus": "fullService",
+  "latitude": "49.439999",
+  "longitude": "1.100000",
+  "streetAddress": "2107 Wilson Blvd. Suite 600",
+  "city": "Arlington",
+  "state": "VA",
+  "zipCode": "22201-3061",
+  "country": "USA",
+  "lanIpAddress": "10.232.128.140",
+  "lanSubnetMask": "255.255.255.0",
+  "statusLastChangedOn": "2021-04-30 10:23:57"
+}

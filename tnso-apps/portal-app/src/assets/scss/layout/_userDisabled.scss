@@ -1,0 +1,16 @@
+.disabled-container {
+  .title {
+    @include font-frutiger();
+    color: $black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .text {
+    color: $black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}

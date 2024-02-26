@@ -1,0 +1,2085 @@
+openapi: 3.0.2
+
+info:
+  title: Portal API Endpoints
+  version: v1.0.0
+
+components:
+  securitySchemes:
+    BearerToken:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT
+
+  schemas:
+    Authenticate:
+      type: object
+      properties:
+        username:
+          type: string
+        password:
+          type: string
+      example:
+        username: admin
+        password: '@dminPWD_2023!'
+
+    AuthenticateResponseOk:
+      type: object
+      properties:
+        accessToken:
+          type: string
+        refreshToken:
+          type: string
+      example:
+        accessToken: Bearer eyJhbGciOiJIUzUxMiJ9.eyJmaXJzdE5hbWUiOiJhZG1pbiIsImxhc3ROYW1lIjoiYWRtaW4iLCJzdWIiOiJhZG1pbnVzZXIiLCJyb2xlIjoiQURNSU4iLCJ0aW1lWm9uZSI6IlVTL0Vhc3Rlcm4iLCJleHAiOjE2Nzc1MjI2NjQsInVzZXJJZCI6OCwiaWF0IjoxNjc3NTE5MDY0LCJlbWFpbCI6ImFkbWluQHRuc2kuY29tIn0.D6OkDs2s3YzkrAaLE20Vup0nxk1MQzwaVpwd3Yho4r-VAtUe5Luv0b2Gp9HhAGvS0CfECXziUZaTqj07H5Qd-Q
+        refreshToken: 08a1913b-b220-437f-96a8-269fd3521a92
+
+    AuthenticateResponseForbidden:
+      type: object
+      properties:
+        error:
+          type: string
+          enum: [ACCOUNT_LOCKED, ACCOUNT_DISABLED, CREDENTIALS_EXPIRED]
+      example:
+        error: ACCOUNT_LOCKED
+
+    BadAccessTokenResponse:
+      type: object
+      properties:
+        error:
+          type: string
+          enum: [BAD_ACCESS_TOKEN]
+      example:
+        error: BAD_ACCESS_TOKEN
+
+    PaginationResponse:
+      type: object
+      properties:
+        totalRecords:
+          type: integer
+          example: 10
+        returnedRecords:
+          type: integer
+          example: 1
+
+    DeviceDataResponse:
+      type: object
+      properties:
+        acna:
+          type: string
+          example: aafu
+        knownAs:
+          type: string
+          example: Alliance Bernstein
+        connectivityStatus:
+          type: string
+          enum: [fullService, onPrimary, onBackup, offline, inderterminate, unknown]
+          example: onBackup
+        customerDeviceName:
+          type: string
+          example: Device Center IT
+        country:
+          type: string
+          example: Italy
+        operationalStatus:
+          type: string
+          example: Installed
+        tnsDeviceName:
+          type: string
+          example: aafu1
+        hasGeolocation:
+          type: boolean
+          example: true
+
+    connectivityStatus:
+      type: object
+      properties:
+        fullService:
+          type: integer
+        onPrimary:
+          type: integer
+        onBackup:
+          type: integer
+        offline:
+          type: integer
+        inderterminate:
+          type: integer
+        unknown:
+          type: integer
+      example:
+        fullService: 1900
+        onPrimary: 90
+        onBackup: 8
+        offline: 1
+        inderterminate: 0
+        unknown: 1
+
+    connectivityStatusEnum:
+      type: string
+      enum: [fullService, onPrimary, onBackup, offline, inderterminate, unknown]
+      example: onBackup
+
+    GroupsMembers:
+      type: object
+      properties:
+        acna:
+          type: string
+        knownAs:
+          type: string
+        totalNumberOfDevices:
+          type: integer
+        connectivityStatus:
+          $ref: '#/components/schemas/connectivityStatus'
+      example:
+        acna: apl
+        knownAs: Apple
+        totalNumberOfDevices: 2000
+        connectivityStatus:
+          fullService: 1900
+          onPrimary: 90
+          onBackup: 8
+          offline: 1
+          inderterminate: 0
+          unknown: 1
+
+    Users:
+      type: object
+      properties:
+        username:
+          type: string
+          example: admin
+        firstName:
+          type: string
+          example: Alliance
+        lastName:
+          type: string
+          example: Bernstein
+        email:
+          type: string
+          example: Alliance.Bernstein@tnsi.com
+        enabled:
+          type: boolean
+          example: true
+        credentialsExpired:
+          type: boolean
+          example: true
+        accountLocked:
+          type: boolean
+          example: true
+        companyProfiles:
+          type: string
+          example: "Tnsonline Co,Regard CO"
+        lastLogin:
+          type: string
+          example: "2023-02-28 05:54:33"
+        role:
+          type: string
+          example: "Admin"
+
+security:
+  - BearerToken: []
+
+paths:
+  /v1/portalapi/authenticate:
+    post:
+      summary: Authenticate
+      description: |
+        # To request Access Token and Refresh Token
+        ### Allowed Roles:
+        - SUPERUSER
+        - ADMIN
+        - BASIC
+      security: []
+      tags:
+        - Authentication
+      requestBody:
+        required: true
+        description: User and Password to login
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Authenticate'
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/AuthenticateResponseOk'
+        '400':
+          description: Bad Request
+        '403':
+          description: Forbidden
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/AuthenticateResponseForbidden'
+        '404':
+          description: Not Found
+        '500':
+          description: Internal Server Error
+
+  /v1/portalapi/authenticate/refreshToken:
+    post:
+      summary: Refresh Token
+      description: |
+        # To request new Access Token and Refresh Token when Access Token expired
+        ### Allowed Roles:
+        - SUPERUSER
+        - ADMIN
+        - BASIC
+      security: []
+      tags:
+        - Authentication
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                refreshToken:
+                  type: string
+            example:
+              refreshToken: e58ed763-928c-4155-bee9-fdbaaadc15f3
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/AuthenticateResponseOk'
+        '400':
+          description: Bad Request
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+                    enum: [BAD_REFRESH_TOKEN]
+              example:
+                error: BAD_REFRESH_TOKEN
+        '404':
+          description: Not Found
+        '500':
+          description: Internal Server Error
+
+  /v1/portalapi/devices/{tnsDeviceName}/note:
+    get:
+      summary: Fetch Device Note
+      description: |
+        # To fetch device's note
+        ### Allowed Roles:
+        - ADMIN
+        - BASIC
+      tags:
+        - Devices
+      parameters:
+        - in: path
+          required: true
+          name: tnsDeviceName
+          schema:
+            type: string
+          example: eftx03043v
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  note:
+                    type: string
+              example:
+                note: here is my device's note
+        '400':
+          description: Bad Request
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BadAccessTokenResponse'
+        '403':
+          description: Forbidden
+        '404':
+          description: Not Found
+        '500':
+          description: Internal Server Error
+
+    patch:
+      summary: Update Device Note
+      description: |
+        # To update device's note
+        ### Allowed Roles:
+        - ADMIN
+        - BASIC
+      tags:
+        - Devices
+      parameters:
+        - in: path
+          required: true
+          name: tnsDeviceName
+          schema:
+            type: string
+          example: eftx03043v
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required:
+                - note
+              properties:
+                note:
+                  type: string
+                  maximum: 500
+            example:
+              note: here is my updated device's note
+      responses:
+        '204':
+          description: No Content
+        '400':
+          description: Bad Request
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BadAccessTokenResponse'
+        '403':
+          description: Forbidden
+        '404':
+          description: Not Found
+        '500':
+          description: Internal Server Error
+
+  /v1/portalapi/devices:
+    get:
+      summary: Fetch All Devices
+      description: |
+        # To fetch and filter devices information associated to the user
+        ### Allowed Roles:
+        - ADMIN
+        - BASIC
+      tags:
+        - Devices
+      parameters:
+        - in: query
+          name: acnas
+          schema:
+            type: string
+          example: eftx,bml,aafu
+        - in: query
+          name: knownAs
+          schema:
+            type: string
+          example: Alliance Bernstein
+        - in: query
+          name: connectivityStatus
+          schema:
+            $ref: '#/components/schemas/connectivityStatusEnum'
+        - in: query
+          name: customerDeviceName
+          schema:
+            type: string
+          example: Barclay
+        - in: query
+          name: country
+          schema:
+            type: string
+          example: Italy
+        - in: query
+          name: countries
+          schema:
+            type: string
+          example: USA,Italy
+        - in: query
+          name: operationalStatus
+          schema:
+            type: string
+          example: configured
+        - in: query
+          name: tnsDeviceName
+          schema:
+            type: string
+          example: eftx03043v,bml26153v
+        - in: query
+          name: hasGeolocation
+          schema:
+            type: boolean
+          example: false
+        - in: query
+          name: orderBy
+          schema:
+            type: string
+            default: ASC
+          example: DESC
+        - in: query
+          name: recordsPerPage
+          schema:
+            type: integer
+            maximum: 200
+            default: 100
+          example: 30
+        - in: query
+          name: sortBy
+          schema:
+            type: string
+            default: tnsDeviceName
+          example: connectivityStatus
+        - in: query
+          name: startAtRecord
+          schema:
+            type: integer
+            default: 0
+            minimum: 0
+          example: 100
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                allOf:
+                  - $ref: '#/components/schemas/PaginationResponse'
+                  - properties:
+                      devices:
+                        type: array
+                        items:
+                          $ref: '#/components/schemas/DeviceDataResponse'
+        '400':
+          description: Bad Request
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BadAccessTokenResponse'
+        '403':
+          description: Forbidden
+        '500':
+          description: Internal Server Error
+
+  /v1/portalapi/devices/{tnsDeviceName}:
+    get:
+      summary: Fetch Device's details
+      description: |
+        # To fetch some device's information
+        ### Allowed Roles:
+        - ADMIN
+        - BASIC
+      tags:
+        - Devices
+      parameters:
+        - in: path
+          required: true
+          name: tnsDeviceName
+          schema:
+            type: string
+          example: eftx03043v
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  tnsDeviceName:
+                    type: string
+                  customerDeviceName:
+                    type: string
+                  acna:
+                    type: string
+                  knownAs:
+                    type: string
+                  manufacturer:
+                    type: string
+                  model:
+                    type: string
+                  operationalStatus:
+                    type: string
+                  connectivityStatus:
+                    $ref: '#/components/schemas/connectivityStatusEnum'
+                  streetAddress:
+                    type: string
+                  latitude:
+                    type: string
+                  longitude:
+                    type: string
+                  city:
+                    type: string
+                  state:
+                    type: string
+                  zipCode:
+                    type: string
+                  country:
+                    type: string
+                  lanIpAddress:
+                    type: string
+                  lanSubnetMask:
+                    type: string
+                  statusLastChangedOn:
+                    type: integer
+              example:
+                tnsDeviceName: eftx03043v
+                customerDeviceName: Router DC 3
+                acna: eftx
+                knownAs: EFTX Corp.
+                manufacturer: Cisco
+                model: C1111-4PLTEEA
+                operationalStatus: Deployed
+                connectivityStatus: fullService
+                latitude: '49.439999'
+                longitude: '1.100000'
+                streetAddress: 2107 Wilson Blvd. Suite 600
+                city: Arlington
+                state: VA
+                zipCode: 22201-3061
+                country: USA
+                lanIpAddress: '10.232.128.140'
+                lanSubnetMask: '255.255.255.0'
+                statusLastChangedOn: 1677844673
+        '400':
+          description: Bad Request
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BadAccessTokenResponse'
+        '403':
+          description: Forbidden
+        '404':
+          description: Not Found
+        '500':
+          description: Internal Server Error
+
+  /v1/portalapi/devices/count/connectivityStatus:
+    get:
+      summary: Count Devices by Connectivity Status
+      description: |
+        # To count the devices, grouped by connectivity status, associated to the user
+        ### Allowed Roles:
+        - ADMIN
+        - BASIC
+      tags:
+        - Devices
+      parameters:
+        - in: query
+          name: acnas
+          schema:
+            type: string
+          example: eftx,bml,aafu
+        - in: query
+          name: hasGeolocation
+          schema:
+            type: boolean
+          example: false
+        - in: query
+          name: knownAs
+          schema:
+            type: string
+          example: Alliance Bernstein
+        - in: query
+          name: customerDeviceName
+          schema:
+            type: string
+          example: Barclay
+        - in: query
+          name: country
+          schema:
+            type: string
+          example: Italy
+        - in: query
+          name: countries
+          schema:
+            type: string
+          example: USA,Italy
+        - in: query
+          name: operationalStatus
+          schema:
+            type: string
+          example: configured
+        - in: query
+          name: tnsDeviceName
+          schema:
+            type: string
+          example: eftx03043v,bml26153v
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/connectivityStatus'
+        '400':
+          description: Bad Request
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BadAccessTokenResponse'
+        '403':
+          description: Forbidden
+        '404':
+          description: Not Found
+        '500':
+          description: Internal Server Error
+
+  /v1/portalapi/devices/groups/members:
+    get:
+      summary: Fetch Groups Grouped by Members
+      description: |
+        # To fetch information per member associated to the user
+        ### Allowed Roles:
+        - ADMIN
+        - BASIC
+      tags:
+        - Devices
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/GroupsMembers'
+        '400':
+          description: Bad Request
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BadAccessTokenResponse'
+        '403':
+          description: Forbidden
+        '404':
+          description: Not Found
+        '500':
+          description: Internal Server Error
+
+  /v1/portalapi/devices/geolocation:
+    get:
+      summary: Fetch All Devices Geolocation
+      description: |
+        # To fetch information to display devices on Google Maps
+        ### Allowed Roles:
+        - ADMIN
+        - BASIC
+      tags:
+        - Devices
+      parameters:
+        - in: query
+          name: acnas
+          schema:
+            type: string
+          example: eftx,bml,aafu
+        - in: query
+          name: knownAs
+          schema:
+            type: string
+          example: Alliance Bernstein
+        - in: query
+          name: connectivityStatus
+          schema:
+            $ref: '#/components/schemas/connectivityStatusEnum'
+        - in: query
+          name: customerDeviceName
+          schema:
+            type: string
+          example: Barclay
+        - in: query
+          name: country
+          schema:
+            type: string
+          example: Italy
+        - in: query
+          name: countries
+          schema:
+            type: string
+          example: USA,Italy
+        - in: query
+          name: operationalStatus
+          schema:
+            type: string
+          example: configured
+        - in: query
+          name: tnsDeviceName
+          schema:
+            type: string
+          example: eftx03043v,bml26153v
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    tnsDeviceName:
+                      type: string
+                    latitude:
+                      type: string
+                    longitude:
+                      type: string
+                    connectivityStatus:
+                      $ref: '#/components/schemas/connectivityStatusEnum'
+                  example:
+                    tnsDeviceName: eftx03043v
+                    latitude: '49.439999'
+                    longitude: '1.100000'
+                    connectivityStatus: fullService
+        '400':
+          description: Bad Request
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BadAccessTokenResponse'
+        '403':
+          description: Forbidden
+        '500':
+          description: Internal Server Error
+
+  /v1/portalapi/devices/{tnsDeviceName}/uptime/monthly:
+    get:
+      summary: Fetch Device Uptime Monthly
+      description: |
+        # To fetch last 12 months uptime details for a tnsDeviceName
+        ### Allowed Roles:
+        - ADMIN
+        - BASIC
+      tags:
+        - Devices
+      parameters:
+        - in: path
+          required: true
+          name: tnsDeviceName
+          schema:
+            type: string
+          example: eftx03043v
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    tnsDeviceName:
+                      type: string
+                    month:
+                      type: string
+                    year:
+                      type: string
+                    uptime:
+                      type: string
+                  example:
+                    tnsDeviceName: eftx03043v
+                    month: 'October'
+                    year: '2022'
+                    uptime: '11.100000'
+        '400':
+          description: Bad Request
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BadAccessTokenResponse'
+        '403':
+          description: Forbidden
+        '500':
+          description: Internal Server Error
+
+  /v1/portalapi/devices/{tnsDeviceName}/uptime/daily/{month}:
+    get:
+      summary: Fetch Device Uptime Daily
+      description: |
+        # To fetch uptime details for a tnsDeviceName in a given month
+        ### Allowed Roles:
+        - ADMIN
+        - BASIC
+      tags:
+        - Devices
+      parameters:
+        - in: path
+          required: true
+          name: tnsDeviceName
+          schema:
+            type: string
+          example: eftx03043v
+        - in: path
+          required: true
+          name: month
+          schema:
+            type: string
+          example: November
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    tnsDeviceName:
+                      type: string
+                    day:
+                      type: string
+                    month:
+                      type: string
+                    year:
+                      type: string
+                    uptime:
+                      type: string
+                  example:
+                    tnsDeviceName: eftx03043v
+                    day: '05'
+                    month: 'October'
+                    year: '2022'
+                    uptime: '11.100000'
+        '400':
+          description: Bad Request
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BadAccessTokenResponse'
+        '403':
+          description: Forbidden
+        '500':
+          description: Internal Server Error
+
+  /v1/portalapi/devices/{tnsDeviceName}/lvc:
+    get:
+      summary: Fetch all LVCs for a Device
+      description: |
+        # To fetch the list of LVCs linked to a Device
+        ### Allowed Roles:
+        - ADMIN
+        - BASIC
+      tags:
+        - Devices
+      parameters:
+        - in: path
+          required: true
+          name: tnsDeviceName
+          schema:
+            type: string
+          example: meps00006v
+        - in: query
+          name: status
+          description: Comma separated status list
+          schema:
+            type: string
+          example: Operational
+        - in: query
+          name: recordsPerPage
+          schema:
+            type: integer
+            maximum: 200
+            default: 100
+          example: 30
+        - in: query
+          name: startAtRecord
+          schema:
+            type: integer
+            default: 0
+            minimum: 0
+          example: 100
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                allOf:
+                  - $ref: '#/components/schemas/PaginationResponse'
+                  - properties:
+                      lvcs:
+                        type: array
+                        items:
+                          type: object
+                          properties:
+                            ep1DeviceName:
+                              type: string
+                              example: meps00006v
+                            ep2DeviceName:
+                              type: string
+                              example: meps052a
+                            ep1Acna:
+                              type: string
+                              example: meps
+                            ep2Acna:
+                              type: string
+                              example: meps
+                            lvcTicketNumber:
+                              type: string
+                              example: APLVC0000378611
+                            status:
+                              type: string
+                              example: Operational
+                            startDate:
+                              type: integer
+                              example: 1636693200
+                            ep1Host:
+                              type: string
+                              example: meps00006v-host-1
+                            ep2Host:
+                              type: string
+                              example: meps052a-host-13
+                            ep1RealIp:
+                              type: string
+                              example: 10.10.134.98
+                            ep2RealIp:
+                              type: string
+                              example: 10.226.20.203
+                            knowsEp2As:
+                              type: string
+                              example: 10.226.20.203
+                            knowsEp1As:
+                              type: string
+                              example: 10.10.134.98
+        '400':
+          description: Bad Request
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BadAccessTokenResponse'
+        '403':
+          description: Forbidden
+        '500':
+          description: Internal Server Error
+
+  /v1/portalapi/devices/count/nogeolocation:
+    get:
+      summary: Fetch device count with no gelocation details
+      description: |
+        # Count of devices with no gelocation details
+        ### Allowed Roles:
+        - ADMIN
+        - BASIC
+      tags:
+        - Devices
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  count:
+                    type: integer
+              example:
+                count: 20
+        '400':
+          description: Bad Request
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BadAccessTokenResponse'
+        '403':
+          description: Forbidden
+        '404':
+          description: Not Found
+        '500':
+          description: Internal Server Error
+
+  /v1/portalapi/acnas:
+    get:
+      summary: Fetch All ACNAs
+      description: |
+        # To fetch the list of ACNAs linked to the user's
+        ### Allowed Roles:
+        - SUPERUSER
+        - ADMIN
+      tags:
+        - ACNAs
+      parameters:
+        - in: query
+          name: name
+          schema:
+            type: string
+          example: eftx
+        - in: query
+          name: recordsPerPage
+          schema:
+            type: integer
+            default: 100
+            maximum: 200
+          example: 30
+        - in: query
+          name: startAtRecord
+          schema:
+            type: integer
+            default: 0
+            minimum: 0
+          example: 100
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                allOf:
+                  - $ref: '#/components/schemas/PaginationResponse'
+                  - properties:
+                      acnas:
+                        type: array
+                        items:
+                          type: object
+                          properties:
+                            name:
+                              type: string
+                              example: aafu
+                            knownAs:
+                              type: string
+                              example: Alliance Bernstein
+        '400':
+          description: Bad Request
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BadAccessTokenResponse'
+        '403':
+          description: Forbidden
+        '500':
+          description: Internal Server Error
+
+  /v1/portalapi/companyprofiles:
+    get:
+      summary: Fetch All Company Profiles
+      description: |
+        # To fetch the list of company profiles visible by the user
+        ### Allowed Roles:
+        - SUPERUSER
+        - ADMIN
+      tags:
+        - Company Profiles
+      parameters:
+        - in: query
+          name: name
+          schema:
+            type: string
+          example: eftx
+        - in: query
+          name: recordsPerPage
+          schema:
+            type: integer
+            maximum: 200
+            default: 100
+          example: 30
+        - in: query
+          name: startAtRecord
+          schema:
+            type: integer
+            default: 0
+            minimum: 0
+          example: 100
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                allOf:
+                  - $ref: '#/components/schemas/PaginationResponse'
+                  - properties:
+                      companyProfiles:
+                        type: array
+                        items:
+                          type: object
+                          properties:
+                            name:
+                              type: string
+                              example: aafu
+                            note:
+                              type: string
+                              example: Customer's company profile note
+                            canBeDeleted:
+                              type: boolean
+                              example: false
+                            acnas:
+                              type: array
+                              items:
+                                type: object
+                                properties:
+                                  name:
+                                    type: string
+                                    example: aafu
+                                  knownAs:
+                                    type: string
+                                    example: Alliance Bernstein
+        '400':
+          description: Bad Request
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BadAccessTokenResponse'
+        '403':
+          description: Forbidden
+        '500':
+          description: Internal Server Error
+
+    post:
+      summary: Create Company Profile
+      description: |
+        # To create a new company profile
+        ### Allowed Roles:
+        - SUPERUSER
+        - ADMIN
+      tags:
+        - Company Profiles
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required:
+                - name
+                - acnas
+              properties:
+                name:
+                  type: string
+                acnas:
+                  type: string
+                note:
+                  type: string
+                  maximum: 500
+            example:
+              name: Chris Co
+              acnas: aafu,eftx
+              note: Customer's company profile note
+      responses:
+        '204':
+          description: No Content
+        '400':
+          description: Bad Request
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+                    enum: [BAD_REFRESH_TOKEN]
+              example:
+                error: BAD_REFRESH_TOKEN
+        '403':
+          description: Forbidden
+        '409':
+          description: Conflict
+        '500':
+          description: Internal Server Error
+
+  /v1/portalapi/companyprofiles/{companyProfileName}:
+    patch:
+      summary: Update Company Profile
+      description: |
+        # To update the company profile's name and/or its linked ACNAs
+        ### Allowed Roles:
+        - SUPERUSER
+        - ADMIN
+      tags:
+        - Company Profiles
+      parameters:
+        - in: path
+          required: true
+          name: companyProfileName
+          schema:
+            type: string
+          example: Chris Co
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              anyOf:
+                - properties:
+                    name:
+                      type: string
+                      description: New company profile's name
+                      example: Chris Corp
+                - properties:
+                    note:
+                      type: string
+                      maximum: 500
+                      description: New company profile's note
+                      example: My new note
+                - properties:
+                    acnas:
+                      type: string
+                      description: Comma separated ACNAs
+                      example: aafu,eftx
+            examples:
+              Company Name Only:
+                value:
+                  name: Chris Corp
+              Note Only:
+                value:
+                  note: My new note
+              ACNAs Only:
+                value:
+                 acnas: aafu,eftx,clmb
+              All Parameters:
+                value:
+                  name: Chris Corp
+                  note: My new note
+                  acnas: aafu,eftx,clmb
+      responses:
+        '204':
+          description: No Content
+        '400':
+          description: Bad Request
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BadAccessTokenResponse'
+        '403':
+          description: Forbidden
+        '409':
+          description: Conflict
+        '500':
+          description: Internal Server Error
+
+    delete:
+      summary: Delete Company Profile
+      description: |
+        # To delete a company profile by its name
+        ### Allowed Roles:
+        - SUPERUSER
+        - ADMIN
+      tags:
+        - Company Profiles
+      parameters:
+        - in: path
+          required: true
+          name: companyProfileName
+          schema:
+            type: string
+          example: Chris Co
+      responses:
+        '204':
+          description: No Content
+        '400':
+          description: Bad Request
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BadAccessTokenResponse'
+        '403':
+          description: Forbidden
+        '500':
+          description: Internal Server Error
+
+  /v1/portalapi/companyprofiles/name/{companyProfileName}/available:
+    get:
+      summary: Check Company Profile Name Available
+      description: |
+        # To update the company profile's name and/or its linked ACNAs
+        ### Allowed Roles:
+        - SUPERUSER
+        - ADMIN
+      tags:
+        - Company Profiles
+      parameters:
+        - in: path
+          name: companyProfileName
+          required: true
+          schema:
+            type: string
+          example: Chris Co
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  available:
+                    type: boolean
+                    example: true
+        '400':
+          description: Bad Request
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BadAccessTokenResponse'
+        '403':
+          description: Forbidden
+        '500':
+          description: Internal Server Error
+
+  /v1/portalapi/users/username/{username}/available:
+    get:
+      summary: Check Username Availability
+      description: |
+        # Check if a username is available before to create a new user
+        ### Allowed Roles:
+        - SUPERUSER
+        - ADMIN
+      tags:
+        - Users
+      parameters:
+        - in: path
+          name: username
+          required: true
+          schema:
+            type: string
+          example: admin
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  available:
+                    type: boolean
+                    example: true
+        '400':
+          description: Bad Request
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BadAccessTokenResponse'
+        '403':
+          description: Forbidden
+        '500':
+          description: Internal Server Error
+
+  /v1/portalapi/users/email/{email}/available:
+    get:
+      summary: Check E-mail Availability
+      description: |
+        # Check if an e-mail is available before to create a new user
+        ### Allowed Roles:
+        - SUPERUSER
+        - ADMIN
+      tags:
+        - Users
+      parameters:
+        - in: path
+          name: email
+          required: true
+          schema:
+            type: string
+          example: admin@tnsi.com
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  available:
+                    type: boolean
+                    example: true
+        '400':
+          description: Bad Request
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BadAccessTokenResponse'
+        '403':
+          description: Forbidden
+        '500':
+          description: Internal Server Error
+
+  /v1/portalapi/users/superuser:
+    post:
+      summary: Create TNS Admin User
+      description: |
+        # To create a new TNS administrator user account
+        ### Allowed Roles:
+        - SUPERUSER
+      tags:
+        - Users
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required:
+                - username
+                - firstName
+                - lastName
+                - email
+                - enabled
+              properties:
+                username:
+                  type: string
+                  minimum: 6
+                firstName:
+                  type: string
+                lastName:
+                  type: string
+                email:
+                  type: string
+                  pattern: "^[a-zA-Z0-9_+&*-]+(?:\\.[a-zA-Z0-9_+&*-]+)*@(?:[a-zA-Z0-9-]+\\.)+[a-zA-Z]{2,7}$"
+                enabled:
+                  type: boolean
+                timeZone:
+                  type: string
+                  default: US/Eastern
+            example:
+              username: chris_superuser
+              firstName: Christopher
+              lastName: Walker
+              email: cwalker@tnsi.com
+              enabled: true
+      responses:
+        '204':
+          description: No Content
+        '400':
+          description: Bad Request
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+                    enum: [BAD_REFRESH_TOKEN]
+              example:
+                error: BAD_REFRESH_TOKEN
+        '403':
+          description: Forbidden
+        '409':
+          description: Conflict
+        '500':
+          description: Internal Server Error
+
+  /v1/portalapi/users/admin:
+    post:
+      summary: Create Customer Admin User
+      description: |
+        # To create a new customer administrator user account
+        ### Allowed Roles:
+        - SUPERUSER
+        - ADMIN
+      tags:
+        - Users
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required:
+                - username
+                - firstName
+                - lastName
+                - email
+                - enabled
+                - companyProfiles
+              properties:
+                username:
+                  type: string
+                  minimum: 6
+                firstName:
+                  type: string
+                lastName:
+                  type: string
+                email:
+                  type: string
+                  pattern: "^[a-zA-Z0-9_+&*-]+(?:\\.[a-zA-Z0-9_+&*-]+)*@(?:[a-zA-Z0-9-]+\\.)+[a-zA-Z]{2,7}$"
+                enabled:
+                  type: boolean
+                companyProfiles:
+                  type: string
+                  description: Comma separated company profile names
+                  example: "Chris Co,Dr. Pepper"
+                timeZone:
+                  type: string
+                  default: US/Eastern
+            example:
+              username: chris_admin
+              firstName: Christopher
+              lastName: Walker
+              email: cwalker@tnsi.com
+              enabled: true
+              companyProfiles: "Chris Co,Dr. Pepper"
+      responses:
+        '204':
+          description: No Content
+        '400':
+          description: Bad Request
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+                    enum: [BAD_REFRESH_TOKEN]
+                example:
+                  error: BAD_REFRESH_TOKEN
+        '403':
+          description: Forbidden
+        '409':
+          description: Conflict
+        '500':
+          description: Internal Server Error
+
+  /v1/portalapi/users/basic:
+    post:
+      summary: Create Customer Basic User
+      description: |
+        # To create a new customer basic user account
+        ### Allowed Roles:
+        - SUPERUSER
+        - ADMIN
+      tags:
+        - Users
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required:
+                - username
+                - firstName
+                - lastName
+                - email
+                - enabled
+                - companyProfiles
+              properties:
+                username:
+                  type: string
+                  minimum: 6
+                firstName:
+                  type: string
+                lastName:
+                  type: string
+                email:
+                  type: string
+                  pattern: "^[a-zA-Z0-9_+&*-]+(?:\\.[a-zA-Z0-9_+&*-]+)*@(?:[a-zA-Z0-9-]+\\.)+[a-zA-Z]{2,7}$"
+                enabled:
+                  type: boolean
+                companyProfiles:
+                  type: string
+                  description: Comma separated company profile names
+                  example: "Chris Co,Dr. Pepper"
+                timeZone:
+                  type: string
+                  default: US/Eastern
+            example:
+              username: chris_basic
+              firstName: Christopher
+              lastName: Walker
+              email: cwalker@tnsi.com
+              enabled: true
+              companyProfiles: "Chris Co,Dr. Pepper"
+      responses:
+        '204':
+          description: No Content
+        '400':
+          description: Bad Request
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+                    enum: [BAD_REFRESH_TOKEN]
+              example:
+                error: BAD_REFRESH_TOKEN
+        '403':
+          description: Forbidden
+        '409':
+          description: Conflict
+        '500':
+          description: Internal Server Error
+
+  /v1/portalapi/users/actas:
+    post:
+      summary: Act As Another User
+      description: |
+        # To get an Access Token and Refresh Token associated to another user, to navigate like we were connected like him
+        ### Allowed Roles:
+        - SUPERUSER
+        - ADMIN
+      tags:
+        - Users
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required:
+                - username
+              properties:
+                username:
+                  type: string
+            example:
+              username: chris_basic
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/AuthenticateResponseOk'
+        '400':
+          description: Bad Request
+        '403':
+          description: Forbidden
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/AuthenticateResponseForbidden'
+        '404':
+          description: Not Found
+        '500':
+          description: Internal Server Error
+
+  /v1/portalapi/users/superuser/{username}:
+    patch:
+      summary: Update TNS Admin User
+      description: |
+        # To update a TNS admin user account or/and to update role to SUPERUSER
+        ### Allowed Roles:
+        - SUPERUSER
+      tags:
+        - Users
+      parameters:
+        - in: path
+          name: username
+          required: true
+          schema:
+            type: string
+          example: chris
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                firstName:
+                  type: string
+                  description: New user's firstname
+                  example: Chris
+                lastName:
+                  type: string
+                  description: New user's lastname
+                  example: Smith
+                email:
+                  type: string
+                  pattern: "^[a-zA-Z0-9_+&*-]+(?:\\.[a-zA-Z0-9_+&*-]+)*@(?:[a-zA-Z0-9-]+\\.)+[a-zA-Z]{2,7}$"
+                  description: New user's email
+                  example: csmith@tnsi.com
+                enabled:
+                  type: boolean
+                  description: New user's account status
+                  example: false
+                timeZone:
+                  type: string
+                  description: New user's time zone
+                  example: Australia/South
+            example:
+              firstName: Chris
+              lastName: Smith
+              email: csmith@tnsi.com
+              enabled: false
+              timeZone: Australia/South
+      responses:
+        '204':
+          description: No Content
+        '400':
+          description: Bad Request
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+                    enum: [BAD_REFRESH_TOKEN]
+              example:
+                error: BAD_REFRESH_TOKEN
+        '403':
+          description: Forbidden
+        '409':
+          description: Conflict
+        '500':
+          description: Internal Server Error
+
+  /v1/portalapi/users/admin/{username}:
+    patch:
+      summary: Update Customer Admin User
+      description: |
+        # To update a customer admin user account or/and to update role to ADMIN
+        ### Allowed Roles:
+        - SUPERUSER
+        - ADMIN
+      tags:
+        - Users
+      parameters:
+        - in: path
+          name: username
+          required: true
+          schema:
+            type: string
+          example: chris
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                firstName:
+                  type: string
+                  description: New user's firstname
+                  example: Chris
+                lastName:
+                  type: string
+                  description: New user's lastname
+                  example: Smith
+                email:
+                  type: string
+                  pattern: "^[a-zA-Z0-9_+&*-]+(?:\\.[a-zA-Z0-9_+&*-]+)*@(?:[a-zA-Z0-9-]+\\.)+[a-zA-Z]{2,7}$"
+                  description: New user's email
+                  example: csmith@tnsi.com
+                enabled:
+                  type: boolean
+                  description: New user's account status
+                  example: false
+                companyProfiles:
+                  type: string
+                  description: New comma separated user's comapny profile names
+                  example: aafu,eftx
+                timeZone:
+                  type: string
+                  description: New user's time zone
+                  example: Australia/South
+            examples:
+              User Details Only:
+                value:
+                  firstName: Chris
+                  lastName: Smith
+                  email: csmith@tnsi.com
+                  enabled: false
+                  timeZone: Australia/South
+              User Visibility Only:
+                value:
+                  companyProfiles: aafu,eftx
+              All Parameters:
+                value:
+                  firstName: Chris
+                  lastName: Smith
+                  email: csmith@tnsi.com
+                  enabled: false
+                  companyProfiles: aafu,eftx
+                  timeZone: Australia/South
+      responses:
+        '204':
+          description: No Content
+        '400':
+          description: Bad Request
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+                    enum: [BAD_REFRESH_TOKEN]
+              example:
+                error: BAD_REFRESH_TOKEN
+        '403':
+          description: Forbidden
+        '409':
+          description: Conflict
+        '500':
+          description: Internal Server Error
+
+  /v1/portalapi/users/basic/{username}:
+    patch:
+      summary: Update Customer Basic User
+      description: |
+        # To update a customer basic user account or/and to update role to BASIC
+        ### Allowed Roles:
+        - SUPERUSER
+        - ADMIN
+      tags:
+        - Users
+      parameters:
+        - in: path
+          name: username
+          required: true
+          schema:
+            type: string
+          example: chris
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                firstName:
+                  type: string
+                  description: New user's firstname
+                  example: Chris
+                lastName:
+                  type: string
+                  description: New user's lastname
+                  example: Smith
+                email:
+                  type: string
+                  pattern: "^[a-zA-Z0-9_+&*-]+(?:\\.[a-zA-Z0-9_+&*-]+)*@(?:[a-zA-Z0-9-]+\\.)+[a-zA-Z]{2,7}$"
+                  description: New user's email
+                  example: csmith@tnsi.com
+                enabled:
+                  type: boolean
+                  description: New user's account status
+                  example: false
+                companyProfiles:
+                  type: string
+                  description: New comma separated user's comapny profile names
+                  example: aafu,eftx
+                timeZone:
+                  type: string
+                  description: New user's time zone
+                  example: Australia/South
+            examples:
+              User Details Only:
+                value:
+                  firstName: Chris
+                  lastName: Smith
+                  email: csmith@tnsi.com
+                  enabled: false
+                  timeZone: Australia/South
+              User Visibility Only:
+                value:
+                  companyProfiles: aafu,eftx
+              All Parameters:
+                value:
+                  firstName: Chris
+                  lastName: Smith
+                  email: csmith@tnsi.com
+                  enabled: false
+                  companyProfiles: aafu,eftx
+                  timeZone: Australia/South
+      responses:
+        '204':
+          description: No Content
+        '400':
+          description: Bad Request
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+                    enum: [BAD_REFRESH_TOKEN]
+              example:
+                error: BAD_REFRESH_TOKEN
+        '403':
+          description: Forbidden
+        '409':
+          description: Conflict
+        '500':
+          description: Internal Server Error
+
+  /v1/portalapi/users/profile:
+    patch:
+      summary: Update own profile
+      description: |
+        # To update own profile details
+        ### Allowed Roles:
+        - SUPERUSER
+        - ADMIN
+        - BASIC
+      tags:
+        - Users
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              anyOf:
+                - properties:
+                    firstName:
+                      type: string
+                      description: New user's firstname
+                      example: Chris
+                - properties:
+                    lastName:
+                      type: string
+                      description: New user's lastname
+                      example: Smith
+                - properties:
+                    email:
+                      type: string
+                      pattern: "^[a-zA-Z0-9_+&*-]+(?:\\.[a-zA-Z0-9_+&*-]+)*@(?:[a-zA-Z0-9-]+\\.)+[a-zA-Z]{2,7}$"
+                      description: New user's email
+                      example: csmith@tnsi.com
+                - properties:
+                    timeZone:
+                      type: string
+                      description: New user's time zone
+                      example: Australia/South
+            example:
+                firstName: Chris
+                lastName: Smith
+                email: csmith@tnsi.com
+                timeZone: Australia/South
+      responses:
+        '204':
+          description: No Content
+
+  /v1/portalapi/users:
+    get:
+      summary: Fetch Users
+      description: |
+        # Fetch users  having all their ACNAs associated to the logged in user
+        ### Allowed Roles:
+        - SUPERUSER
+        - ADMIN
+      tags:
+        - Users
+      parameters:
+        - in: query
+          name: username
+          schema:
+            type: string
+          example: admin
+        - in: query
+          name: firstName
+          schema:
+            type: string
+          example: Alliance
+        - in: query
+          name: lastName
+          schema:
+            type: string
+          example: Alliance
+        - in: query
+          name: email
+          schema:
+            type: string
+          example: alliance@tnsi.com
+        - in: query
+          name: orderBy
+          schema:
+            type: string
+            default: ASC
+          example: DESC
+        - in: query
+          name: recordsPerPage
+          schema:
+            type: integer
+            maximum: 200
+            default: 100
+          example: 30
+        - in: query
+          name: sortBy
+          schema:
+            type: string
+            default: username
+          example: firstName
+        - in: query
+          name: startAtRecord
+          schema:
+            type: integer
+            default: 0
+            minimum: 0
+          example: 100
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                allOf:
+                  - $ref: '#/components/schemas/PaginationResponse'
+                  - properties:
+                      users:
+                        type: array
+                        items:
+                          $ref: '#/components/schemas/Users'
+        '400':
+          description: Bad Request
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BadAccessTokenResponse'
+        '403':
+          description: Forbidden
+        '500':
+          description: Internal Server Error

@@ -1,0 +1,13 @@
+.container-change-detail {
+  h3 {
+    @include font-frutiger(21px);
+    color: $black;
+    font-weight: bold;
+  }
+  .textarea-note {
+    cursor: default;
+    resize: none;
+    border: 1px solid $black;
+    background-color: #242632;
+  }
+}

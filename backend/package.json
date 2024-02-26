@@ -1,0 +1,24 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "Mocked backend with JSON server",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "engines": {
+    "node": "18.15.0"
+  },
+  "author": "Nico Buzzi",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.20.0",
+    "express": "^4.18.1",
+    "jose": "^4.11.1",
+    "json-server": "^0.17.0",
+    "open": "^8.4.0",
+    "swagger-ui-express": "^4.4.0",
+    "yamljs": "^0.3.0"
+  }
+}

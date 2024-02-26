@@ -1,0 +1,77 @@
+.scheduleGraph-container {
+  .schedule-container {
+    margin-top: 25px;
+    padding-right: 0rem;
+    padding-left: 0rem;
+  }
+
+  .timeLine-container {
+    padding: 0rem;
+  }
+
+  .title-chart {
+    color: #FFFFFF;
+    font-family: Helvetica;
+  }
+
+  .title-ticket {
+    font-family: Helvetica;
+    color: #FFFFFF;
+    padding-right: 0;
+    margin-top: 1.3rem;
+  }
+
+  .title-Device {
+    color: #FFFFFF;
+    padding-right: 0;
+    margin-top: 1.3rem;
+    font-family: Helvetica;
+  }
+
+  .items-table {
+    border-color: rgb(177, 185, 196);
+    border: 2px;
+    margin-top: 1rem;
+    padding-right: 0;
+    font-family: Helvetica;
+  }
+
+  .container-title {
+    margin-left: 1rem;
+    font-family: Helvetica;
+  }
+
+  .items-ticket {
+    font-family: Helvetica;
+    background-color: #2d2d39;
+    color: #FFFFFF;
+    border: 1px solid #b1b9c4;
+    padding-bottom: 0.4rem;
+    padding-top: 0.4rem;
+    padding-left: 0.8rem;
+    padding-right: 0.8rem;
+    margin-bottom: 6px;
+    font-size: 11px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .items-device {
+    font-family: Helvetica;
+    background-color: #2d2d39;
+    color: #FFFFFF;
+    border: 1px solid #b1b9c4;
+    padding-bottom: 0.4rem;
+    padding-top: 0.4rem;
+    padding-left: 0.8rem;
+    padding-right: 0.8rem;
+    margin-bottom: 6px;
+    margin-left: 10px;
+    margin-right: -1rem;
+    font-size: 11px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
+}

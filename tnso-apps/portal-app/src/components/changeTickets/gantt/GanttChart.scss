@@ -1,0 +1,110 @@
+line._RuwuK {
+  stroke: none !important;
+}
+//header
+rect._35nLX {
+  fill: #cbcbcb !important;
+}
+div._1nBOt {
+  background-color: #cbcbcb !important;
+}
+div._WuQ0f {
+  text-align: center;
+  color: black;
+  font-weight: 600;
+}
+text._9w8d5 {
+  fill: black !important;
+  font-weight: 600;
+}
+//Tooltip
+._25P-K {
+    margin-left: -9rem;
+}
+.gantt-tooltip-container {
+  background-color: #192430 !important;
+  color: white;
+  border: 1px solid #007fdc;
+  border-radius: 0.2rem;
+}
+
+//body
+rect._2dZTy {
+  fill: transparent !important;
+  min-width: 1600px !important;
+  width: 100% !important;
+  stroke: white;
+}
+div._34SS0 {
+  background-color: transparent !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+div._3lLk3 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid white;
+  align-content: center;
+  text-align: center;
+  margin: 0%;
+  height: 100%;
+}
+text._3KcaM {
+  fill: none !important;
+}
+._KxSXS {
+  display: none;
+}
+// graph bars
+._2pZMF {
+  display:none;
+}
+.leyend-component {
+  margin-bottom: 0.5rem;
+  .status-box {
+    width: 10px;
+    height: 10px;
+    border-radius: 5%;
+  }
+  .approved {
+    background-color: #007fdc;
+  }
+
+  .cancelled {
+    background-color: #ff2d2e;
+  }
+
+  .in-progress {
+    background-color: #38bdcf;
+  }
+
+  .completed {
+    background-color: #fa7130;
+  }
+
+  .requested {
+    background-color: #37c514;
+  }
+
+  .ant-radio-button-wrapper {
+    background-color: transparent;
+    color: white;
+    border: 1px solid white;
+    border-radius: 0.3rem;
+  }
+
+  .ant-radio-button-wrapper:not(:first-child)::before {
+    display: none;
+  }
+
+  .ant-radio-button-wrapper-checked:not(.ant-radio-button-wrapper-disabled) {
+    background-color: #007fdc;
+    border: none;
+    box-shadow: none;
+  }
+  .ant-radio-button-wrapper-checked:not(.ant-radio-button-wrapper-disabled):hover {
+    color: white;
+  }
+}

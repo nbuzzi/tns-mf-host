@@ -1,0 +1,238 @@
+.react-bootstrap-table {
+  background-color: $table-bg;
+  .next-table th,
+  .next-table td {
+    border: none;
+    padding: 0%;
+    padding-top: 0.7rem;
+    padding-bottom: 0.7rem;
+  }
+  .cursor-default td {
+    cursor: default !important;
+  }
+  .next-table th.border-left-color,
+  .next-table td.border-left-color {
+    border-left: thin solid white !important;
+  }
+  .next-table th {
+    width: var(--column-width);
+    font-size: 0.85rem;
+  }
+
+  .next-table th[tabindex="0"]:first-child {
+    width: var(--first-column-width) !important;
+    font-size: 0.85rem;
+  }
+
+  .next-table td {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 20px;
+    font-size: 0.85rem;
+  }
+  width: 100%;
+  table-layout: fixed;
+}
+
+.header-table-bootstrap th {
+  text-align: center;
+  background-color: $table-header-bg;
+  color: $table-header-title;
+  border: none;
+  padding: 0.6rem;
+}
+
+.filters-table-bootstrap th input,
+.filters-table-bootstrap th select {
+  border: none;
+  background-color: $table-bg;
+  padding: 0%;
+  &:focus {
+    outline: none;
+    background-color: $table-bg;
+    border: none;
+    box-shadow: none;
+  }
+  &:hover {
+    background-color: $table-bg;
+  }
+}
+.react-bootstrap-table .next-table .text-left td {
+  padding-left: 0.5rem;
+}
+
+.body-table-bootstrap tr:hover {
+  background-color: #0f19335c;
+}
+
+.filters-table-bootstrap tr th {
+  padding-top: 0.5rem !important;
+  padding-bottom: 0.3rem !important;
+  height: 2.5rem !important;
+  border-right: none;
+  border-left: none;
+  cursor: default;
+}
+.filters-table-bootstrap label {
+  width: 100%;
+  height: 0.5rem;
+}
+
+.filter-input-search {
+  position: relative;
+  width: 100%;
+  max-height: 100%;
+
+  .ant-input-wrapper {
+    height: 100%;
+    color: $black;
+    background-color: $table-bg;
+    border-left: 1px solid $table-border;
+    border-right: 1px solid $table-border;
+
+    &:focus-within {
+      border: 1px solid $hover-table;
+      outline: 1px solid $hover-table;
+      .ant-input,
+      .ant-input-group-addon,
+      .ant-input-search-button {
+        border: none;
+      }
+      .ant-input-search-button {
+        background-color: $primary;
+      }
+    }
+
+    .ant-input-clear-icon {
+      vertical-align: middle;
+      color: $black;
+    }
+    .ant-input-affix-wrapper {
+      padding: 0px;
+      height: 32px;
+      background-color: $table-bg;
+      border: none;
+    }
+    .ant-input {
+      padding-left: 8px;
+      padding-right: 8px;
+    }
+
+    .ant-input,
+    .ant-btn,
+    .ant-input-group-addon,
+    .ant-input-search-button {
+      background-color: $table-bg;
+      color: $black;
+      height: 100%;
+    }
+    .ant-input,
+    .ant-btn {
+      border: none;
+      &:focus {
+        border: none;
+      }
+    }
+
+    .anticon-search {
+      color: $black;
+
+      background: transparent;
+      svg {
+        color: $black;
+      }
+    }
+  }
+}
+
+.filter-datepicker-search {
+  .ant-picker {
+    background: transparent;
+    border: none;
+    width: 90%;
+    padding: 0%;
+  }
+}
+.ant-picker-time-panel-column {
+  background: #142248;
+  color: $black;
+}
+
+.table {
+  --bs-table-bg: #0f19335c;
+}
+
+.ant-picker-time-panel-column > li.ant-picker-time-panel-cell .ant-picker-time-panel-cell-inner:hover {
+  background: $primary;
+}
+
+.ant-picker-time-panel-column > li.ant-picker-time-panel-cell .ant-picker-time-panel-cell-inner {
+  background: #142248;
+  color: $black;
+}
+.ant-picker-dropdown {
+  border: 1px solid #3275de;
+  border-radius: 0.3rem;
+}
+.ant-picker-dropdown .ant-picker-time-panel-column > li.ant-picker-time-panel-cell-selected .ant-picker-time-panel-cell-inner {
+  background: $primary;
+}
+.ant-picker-header-view {
+  color: white;
+}
+.ant-picker .ant-picer-input {
+  border: none;
+}
+.ant-picker .ant-picer-input:active {
+  border: none;
+}
+
+.ant-picker .ant-picker-input > input {
+  color: white;
+  padding: 0.5rem;
+}
+.ant-picker-prev-icon,
+.ant-picker-next-icon {
+  color: white;
+}
+.ant-dropdown .ant-table-filter-dropdown {
+  border: 1px solid #3275de;
+}
+.filters-table-bootstrap th input,
+.filter-input-search .ant-input-wrapper .ant-input,
+.filter-input-search .ant-input-wrapper,
+.ant-input-search > .ant-input-group > .ant-input-group-addon:last-child,
+.ant-input-search > .ant-input-group > .ant-input-group-addon:last-child .ant-input-search-button:not(.ant-btn-primary),
+.filters-table-bootstrap th select {
+  color: $black;
+  background-color: transparent;
+}
+.ant-picker-time-panel-column > li.ant-picker-time-panel-cell-selected .ant-picker-time-panel-cell-inner {
+  background: $primary;
+}
+
+.ant-picker-dropdown .ant-picker-time-panel-column > li.ant-picker-time-panel-cell .ant-picker-time-panel-cell-inner {
+  color: white;
+}
+
+.ant-picker-year-panel .ant-picker-body,
+.ant-picker-month-panel .ant-picker-body,
+.ant-picker-panel-container .ant-picker-panel .ant-picker-content,
+.ant-picker-panel-container .ant-picker-panel table,
+.ant-picker-header,
+.ant-picker-date-panel .ant-picker-body,
+ul.ant-picker-ranges {
+  background: #142248;
+}
+
+.ant-picker-cell .ant-picker-cell-inner:hover {
+  color: $white;
+}
+.ant-picker-clear {
+  background: transparent;
+  color: transparent;
+}
+.ant-pagination-options {
+  display: none;
+}

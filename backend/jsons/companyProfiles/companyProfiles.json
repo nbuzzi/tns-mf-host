@@ -1,0 +1,364 @@
+[
+  {
+    "name": "Johnson & Johnson",
+    "acnas": [
+      {
+        "name": "aafu"
+      },
+      {
+        "name": "abfa"
+      },
+      {
+        "name": "abfu"
+      },
+      {
+        "name": "afab"
+      }
+    ]
+  },
+  {
+    "name": "Ferrari",
+    "acnas": [
+      {
+        "name": "fafu"
+      },
+      {
+        "name": "fauf"
+      },
+      {
+        "name": "ffau"
+      },
+      {
+        "name": "ffua"
+      },
+      {
+        "name": "fuaf"
+      },
+      {
+        "name": "fufa"
+      }
+    ]
+  },
+  {
+    "name": "Nintendo",
+    "acnas": [
+      {
+        "name": "pafu"
+      },
+      {
+        "name": "pafu"
+      },
+      {
+        "name": "pafu"
+      },
+      {
+        "name": "pafu"
+      },
+      {
+        "name": "pafu"
+      },
+      {
+        "name": "pafu"
+      }
+    ]
+  },
+  {
+    "name": "Apple",
+    "acnas": [
+      {
+        "name": "pafu"
+      },
+      {
+        "name": "pafu"
+      },
+      {
+        "name": "pafu"
+      },
+      {
+        "name": "pafu"
+      },
+      {
+        "name": "pafu"
+      },
+      {
+        "name": "pafu"
+      }
+    ]
+  },
+  {
+    "name": "Microsoft",
+    "acnas": [
+      {
+        "name": "pafu"
+      },
+      {
+        "name": "pafu"
+      },
+      {
+        "name": "pafu"
+      },
+      {
+        "name": "pafu"
+      },
+      {
+        "name": "pafu"
+      },
+      {
+        "name": "pafu"
+      }
+    ]
+  },
+  {
+    "name": "Google",
+    "acnas": [
+      {
+        "name": "pafu"
+      },
+      {
+        "name": "pafu"
+      },
+      {
+        "name": "pafu"
+      },
+      {
+        "name": "pafu"
+      },
+      {
+        "name": "pafu"
+      },
+      {
+        "name": "pafu"
+      }
+    ]
+  },
+  {
+    "name": "Facebook",
+    "acnas": [
+      {
+        "name": "pafu"
+      },
+      {
+        "name": "pafu"
+      },
+      {
+        "name": "pafu"
+      },
+      {
+        "name": "pafu"
+      },
+      {
+        "name": "pafu"
+      },
+      {
+        "name": "pafu"
+      }
+    ]
+  },
+  {
+    "name": "Amazon",
+    "acnas": [
+      {
+        "name": "pafu"
+      },
+      {
+        "name": "pafu"
+      },
+      {
+        "name": "pafu"
+      },
+      {
+        "name": "pafu"
+      },
+      {
+        "name": "pafu"
+      },
+      {
+        "name": "pafu"
+      }
+    ]
+  },
+  {
+    "name": "Tesla",
+    "acnas": [
+      {
+        "name": "pafu"
+      },
+      {
+        "name": "pafu"
+      },
+      {
+        "name": "pafu"
+      },
+      {
+        "name": "pafu"
+      },
+      {
+        "name": "pafu"
+      },
+      {
+        "name": "pafu"
+      }
+    ]
+  },
+  {
+    "name": "Samsung",
+    "acnas": [
+      {
+        "name": "pafu"
+      },
+      {
+        "name": "pafu"
+      },
+      {
+        "name": "pafu"
+      },
+      {
+        "name": "pafu"
+      },
+      {
+        "name": "pafu"
+      },
+      {
+        "name": "pafu"
+      }
+    ]
+  },
+  {
+    "name": "Sony",
+    "acnas": [
+      {
+        "name": "pafu"
+      },
+      {
+        "name": "pafu"
+      },
+      {
+        "name": "pafu"
+      },
+      {
+        "name": "pafu"
+      },
+      {
+        "name": "pafu"
+      },
+      {
+        "name": "pafu"
+      }
+    ]
+  },
+  {
+    "name": "Disney",
+    "acnas": [
+      {
+        "name": "pafu"
+      },
+      {
+        "name": "pafu"
+      },
+      {
+        "name": "pafu"
+      },
+      {
+        "name": "pafu"
+      },
+      {
+        "name": "pafu"
+      },
+      {
+        "name": "pafu"
+      }
+    ]
+  },
+  {
+    "name": "McDonalds",
+    "acnas": [
+      {
+        "name": "pafu"
+      },
+      {
+        "name": "pafu"
+      },
+      {
+        "name": "pafu"
+      },
+      {
+        "name": "pafu"
+      },
+      {
+        "name": "pafu"
+      },
+      {
+        "name": "pafu"
+      }
+    ]
+  },
+  {
+    "name": "Coca-Cola",
+    "acnas": [
+      {
+        "name": "pafu"
+      },
+      {
+        "name": "pafu"
+      },
+      {
+        "name": "pafu"
+      },
+      {
+        "name": "pafu"
+      },
+      {
+        "name": "pafu"
+      },
+      {
+        "name": "pafu"
+      }
+    ]
+  },
+  {
+    "name": "Pepsi",
+    "acnas": [
+      {
+        "name": "pafu"
+      },
+      {
+        "name": "pafu"
+      },
+      {
+        "name": "pafu"
+      },
+      {
+        "name": "pafu"
+      },
+      {
+        "name": "pafu"
+      },
+      {
+        "name": "pafu"
+      }
+    ]
+  },
+  {
+    "name": "Burger King",
+    "acnas": [
+      {
+        "name": "pafu"
+      },
+      {
+        "name": "pafu"
+      },
+      {
+        "name": "pafu"
+      },
+      {
+        "name": "pafu"
+      },
+      {
+        "name": "pafu"
+      },
+      {
+        "name": "pafu"
+      }
+    ]
+  }
+]

@@ -1,0 +1,72 @@
+[
+  {
+    "recordDate/Time": "2022-05-10T11:00:00Z",
+    "technology": "4G",
+    "indicator": "RSSI",
+    "quality": "Fair",
+    "value": -70
+  },
+  {
+    "recordDate/Time": "2022-10-06T11:00:00Z",
+    "technology": "4G",
+    "indicator": "RSRQ",
+    "quality": "Good",
+    "value": -10
+  },
+  {
+    "recordDate/Time": "2022-10-01T12:00:00Z",
+    "technology": "4G",
+    "indicator": "RSRP",
+    "quality": "Fair",
+    "value": -70
+  },
+  {
+    "recordDate/Time": "2022-10-03T14:00:00Z",
+    "technology": "4G",
+    "indicator": "SINR",
+    "quality": "Fair",
+    "value": 16
+  },
+  {
+    "recordDate/Time": "2022-10-03T10:00:00Z",
+    "technology": "4G",
+    "indicator": "RSRP",
+    "quality": "Good",
+    "value": -84
+  },
+  {
+    "recordDate/Time": "2022-10-03T12:00:00Z",
+    "technology": "3G",
+    "indicator": "SINR",
+    "quality": "Fair",
+    "value": -70
+  },
+  {
+    "recordDate/Time": "2022-09-23T15:00:00Z",
+    "technology": "3G",
+    "indicator": "EC/IO",
+    "quality": "Good",
+    "value": -8
+  },
+  {
+    "recordDate/Time": "2022-09-28T12:00:00Z",
+    "technology": "3G",
+    "indicator": "RSSI",
+    "quality": "Fair",
+    "value": -87
+  },
+  {
+    "recordDate/Time": "2022-09-28T13:00:00Z",
+    "technology": "3G",
+    "indicator": "RSSI",
+    "quality": "Fair",
+    "value": -78
+  },
+  {
+    "recordDate/Time": "2022-09-28T17:00:00Z",
+    "technology": "3G",
+    "indicator": "RSCP",
+    "quality": "Fair",
+    "value": -79
+  }
+]

@@ -1,0 +1,28 @@
+{
+  "devicesStatusDetails": [
+    {
+      "id": 82859,
+      "acna": "bpip",
+      "tnsName": "bpip050a",
+      "status": "fullService"
+    },
+    {
+      "id": 82860,
+      "acna": "bpip",
+      "tnsName": "bpip050b",
+      "status": "offline"
+    },
+    {
+      "id": 82861,
+      "acna": "bpip",
+      "tnsName": "bpip051a",
+      "status": "onBackup"
+    },
+    {
+      "id": 82867,
+      "acna": "bpip",
+      "tnsName": "bpip051b",
+      "status": "fullService"
+    }
+  ]
+}

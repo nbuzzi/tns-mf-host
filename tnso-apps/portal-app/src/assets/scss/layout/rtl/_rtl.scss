@@ -1,0 +1,32 @@
+.rtl {
+  @import "./rtl-components";
+  @import "./rtl-spacing";
+  text-align: right;
+  direction: rtl;
+  ol,
+  ul {
+    padding: 0px;
+  }
+  .ms-n3 {
+    margin-left: 0 !important;
+    margin-right: -1rem !important;
+  }
+  .topbar {
+    .mega-dropdown.dropdown-menu {
+      transform: translate(0, 47px) !important;
+    }
+  }
+
+  .sidebarArea .nav-link {
+    padding: 12px 12px 12px 5px;
+  }
+  // form editor
+  .rdw-embedded-modal {
+    left: 5px !important;
+    right: unset !important;
+  }
+}
+
+body {
+  --bs-body-bg: #0f0f1a;
+}
