@@ -1,6 +1,6 @@
 export const env = {
   VITE_PORTAL_ENVIRONMENT: 'development',
-  VITE_API_URL_BASE: 'http://localhost:5000/v1/portalapi',
+  VITE_API_URL_BASE: 'https://tns-backend.vercel.app/v1/portalapi',
   VITE_JWT_SECRET: 'tns-dashboard',
   // VITE_API_URL_BASE:'http://172.17.8.145/v1/portalapi',
   VITE_GOOGLE_API_KEY: 'AIzaSyAGOYRSpWgUwGpvOeRS6ltEY4oADP59Srw',
