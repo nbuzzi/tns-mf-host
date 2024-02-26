@@ -34,7 +34,7 @@
           "fileReplacements": [
             {
               "replace": "env.ts",
-              "with": "env.ts.sample"
+              "with": "env.ts"
             }
           ],
           "optimization": true,
